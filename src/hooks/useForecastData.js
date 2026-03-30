@@ -7,7 +7,7 @@
  */
 import { useState, useEffect } from 'react';
 
-const FORECAST_URL = '/data/simulation_output.json';
+const FORECAST_URL = `${import.meta.env.BASE_URL}data/simulation_output.json`;
 const REFRESH_MS   = 5 * 60 * 1000;
 
 /**
