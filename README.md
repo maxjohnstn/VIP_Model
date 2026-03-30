@@ -2,7 +2,7 @@
 
 > Physics-based solar PV simulation and live forecasting dashboard for five off-grid community cycling hubs across Scotland.
 
-**Live dashboard →** [max-johnston77.github.io/VIP_Model](https://max-johnston77.github.io/VIP_Model/)  
+**Live dashboard →** [max-johnston77.github.io/VIP_Model](https://maxjohnstn.github.io/VIP_Model/)  
 **University of Strathclyde · EEE · VIP Programme · 2025–2026**
 
 ---
