@@ -45,6 +45,12 @@ jobs:
       - name: Build dashboard
         run: npm run build
 
+      - name: Build dashboard
+        run: npm run build
+
+      - name: Disable Jekyll
+        run: touch docs/.nojekyll
+
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
