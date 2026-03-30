@@ -1,123 +1,124 @@
-# Run From GitHub (Vite Guide)
+# Running the Project from GitHub
 
-This guide is for a new person who has only the GitHub repo URL and wants to run the dashboard locally.
+This guide covers cloning the repo and running everything locally from scratch.
 
-Related docs:
-- Project overview: [README.md](README.md)
-- Architecture details: [README_ARCHITECTURE.md](README_ARCHITECTURE.md)
-- Calculations/model rules: [DASHBOARD_CALCULATIONS.md](DASHBOARD_CALCULATIONS.md)
+---
 
-## 1) Prerequisites
+## Prerequisites
 
-Install:
-- Node.js 20+
-- npm 10+
-- Git
+| Tool | Version | Check |
+|---|---|---|
+| Node.js | 20+ | `node --version` |
+| npm | 10+ | `npm --version` |
+| Python | 3.9+ | `python3 --version` |
+| Git | Any | `git --version` |
 
-Check versions:
+---
 
-```bash
-node -v
-npm -v
-git --version
-```
-
-## 2) Clone The Repository
+## 1. Clone the repository
 
 ```bash
-git clone https://github.com/jackmclean25/VIP_Model.git
+git clone https://github.com/maxjohnstn/VIP_Model.git
 cd VIP_Model
 ```
 
-If your local folder has a different name, `cd` into that folder.
+---
 
-## 3) Install Dependencies
+## 2. Install Node dependencies
 
 ```bash
 npm install
 ```
 
-## 4) Start Vite Dev Server
+---
 
-Recommended command for this project:
+## 3. Install Python dependencies
 
 ```bash
-npm run dev -- --host --port 5180 --strictPort --open
+pip install pvlib requests pandas numpy scipy
 ```
 
-What the flags do:
-- `--host`: allows access from local network if needed
-- `--port 5180`: runs on port 5180
-- `--strictPort`: fails instead of auto-switching ports
-- `--open`: opens browser automatically
+---
 
-You can also run default Vite behavior:
+## 4. Run the dashboard (dev server)
 
 ```bash
 npm run dev
 ```
 
-That usually opens on the default Vite port (`5173`) unless occupied.
+Open [http://localhost:5180](http://localhost:5180) in your browser.
 
-## 5) Open In Browser Manually
+> If port 5180 is already in use, stop the existing Vite process first (`Ctrl+C`), then rerun.
 
-If browser does not open automatically:
+---
 
-```bash
-open -a "Google Chrome" http://localhost:5180/
-```
+## 5. Regenerate the forecast data
 
-Or use your browser at:
-- `http://localhost:5180`
-- If using default port mode, check terminal output for the URL.
-
-## 6) Common Issues
-
-### Port 5180 already in use
-
-Kill processes using 5180 and restart:
+The dashboard reads from `public/data/simulation_output.json`. This file is committed to the repo so the dashboard will work immediately after cloning, but to generate fresh data run:
 
 ```bash
-(lsof -tiTCP:5180 -sTCP:LISTEN | xargs kill -9) 2>/dev/null || true
+python3 solar_simulation.py
 ```
 
-Then run dev server again.
+This takes 30–60 seconds. It writes updated JSON to both:
+- `public/data/simulation_output.json` (used by the Vite dev server)
+- `docs/data/simulation_output.json` (used by GitHub Pages)
 
-### Dependencies look broken
+---
 
-Try a clean reinstall:
+## 6. Verify the JSON output
 
 ```bash
-rm -rf node_modules package-lock.json
-npm install
+python3 -c "
+import json
+d = json.load(open('public/data/simulation_output.json'))
+print('generated_at:', d['generated_at'])
+for s in d['sites']:
+    print(s['name'], '| hourly:', len(s['hourly']), '| soc_start:', s['hourly'][0]['soc_pct'])
+"
 ```
 
-### Verify scripts available
+You should see 6 sites (including Clyde CP1 and CP2 separately), each with 168 hourly rows.
 
-```bash
-npm run
-```
+---
 
-Expected key scripts:
-- `dev`
-- `build`
-- `lint`
-- `preview`
-
-## 7) Build And Preview
-
-Build production bundle:
+## 7. Build for production
 
 ```bash
 npm run build
 ```
 
-Preview production bundle locally:
+Output goes to `dist/`. For deployment this project uses GitHub Pages (served from `/docs`), so a manual build isn't normally required.
 
+---
+
+## Troubleshooting
+
+### `npm run dev` fails with "port already in use"
+Another Vite process is running. Find and stop it:
 ```bash
-npm run preview
+lsof -i :5180
+kill -9 <PID>
 ```
 
-## 8) Stop The Dev Server
+### Dashboard shows stale data
+The JSON hasn't been regenerated. Run `python3 solar_simulation.py` and refresh.
 
-Press `Ctrl + C` in the terminal where Vite is running.
+### HMR warning about `useSimulator`
+`useSimulator.js` must stay in `src/context/useSimulator.js` as a separate file from `SimulatorContext.jsx`. Vite Fast Refresh cannot handle a file that exports both a React component and a hook. Do not merge them.
+
+### Python script fails to fetch SOC
+The Solar Guardian API may be unavailable. The script falls back to `FALLBACK_SOC = 0.50` (50% total capacity) automatically — this is expected and the simulation will still run.
+
+### `AUTO_PUSH = False` in `solar_simulation.py`
+The script can commit and push the JSON automatically, but this is currently disabled. To update the live dashboard, manually commit and push `docs/data/simulation_output.json` after running the simulation.
+
+---
+
+## Live Dashboard
+
+The production dashboard is served via GitHub Pages:
+
+**[https://maxjohnstn.github.io/VIP_Model/](https://maxjohnstn.github.io/VIP_Model/)**
+
+GitHub Pages is configured to serve from the `main` branch, `/docs` folder (Settings → Pages).

@@ -1,109 +1,187 @@
-# VIP Dashboard Editing Guide
+# Editing & Extension Guide — VIP Solar Dashboard
 
-This guide helps a new developer make confident edits without breaking core behavior.
+This guide covers the most common changes you're likely to make: adding sites, updating appliances, changing physics constants, and extending the dashboard UI.
 
-Related docs:
-- Overview: [README.md](README.md)
-- Architecture: [README_ARCHITECTURE.md](README_ARCHITECTURE.md)
-- Calculations: [DASHBOARD_CALCULATIONS.md](DASHBOARD_CALCULATIONS.md)
+---
 
-## 1) Common Change Scenarios
+## Adding or updating a site
 
-### Update battery/site constraints
+Site configuration lives in two places:
 
-Edit: `src/data/sitedata.json`
+### 1. `solar_simulation.py` — Python physics config
 
-Examples:
-- `site.battery_capacity_wh`
-- `site.max_voltage`
-- `energy.min_soc`
-- appliance definitions (`watts`, `durationMinutes`, `energyWh`, `isBackground`)
+Find the `LOCATIONS` list near the top of the file. Each site is a dictionary:
 
-Impact:
-- Availability and feasibility calculations
-- status/alert behavior
-- operator metrics
-
-### Change energy feasibility behavior
-
-Edit: `src/utils/energyCalc.js`
-
-Functions to modify:
-- `calcAvailableEnergy`
-- `calcFeasibility`
-- `deriveStatus`
-
-Also update:
-- [DASHBOARD_CALCULATIONS.md](DASHBOARD_CALCULATIONS.md)
-
-### Change prediction behavior
-
-Edit: `src/utils/prediction.js`
-
-Functions to modify:
-- `predictFullChargeHour`
-- `getPredictionConfidence`
-
-Also update:
-- [DASHBOARD_CALCULATIONS.md](DASHBOARD_CALCULATIONS.md)
-
-### Change app state, simulation controls, or date behavior
-
-Edit: `src/context/SimulatorContext.jsx` and `src/components/layout/SimulatorPanel.jsx`
-
-### Change tab UI only
-
-Edit tab files:
-- `src/components/tabs/NowTab.jsx`
-- `src/components/tabs/ForecastTab.jsx`
-- `src/components/tabs/PlanTab.jsx`
-
-## 2) Data Contract Notes
-
-Normalized telemetry row shape used by the app:
-- `timestamp`
-- `soc`
-- `voltage`
-- `voltage_max`
-- `temperature`
-- `pv_power_w`
-- `pv_energy_wh`
-- `gti`
-- `clearsky_gti`
-
-If you rename or remove fields, update:
-- mapping in `SimulatorContext.jsx`
-- utility functions that consume rows
-- relevant docs
-
-## 3) Alert Logic Locations
-
-User-facing alerts:
-- `src/components/forecast/AlertSection.jsx`
-
-Operator technical issues:
-- `src/components/operator/TechnicalAlerts.jsx`
-- persistence and clearing in `src/context/SimulatorContext.jsx`
-
-## 4) Checklist Before Finishing Any Logic Change
-
-1. Confirm thresholds are changed in one place only.
-2. Verify any dependent UI labels still describe the new behavior.
-3. Update [DASHBOARD_CALCULATIONS.md](DASHBOARD_CALCULATIONS.md) if formulas or thresholds changed.
-4. Update [README_ARCHITECTURE.md](README_ARCHITECTURE.md) if ownership or data flow changed.
-5. Run lint:
-
-```bash
-npm run lint
+```python
+{
+    "name": "Chryston",
+    "lat": 55.916,
+    "lon": -4.083,
+    "tilt": 30,
+    "azimuth": 180,
+    "capacity_kwp": 0.78,
+    "system_derating": 1.0,
+    "battery_capacity_wh": 3840,
+    "usable_capacity_wh": 1920,
+    "inverter_limit_w": 1000,
+    "inverter_idle_w": 8,
+    "always_on_load_w": 0.0,
+    "station_id": "chryston-01",   # Solar Guardian API ID
+}
 ```
 
-## 5) Suggested Reading Order For New Joiners
+To add a new site, copy an existing entry, update all values, and add the correct `station_id` for the Solar Guardian API.
 
-1. [README.md](README.md)
-2. [README_ARCHITECTURE.md](README_ARCHITECTURE.md)
-3. [DASHBOARD_CALCULATIONS.md](DASHBOARD_CALCULATIONS.md)
-4. Core code path:
-   - `src/context/SimulatorContext.jsx`
-   - `src/components/tabs/NowTab.jsx`
-   - `src/utils/energyCalc.js`
-   - `src/utils/prediction.js`
+### 2. `src/data/allsites.json` — dashboard config
+
+Each site entry controls what the React app uses for energy calculations and what appliances are shown:
+
+```json
+{
+  "name": "Chryston",
+  "battery_capacity_wh": 3840,
+  "usable_capacity_wh": 1920,
+  "inverter_limit_w": 1000,
+  "appliances": [
+    {
+      "id": "kettle",
+      "label": "Kettle",
+      "watts": 1500,
+      "typical_duration_min": 3
+    }
+  ]
+}
+```
+
+The `name` field must match exactly what Python writes into `simulation_output.json` — this is how `SimulatorContext` links the JSON data to the correct site config.
+
+**Also update the TopBar dropdown** in `src/components/layout/TopBar.jsx` to include the new site name in the site switcher.
+
+---
+
+## Updating appliances
+
+Appliances for each site are in `src/data/allsites.json` under the `appliances` array.
+
+Each appliance:
+
+```json
+{
+  "id": "pump",
+  "label": "Water Pump",
+  "watts": 250,
+  "typical_duration_min": 30
+}
+```
+
+- `id` — unique string, used as a React key
+- `watts` — power draw in watts
+- `typical_duration_min` — how long the appliance typically runs; used by `energyCalc.js` to calculate `requestedWh`
+
+The feasibility check (`go / wait / insufficient`) is driven entirely by these values — no code changes required, just update the JSON.
+
+---
+
+## Changing physics constants
+
+### DoD floor (`min_soc`)
+
+In `src/data/sitedata.json`:
+```json
+"energy": {
+  "min_soc": 50
+}
+```
+
+This is 50% of **total** battery capacity (AGM 50% DoD). Do not lower this — it represents the hard cutoff for the battery.
+
+### Per-site battery capacity
+
+In `src/data/allsites.json`, update `battery_capacity_wh` and `usable_capacity_wh` for the relevant site. `SimulatorContext` reads these and passes them to `energyCalc.js` when the site is selected.
+
+### System derating
+
+In `solar_simulation.py`, update `system_derating` in the `LOCATIONS` entry for the site. This requires re-running the simulation to take effect.
+
+---
+
+## Updating the full-charge prediction model
+
+The prediction is calculated in Python (`solar_simulation.py`, Block 7) and written to `daily[].full_charge_time` in the JSON. A JavaScript port lives in `src/utils/prediction.js` but is not currently used for displayed predictions — all predictions come from Python output.
+
+If you update the regression model, update both the Python and JavaScript versions to keep them in sync.
+
+---
+
+## Adding a new tab
+
+1. Create a new component in `src/components/tabs/`, e.g. `StatsTab.jsx`
+2. Add a tab entry to `src/components/layout/BottomNav.jsx`
+3. Add the corresponding route/case to `src/components/layout/AppShell.jsx`
+4. Consume data via `useSimulator()` — never fetch or calculate independently
+
+```jsx
+import { useSimulator } from '../../context/useSimulator';
+
+export default function StatsTab() {
+  const { todayHourly, siteData } = useSimulator();
+  // ...
+}
+```
+
+---
+
+## Adding operator alerts
+
+Technical alerts are in `src/components/operator/TechnicalAlerts.jsx`. Each alert is driven by conditions on `currentHourData` (from `SimulatorContext`):
+
+```jsx
+const alerts = [];
+
+if (currentHourData?.voltage >= siteData.chargeVoltageThreshold) {
+  alerts.push({ type: 'overvoltage', message: 'Battery voltage above charge threshold' });
+}
+```
+
+To add a new alert, add a condition and push to the `alerts` array. The `AlertCard` shared component handles display.
+
+> **Note:** `voltage` and `temperature` are `null` for all forecast rows — only the current live hour has real values. Alert logic must handle `null` gracefully.
+
+---
+
+## Updating per-site voltage thresholds
+
+Currently all sites use CP2 voltage thresholds for alert detection. Per-site thresholds are a known pending item.
+
+To fix this, add a `voltage_thresholds` object to each site entry in `allsites.json`:
+
+```json
+{
+  "name": "Chryston",
+  "voltage_thresholds": {
+    "charge": 28.8,
+    "low": 24.0,
+    "critical": 23.0
+  }
+}
+```
+
+Then update `TechnicalAlerts.jsx` and `deriveStatus()` in `energyCalc.js` to read from `siteData.voltage_thresholds` instead of hardcoded constants.
+
+---
+
+## Pushing changes to the live dashboard
+
+After making changes:
+
+```bash
+# Regenerate simulation data if physics changed
+python3 solar_simulation.py
+
+# Commit and push
+git add .
+git commit -m "describe your change"
+git push
+```
+
+GitHub Pages redeploys automatically within ~1 minute.

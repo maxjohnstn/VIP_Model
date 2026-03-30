@@ -1,140 +1,259 @@
-# VIP Dashboard Architecture
+# Architecture Overview — VIP Solar Dashboard
 
-This document explains how data moves through the app, what each feature owns, and where to edit safely.
+This document describes how the system fits together end to end, from the Python simulation pipeline through to what the user sees in the browser.
 
-Main entry docs:
-- Overview: [README.md](README.md)
-- Model/calculations: [DASHBOARD_CALCULATIONS.md](DASHBOARD_CALCULATIONS.md)
-- Editing guide: [README_EDITING_GUIDE.md](README_EDITING_GUIDE.md)
+---
 
-## 1) Runtime Flow
+## High-Level Architecture
 
-The runtime path is:
+```
+┌─────────────────────────────────────────────────────┐
+│                   Python Pipeline                   │
+│                solar_simulation.py                  │
+│                                                     │
+│  Solar Guardian API ──► live battery SOC            │
+│  Open-Meteo API     ──► 7-day weather forecast      │
+│                          │                          │
+│                    physics model                    │
+│               (GTI → PV → battery SOC)              │
+│                          │                          │
+│                  simulation_output.json             │
+└──────────────────────────┬──────────────────────────┘
+                           │ written to docs/data/ and public/data/
+                           ▼
+┌─────────────────────────────────────────────────────┐
+│                  React Dashboard                    │
+│                  (Vite + Tailwind)                  │
+│                                                     │
+│  useForecastData.js ──► fetches JSON every 5 min    │
+│  SimulatorContext   ──► distributes data to tabs    │
+│                                                     │
+│  NowTab / ForecastTab / PlanTab                     │
+│  OperatorPanel (toggle)                             │
+└─────────────────────────────────────────────────────┘
+```
 
-1. `src/main.jsx` mounts `<App />`.
-2. `src/App.jsx` wraps the app with `<SimulatorProvider>`.
-3. `src/context/SimulatorContext.jsx` loads telemetry/config and computes shared derived values.
-4. `src/components/layout/AppShell.jsx` renders tab content and overlays.
-5. Tab components consume context state and utility functions.
+**Key principle: Python is the single source of truth for all physics. React is a pure display layer — no physics re-calculation happens in the browser.**
 
-## 2) Data Sources
+---
 
-- `src/data/masterdata.json`
-  - Raw time-series rows (`datetime`, battery metrics, irradiance, PV power).
-- `src/data/sitedata.json`
-  - Site constraints and constants (`battery_capacity_wh`, voltage limits, appliance catalog, physics constants).
+## Python Pipeline
 
-## 3) SimulatorContext Responsibilities
+### `solar_simulation.py`
 
-`src/context/SimulatorContext.jsx` is the central source of truth.
+The main script. Run it to regenerate the dashboard data. Takes 30–60 seconds for all 6 sites (5 physical locations, Clyde has 2 controllers).
 
-It provides:
-- Core controls:
-  - `selectedDate`
-  - `simulatedTime` (minutes from midnight)
-  - `isOperatorMode`
-  - `isSimulatorOpen`
-- Derived datasets:
-  - `rowsByDate` and normalized `mappedRowsByDate`
-  - `todayHourly`
-  - `currentHourData` (exact timestamp or nearest prior row)
-  - `predictionsByDate`
-  - `todayPrediction`
-- Technical issue lifecycle:
-  - `registerTechnicalIssues(issues)`
-  - `resolveTechnicalIssue(issueId)`
+Processes each site in sequence through 9 blocks:
 
-Date handling details:
-- Unknown dates are mapped to the nearest available date via `resolveToAvailableDate`.
-- Rows are grouped by date and sorted by `datetime`.
+| Block | Purpose |
+|---|---|
+| 1 | Site configuration — panel, battery, inverter specs |
+| 2 | Solar Guardian API — fetches live battery SOC per controller |
+| 3 | Open-Meteo — 7-day hourly weather forecast with `past_days=1` |
+| 4 | GTI transposition — converts GHI to tilted plane irradiance |
+| 5 | PV model — cell temp → derate → DC power → MPPT clip → inverter |
+| 6 | Battery model — 3-state charge controller simulation |
+| 7 | Full-charge prediction — linear regression |
+| 8 | JSON output — writes to `docs/data/` and `public/data/` |
+| 9 | Main loop — iterates all 6 sites |
 
-## 4) Layout and Navigation
+### Output: `simulation_output.json`
 
-- `src/components/layout/AppShell.jsx`
-  - Owns local tab state (`now`, `forecast`, `plan`).
-  - Renders:
-    - `TopBar`
-    - active tab content
-    - `BottomNav`
-    - `SimulatorPanel`
-    - `OperatorPanel` (when operator mode is enabled)
+```json
+{
+  "generated_at": "2026-03-19T20:00:00+00:00",
+  "sites": [
+    {
+      "name": "Clyde CP2",
+      "capacity_kwp": 5.4,
+      "system_derating": 0.876,
+      "current_soc_pct": 64.0,
+      "soc_source": "api",
+      "hourly": [
+        {
+          "time": "2026-03-19T00:00:00+00:00",
+          "pv_w": 0.0,
+          "pv_available": 0.0,
+          "soc_pct": 64.0
+        }
+      ],
+      "daily": [
+        {
+          "date": "2026-03-19",
+          "gen_kwh": 2.049,
+          "full_charge_time": "14:30",
+          "fc_model_time": "11:22",
+          "fc_confidence": "moderate",
+          "weather_icon": "partly_cloudy"
+        }
+      ]
+    }
+  ]
+}
+```
 
-- `src/components/layout/SimulatorPanel.jsx`
-  - Test-mode controls for date/time simulation.
+Key fields:
+- `pv_w` — curtailed PV output (0 when battery is full and controller is in float)
+- `pv_available` — uncurtailed estimate of what the array could produce
+- `soc_pct` — 0–100% of total battery capacity, matching the EPEVER display exactly
+- `weather_icon` — `sunny | partly_cloudy | cloudy | overcast`
 
-- `src/components/layout/TopBar.jsx`
-  - Site title and operator toggle.
+---
 
-- `src/components/layout/BottomNav.jsx`
-  - Fixed tab navigation.
+## React Dashboard
 
-## 5) Tab Responsibilities
+### Stack
 
-### Now Tab
+- **React** with Vite 7.3.1
+- **Tailwind CSS** — utility-first styling
+- **Recharts** — SOC and PV charts in operator view
+- Mobile-first layout, `max-w-md`, single-page app
 
-- File: `src/components/tabs/NowTab.jsx`
-- Inputs:
-  - `currentHourData`, `todayHourly`, `todayPrediction`, `simulatedTime`, `site`, `siteData`
-- Uses:
-  - `deriveStatus`, `calcAvailableEnergy`, `calcFeasibility`
-- Outputs:
-  - Status banner
-  - Weather/SOC/time pills
-  - Appliance feasibility result bar
+### Data flow
 
-### Forecast Tab
+```
+Browser loads
+→ SimulatorProvider mounts
+→ useForecastData() fetches /data/simulation_output.json every 5 minutes
+→ Parses 6 sites × 168 hourly rows × 7 daily summaries
+→ SimulatorContext exposes selected site data to all tabs
+→ Tabs render with today's data
+```
 
-- File: `src/components/tabs/ForecastTab.jsx`
-- Renders:
-  - `TimelineBar` (6:00-20:00 segmented day bar)
-  - `WeatherSummary`
-  - `AlertSection`
+### `SimulatorContext.jsx` — central data engine
 
-### Plan Tab
+All data flows through this context. It holds:
 
-- File: `src/components/tabs/PlanTab.jsx`
-- Renders:
-  - `WeekStrip` (day cards)
-  - `VisitPlanner` (arrival-time + appliance feasibility)
+| State | Purpose |
+|---|---|
+| `selectedSiteName` | Which of the 5 sites is displayed (changed via TopBar dropdown) |
+| `selectedDate` | YYYY-MM-DD, defaults to today |
+| `simulatedTime` | Minutes since midnight (for time scrubber in test/debug mode) |
+| `isOperatorMode` | Shows/hides the operator overlay |
 
-## 6) Operator Mode
+Key computed values (derived from JSON, never re-calculated):
 
-- Overlay root: `src/components/operator/OperatorPanel.jsx`
-- Submodules:
-  - `LiveMetrics.jsx`: current telemetry and curtailment duration
-  - `SOCChart.jsx`: SOC line chart with current-time marker
-  - `TechnicalAlerts.jsx`: persistent actionable issue list
+| Value | Description |
+|---|---|
+| `todayHourly` | Array of hourly rows for selected site + date |
+| `currentHourData` | Nearest row to `simulatedTime` |
+| `todayPrediction` | `{ predicted_full_charge_time, weather_icon, confidence, gen_kwh }` |
+| `predictionsByDate` | All 7 days of daily predictions |
+| `siteData` | Per-site physics constants for `energyCalc.js` |
 
-Alert thresholds are documented in [DASHBOARD_CALCULATIONS.md](DASHBOARD_CALCULATIONS.md).
+### `useSimulator.js`
 
-## 7) Utility Modules
+A thin hook that calls `useContext(SimulatorContext)`. This file **must stay separate** from `SimulatorContext.jsx` — Vite Fast Refresh cannot handle a file that exports both a React component and a hook.
 
-- `src/utils/energyCalc.js`
-  - `calcAvailableEnergy(...)`
-  - `calcFeasibility(...)`
-  - `deriveStatus(...)`
+### `useForecastData.js`
 
-- `src/utils/prediction.js`
-  - `predictFullChargeHour(...)`
-  - `getPredictionConfidence(...)`
-  - statistics helpers (`mean`, `sampleStdDev`)
+Fetches `simulation_output.json` and converts raw entries into the shape the app uses:
 
-- `src/utils/dayClassifier.js`
-  - `classifyDay(prediction)`
-  - weather icon/label mapping helpers
+```js
+// Hourly rows
+{
+  timestamp,        // ISO string
+  soc,              // soc_pct from JSON (0–100% of total)
+  pv_power_w,       // pv_w (curtailed)
+  pv_available_w,   // pv_available (uncurtailed, for energyCalc)
+  voltage: null,    // not available from forecast
+  temperature: null // not available from forecast
+}
 
-- `src/utils/formatters.js`
-  - time/date formatting helpers used across UI
+// Daily predictions
+{
+  predicted_full_charge_time,  // "14:30"
+  weather_icon,                // "sunny" | "partly_cloudy" | "cloudy" | "overcast"
+  confidence,                  // "high" | "medium" | "low"
+  weather_description,         // human-readable string
+  prediction_hour,             // decimal hour (14.5)
+  gen_kwh
+}
+```
 
-## 8) Safe Edit Strategy
+All timestamps use `getUTCHours()` — not `getHours()` — because timestamps in the JSON are UTC ISO strings. Using `getHours()` shifts results by 1h during BST.
 
-1. If changing behavior, start in utilities (`energyCalc.js`, `prediction.js`) and update docs in the same commit.
-2. If changing app-wide state shape, update `SimulatorContext.jsx` first, then all consuming tabs/components.
-3. Keep thresholds centralized in utilities or `sitedata.json` instead of duplicating in components.
-4. Re-run lint after edits.
+---
 
-## 9) Known Design Choices
+## Component Structure
 
-- The app is deterministic for feasibility and alerts.
-- Full-charge time uses a linear model with feature scaling.
-- This is decision support, not a full electrochemical battery simulator.
+```
+src/components/
+├── layout/
+│   ├── AppShell.jsx         # App shell, tab router
+│   ├── TopBar.jsx           # Site switcher dropdown + operator toggle
+│   ├── BottomNav.jsx        # Now / Forecast / Plan tabs
+│   └── SimulatorPanel.jsx   # Time scrubber (test/debug mode)
+├── tabs/
+│   ├── NowTab.jsx           # Current status + appliance feasibility
+│   ├── ForecastTab.jsx      # Today's hourly PV timeline
+│   └── PlanTab.jsx          # 7-day week planner + visit planner
+├── operator/
+│   ├── OperatorPanel.jsx        # Operator overlay (slides in from right)
+│   ├── LiveMetrics.jsx          # SOC, voltage, temp, PV output
+│   ├── SOCChart.jsx             # Today's SOC curve (Recharts)
+│   ├── ForecastChartsPanel.jsx  # 7-day PV/SOC + drag-drop load scheduler
+│   └── TechnicalAlerts.jsx      # Overvoltage / sub-zero / low SOC alerts
+├── forecast/
+│   ├── TimelineBar.jsx      # Hourly PV bar chart for today
+│   ├── WeatherSummary.jsx   # Weather icon + full charge prediction
+│   └── AlertSection.jsx     # Contextual advice banners
+├── plan/
+│   ├── WeekStrip.jsx        # Horizontal 7-day cards
+│   └── VisitPlanner.jsx     # Arrival time + appliance feasibility planner
+├── now/
+│   └── ApplianceGrid.jsx    # Appliance count selector grid
+└── shared/
+    ├── StatusBanner.jsx     # Charging / full / low / critical banner
+    └── AlertCard.jsx        # Alert display card
+```
+
+---
+
+## Data Files
+
+### `allsites.json` — per-site configuration
+
+Each site entry:
+```json
+{
+  "name": "Clyde CP2",
+  "battery_capacity_wh": 9600,
+  "usable_capacity_wh": 4800,
+  "inverter_limit_w": 5000,
+  "appliances": [ ... ]
+}
+```
+
+`SimulatorContext` uses this to override `sitedata.json` constants when the selected site changes, ensuring `energyCalc.js` uses the correct battery size for each site.
+
+### `sitedata.json` — physics constants (CP2 defaults)
+
+```json
+{
+  "physicsConstants": {
+    "batteryCapacityWh": 9600,
+    "usableCapacityWh": 4800,
+    "maxChargePowerW": 4800,
+    "maxInverterPowerW": 5000
+  },
+  "energy": {
+    "min_soc": 50
+  }
+}
+```
+
+`min_soc: 50` is the AGM depth-of-discharge floor. The previous value of 20 was incorrect.
+
+---
+
+## Deployment
+
+GitHub Pages serves the dashboard from the `main` branch, `/docs` folder.
+
+To update the live dashboard:
+1. Run `python3 solar_simulation.py`
+2. Commit `docs/data/simulation_output.json`
+3. Push to `main`
+
+The site rebuilds automatically within ~1 minute.

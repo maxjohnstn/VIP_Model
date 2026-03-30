@@ -1,284 +1,196 @@
-# VIP Dashboard Calculations and Model Notes
+# Dashboard Calculations — VIP Solar Dashboard
 
-This file explains exactly how calculations are performed, where each calculation lives in code, and how outputs feed UI decisions.
+This document covers all the physics and logic that drives the simulation and the browser-side feasibility calculations.
 
-Related docs:
-- Overview: [README.md](README.md)
-- Architecture and ownership: [README_ARCHITECTURE.md](README_ARCHITECTURE.md)
-- Editing workflow: [README_EDITING_GUIDE.md](README_EDITING_GUIDE.md)
+---
 
-## 1) Data Inputs and Normalization
+## Python Simulation — `solar_simulation.py`
 
-Raw sources:
-- `src/data/masterdata.json`
-- `src/data/sitedata.json`
+### 1. Solar irradiance — GTI transposition
 
-Normalization location:
-- `src/context/SimulatorContext.jsx`
+Global Horizontal Irradiance (GHI) from Open-Meteo is converted to Global Tilted Irradiance (GTI) using:
+- Isotropic sky model
+- Manual solar geometry (declination, hour angle, zenith angle)
+- Bifacial gain where applicable (currently set to 0 for Clyde — derating already absorbs the real contribution)
 
-Each telemetry row is mapped to:
-- `timestamp`
-- `soc`
-- `voltage`
-- `voltage_max`
-- `temperature`
-- `pv_power_w`
-- `pv_energy_wh`
-- `gti`
-- `clearsky_gti`
+### 2. PV model
 
-Rows are grouped by day, sorted by timestamp, then exposed as `todayHourly` and `rowsByDate`.
+```
+GTI
+→ NOCT cell temperature correction
+→ Temperature derate (γ coefficient)
+→ DC power (Pdc)
+→ system_derating multiplier
+→ MPPT clip (rated controller input limit)
+→ Inverter efficiency
+→ AC power output (pv_w)
+```
 
-## 2) Energy Availability Model
+**`system_derating`** is a site-specific multiplier applied to `Pdc` before the MPPT clip. It corrects for real-world losses not captured by the panel datasheet. Derived from validation against measured data:
 
-Function:
-- `calcAvailableEnergy(...)` in `src/utils/energyCalc.js`
+| Site | Derating | Source |
+|---|---|---|
+| Chryston | 1.0 | Not yet validated |
+| Sunny Cycles | 0.85 | Estimated |
+| Cumbernauld | 1.0 | Not yet validated |
+| Denmilne | 1.0 | Not yet validated |
+| Clyde CP1 & CP2 | 0.876 | ERA5 calibration from `validate_clyde.py` |
 
-### 2.1 Core parameters used
+Applying derating before the MPPT clip is intentional — derating a larger system is physically different from clipping a derated one.
 
-From `src/data/sitedata.json`:
-- `batteryCapacityWh`: 9600
-- `min_soc`: 20%
-- `maxChargePowerW`: 4800
-- `avgChargeRateW`: 294
-- `panelFactor`: 0.9968
-- `mpptEfficiency`: 0.998
-- `intervalHours`: 0.1667 (10 min)
+### 3. Battery model — 3-state charge controller
 
-### 2.2 Initial battery state
+The EPEVER controller operates in three states which the simulation replicates:
 
-$$
-	ext{currentBatteryWhRaw} = \frac{\text{currentSoc}}{100} \times \text{batteryCapacityWh}
-$$
+**State 1 — Bulk (SOC < 99%)**
+Controller outputs maximum MPPT power. Load and battery share PV in parallel. Battery receives whatever PV cannot supply to the load.
 
-$$
-	ext{minSocWh} = \text{batteryCapacityWh} \times \frac{\text{minSoc}}{100}
-$$
+**State 2 — Float, load > PV headroom**
+Battery is full. Load is connected but exceeds the PV available in float mode. Battery discharges the shortfall. SOC drops.
 
-Current battery energy is clamped between `minSocWh` and full capacity.
+**State 3 — Float, load ≤ PV headroom ("free energy")**
+Battery is full. Load is small enough that the controller ramping from float toward bulk supplies it entirely from PV. No battery cost.
 
-### 2.3 Appliance power model
+This three-state behaviour was confirmed from real measured data (clydecycle1.xlsx, clydecycle2.xlsx, August 2025 – February 2026).
 
-For each appliance:
-- Energy from `energyWh` or fallback formulas.
-- Duration from `durationMinutes` or inferred from energy/power.
-- Power from `watts` or inferred from energy and duration.
+### 4. SOC convention
 
-Loads are split into:
-- background load (`isBackground === true`)
-- active user-selected load (`userSelectable !== false` and count > 0)
+EPEVER reports SOC as **0–100% of total battery capacity** (verified from voltage-SOC lookup table cross-reference).
 
-### 2.4 Per-interval battery evolution
+All sites use AGM batteries with 50% depth of discharge. The simulation works in total capacity with a DoD floor at 50%:
 
-For each future row after `simulatedTime`:
+```
+EPEVER 50%  →  0% usable   (DoD floor — never discharge below this)
+EPEVER 100% →  100% usable (fully charged)
+```
 
-1. Compute interval duration `deltaHours`.
-2. Compute PV power:
-	- use `pv_power_w` if present
-	- otherwise estimate from irradiance:
+SOC seeding formula:
+```python
+initial_soc_frac = min(1.0, max(0.0, (epever_pct / 100.0) * 2.0 - 1.0))
+```
+Where `2.0 = total_capacity / usable_capacity` (the 50% DoD ratio, same for all sites).
 
-$$
-	ext{grossPvW} = \text{gti} \times \text{panelFactor} \times \text{mpptEfficiency}
-$$
+Output `soc_pct` is 0–100% of total, matching the EPEVER controller display exactly.
 
-3. Compute total load power:
+### 5. Day 3+ SOC reset
 
-$$
-	ext{totalLoadWatts} = \text{backgroundLoadWatts} + \text{activeApplianceWatts}
-$$
+Days 1 and 2 carry forward the actual simulated SOC from the live API reading. From day 3 onwards, at midnight the battery resets to **75% total SOC** (= 50% usable = mid-range worst-case assumption). This is shown on operator charts as a dashed amber reference line.
 
-4. Compute net battery power:
+### 6. Always-on background loads
 
-$$
-	ext{netBatteryW} = \text{grossPvW} - \text{totalLoadWatts}
-$$
+- **Clyde CP2:** `always_on_load_w = 13.0W` (Currys Essentials fridge CTT50W12, confirmed from manual)
+- **All other sites:** `always_on_load_w = 0.0W`
+- **Inverter idle draw** runs 24/7 at all sites
 
-When charging (`netBatteryW > 0`), cap by `maxChargePowerW`.
+The 13W fridge + inverter idle produces approximately 3.9% overnight SOC drop for CP2 (37W total × 10h ÷ 9600Wh), which matches the measured winter average of 3.6%.
 
-5. Apply energy delta and clamp battery bounds:
+### 7. Full-charge prediction
 
-$$
-\Delta Wh = \text{netBatteryW} \times \text{deltaHours}
-$$
+Linear regression model ported from the partner's JavaScript implementation. Predicts the time at which the battery will reach 100% SOC based on the day's forecast irradiance profile.
 
-Track:
-- `remainingSolarWh` (positive battery gain)
-- `batteryDischargeWh` (battery draw)
-- `pvWhUsedForLoad`
-- `batteryCostWh` (active appliance demand not offset by PV)
+---
 
-### 2.5 Returned values and interpretation
+## JavaScript — `energyCalc.js`
 
-Returned fields include:
-- `currentBatteryWh`
-- `minSocWh`
-- `endBatteryWh`
-- `totalAvailableWh = max(0, endBatteryWh - minSocWh)`
-- `delayHours = batteryCostWh / avgChargeRateW`
-- `updatedFullChargeHour = ridgePredictionHour + delayHours` (if prediction exists)
+All browser-side calculations use data from the JSON. No physics is re-derived in the browser.
 
-## 3) Feasibility Decision Logic
+### `calcAvailableEnergy()`
 
-Function:
-- `calcFeasibility(...)` in `src/utils/energyCalc.js`
+Returns three energy budget values:
 
-Statuses:
-- `idle`: requested energy is zero
-- `go`: requestedWh <= immediate available battery above reserve
-- `wait`: requestedWh <= totalAvailableWh by end of day
-- `insufficient`: requestedWh exceeds total available today
+| Value | Meaning |
+|---|---|
+| `batteryAboveFloor` | Energy currently stored above the DoD floor |
+| `pvDuringLoadWh` | PV generated during the load runtime (serves load directly — no battery needed) |
+| `immediateAvailableWh` | `batteryAboveFloor + pvDuringLoadWh` — what's available right now |
+| `totalAvailableWh` | `batteryAboveFloor + remainingPvTotalWh` — what will be available by end of day |
 
-For `wait`, the function searches the earliest future timestamp where cumulative available energy reaches the requested load.
+`pv_available_w` (not `pv_w`) is used for `remainingPvTotalWh` to account for PV that the Python model curtailed in float mode.
 
-## 4) Status Banner State Machine
+### `calcFeasibility()`
 
-Function:
-- `deriveStatus(...)` in `src/utils/energyCalc.js`
+Determines whether an appliance load can run:
 
-Rules in order:
-1. `offline` if no current telemetry row
-2. `curtailment` if `soc >= 99` or `voltage >= charge_threshold_voltage`
-3. `low` if PV active and SOC < 20
-4. `charging` if PV active (and not low)
-5. `critical` if SOC < 10
-6. `low` if SOC < 20
-7. `idle` otherwise
+| Status | Condition |
+|---|---|
+| `go` | `requestedWh ≤ immediateAvailableWh` — can start right now |
+| `wait` | `requestedWh ≤ totalAvailableWh` — solar will charge enough; shows estimated ready time |
+| `insufficient` | Even the full-day energy budget won't cover it |
 
-## 5) Full-Charge Time Prediction Model
+### `deriveStatus()`
 
-File:
-- `src/utils/prediction.js`
+Determines the status banner shown to users:
 
-### 5.1 Model form
+| Status | Condition |
+|---|---|
+| `curtailment` | SOC ≥ 99% or voltage ≥ charge threshold — battery full, PV being curtailed |
+| `charging` | PV > 0 |
+| `low` | SOC < 55% (DoD floor + 5% buffer) |
+| `critical` | SOC < 50% (at or below DoD floor) |
+| `idle` | Overnight, no PV |
 
-Linear model on standardized inputs:
+Note: voltage is `null` in all forecast rows (not available from Open-Meteo). `deriveStatus()` falls back to `SOC ≥ 99%` for curtailment detection when voltage is unavailable.
 
-$$
-\hat{y} = b_0 + \sum_{i=1}^{n} w_i z_i
-$$
+---
 
-with:
+## Operator Charts — `ForecastChartsPanel.jsx`
 
-$$
-z_i = \frac{x_i - \mu_i}{\sigma_i}
-$$
+### PV bar display
 
-Predicted hour is clamped to `[6, 20]` and formatted to `HH:MM`.
+| Bar colour | Meaning |
+|---|---|
+| Bright | `pv_bright` — PV doing useful work (charging battery or serving load) |
+| Faint | `pv_faint` — PV curtailed (battery full, no load) |
 
-### 5.2 Features used
+Total bar height always equals `pv_w` from the Python output — never exceeds it.
 
-- `soc_8am`
-- `forecast_morn_gti`
-- `forecast_morn_cs_ratio`
-- `gti_std`
-- `soc_deficit`
-- `forecast_mean_gti`
-- `bat_temp_morn`
+### Load simulation — `simulateWithLoads()`
 
-### 5.3 Feature construction location
+Calculates how a scheduled load affects the SOC line without re-simulating PV charging (which would double-count energy).
 
-Computed in `src/context/SimulatorContext.jsx` when building `predictionsByDate`.
+```
+socWithLoad = pythonSoc - (cumulativeDrainWh / usableCapWh × 100)
+```
 
-Important derived formulas:
+Three-state logic mirrors the Python battery model:
 
-$$
-	ext{forecast_morn_cs_ratio} = \frac{\text{forecast_morn_gti}}{\text{clearsky_morn_gti}}
-$$
+| Condition | `hourDrainWh` |
+|---|---|
+| Float + small load (State 3) | `0` — load is free from curtailed PV |
+| Float + large load (State 2) | `load - pvPeak` |
+| Bulk charging or night | `loadW` |
 
-$$
-	ext{soc_deficit} = 100 - \text{firstSocOfDay}
-$$
+The SOC-with-load line is displayed in blue (`#4a9eff`), dashed.
 
-`gti_std` is sample standard deviation over rows where `gti > 10`.
+### Drag-and-drop scheduler
 
-### 5.4 Missing data fallback logic
+- Appliances are dragged from a palette onto hour bins (05:00–23:00)
+- Loads are keyed by `date:hour` — a Friday 10:00 load only affects Friday's simulation
+- Click a scheduled load pill to remove it
+- A day selector controls which of the 7 days receives dropped loads
 
-Fallbacks include:
-- `soc_8am`: `current_soc`, then 50
-- `forecast_morn_gti`: `0.6 * clearsky_morn_gti`, then `0.6 * 100`
-- `forecast_morn_cs_ratio`: `0.6`
-- `gti_std`: `80`
-- `soc_deficit`: `100 - start_soc` fallback path
-- `forecast_mean_gti`: `0.6 * clearsky_mean_gti`
-- `bat_temp_morn`: seasonal default (16 Apr-Sep, 10 otherwise)
+---
 
-### 5.5 Confidence output
+## Validation
 
-Function:
-- `getPredictionConfidence(...)`
+### Clyde CP1 / CP2 — `validate_clyde.py`
 
-Rules:
-- `high`: current hour >= 10 and no missing SOC/forecast inputs
-- `moderate`: current hour >= 8 and SOC available
-- `early_estimate`: otherwise
+Compares model predictions against `clydecycle1.xlsx` measured data (August 2025 – February 2026).
 
-UI mapping in context:
-- `high -> high`
-- `moderate -> medium`
-- `early_estimate -> low`
+**Why ERA5, not Solcast:** The GTI column in the Clyde xlsx files comes from Solcast embedded in the controller export. ERA5 gives better correlation with Open-Meteo (R = 0.817 vs 0.737 for Solcast) and is consistent with the weather source the simulation uses.
 
-## 6) Weather and Day Classification
+**Valid window detection:**
+- **Window A** — bulk charging morning: SOC rising, battery current > 0.5A, SOC < 90%
+- **Window B** — load spike events: PV rising and SOC falling simultaneously
 
-### 6.1 Weather icon class
+**Result:** ERA5 calibration factor = 0.876, used as `system_derating` for both Clyde sites.
 
-In `SimulatorContext.jsx`:
+### Sunny Cycles — `sweep_sunny_cycles.py`
 
-$$
-	ext{ratio} = \frac{\text{forecastMeanGti}}{\text{meanClearSkyGti}}
-$$
+Panel identification sweep across two installation phases:
+- Phase 1 (2 panels, pre-October 2025): best fit 270W panels
+- Phase 2 (8 panels, post-October 2025): ERA5 best fit approximately 200W×6 + 440W×2, ongoing
 
-Thresholds:
-- `ratio > 0.75`: `sunny`
-- `ratio > 0.5`: `partly_cloudy`
-- `ratio > 0.25`: `cloudy`
-- otherwise: `rainy`
+### Remaining sites
 
-### 6.2 Daily GTI proxy
-
-$$
-	ext{daily_gti_kwh} = \frac{\sum gti \times (10/60)}{1000}
-$$
-
-This uses a 10-minute sample assumption.
-
-### 6.3 Plan strip color
-
-Function:
-- `classifyDay(prediction)` in `src/utils/dayClassifier.js`
-
-Rules:
-- `red` if missing prediction, low confidence, or `daily_gti_kwh < 1.5`
-- `green` if predicted full charge is before 12:00 and confidence is high/medium
-- `amber` otherwise
-
-## 7) Alerts and Technical Rules
-
-### 7.1 Forecast tab alerts
-
-File:
-- `src/components/forecast/AlertSection.jsx`
-
-User alerts:
-- poor solar day: no full-charge prediction and `daily_gti_kwh < 1.5`
-- low battery advisory: SOC < 20
-
-Operator alerts (shown in forecast only when operator mode is enabled):
-- overvoltage if any `voltage > site.max_voltage`
-- sub-zero charging if `temperature < 0` and `pv_power_w > 0`
-- low SOC duration if SOC < 20 for at least 2 hours
-
-### 7.2 Operator technical issue tracker
-
-File:
-- `src/components/operator/TechnicalAlerts.jsx`
-
-Generated alerts are registered into context and can be cleared by issue ID.
-Each issue stores `raisedAt` and `lastSeenAt` metadata in context state.
-
-## 8) Practical Limits
-
-This app combines:
-- deterministic planning logic (energy/feasibility/alerts)
-- a learned linear predictor for full-charge time
-
-It is intended as operational decision support, not an electrochemical battery simulator.
+Chryston, Cumbernauld, Denmilne: no measured data available yet. `system_derating = 1.0` pending validation.
