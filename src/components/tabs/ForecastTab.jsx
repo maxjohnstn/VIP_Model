@@ -1,4 +1,4 @@
-import { useSimulator } from '../../context/SimulatorContext';
+import { useSimulator } from '../../context/useSimulator';
 import TimelineBar from '../forecast/TimelineBar';
 import WeatherSummary from '../forecast/WeatherSummary';
 import AlertSection from '../forecast/AlertSection';

@@ -1,0 +1,413 @@
+{
+  "sites": [
+    {
+      "name": "Sunny Cycles",
+      "battery_capacity_wh": 2640,
+      "usable_capacity_wh": 1320,
+      "inverter_limit_w": 1500,
+      "appliances": [
+        {
+          "id": "lights",
+          "name": "LED Tube Lights (×5)",
+          "description": "Tamlite TBX 4ft LED batten — 18W each",
+          "icon": "💡",
+          "watts": 90,
+          "durationMinutes": 600,
+          "energyWh": 900,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "confirmed"
+        },
+        {
+          "id": "vanraam",
+          "name": "2-Person E-Bike Full Charge",
+          "description": "36.7V 404Wh — ~1hr full charge",
+          "icon": "🚲",
+          "watts": 449,
+          "durationMinutes": 60,
+          "energyWh": 404,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "confirmed"
+        },
+        {
+          "id": "single_ebike",
+          "name": "Single E-Bike Charge",
+          "description": "36V class est. ~280W charger, ~1hr",
+          "icon": "🚲",
+          "watts": 250,
+          "durationMinutes": 60,
+          "energyWh": 252,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "estimated"
+        },
+        {
+          "id": "inverter_idle",
+          "name": "Inverter Idle",
+          "description": "VP1500 no-load draw",
+          "icon": "⚡",
+          "watts": 9.6,
+          "durationMinutes": null,
+          "energyWh": null,
+          "isBackground": true,
+          "userSelectable": false,
+          "confidence": "confirmed"
+        }
+      ]
+    },
+    {
+      "name": "Denmilne",
+      "battery_capacity_wh": 4800,
+      "usable_capacity_wh": 2400,
+      "inverter_limit_w": 2000,
+      "appliances": [
+        {
+          "id": "indoor_lights",
+          "name": "Indoor LED Bulbs (×10)",
+          "description": "Generic 9W LED E27/GU10 — 6h/day",
+          "icon": "💡",
+          "watts": 90,
+          "durationMinutes": 360,
+          "energyWh": 540,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "estimated"
+        },
+        {
+          "id": "outdoor_lights",
+          "name": "Outdoor LED Lights (×6)",
+          "description": "12W confirmed from label — 6h/day",
+          "icon": "💡",
+          "watts": 72,
+          "durationMinutes": 360,
+          "energyWh": 432,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "confirmed"
+        },
+        {
+          "id": "string_lights",
+          "name": "Decorative String Lights (×10)",
+          "description": "~3W each — seasonal use",
+          "icon": "✨",
+          "watts": 30,
+          "durationMinutes": 240,
+          "energyWh": 120,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "estimated"
+        },
+        {
+          "id": "urn",
+          "name": "Water Urn / Heater",
+          "description": "⚠ 2800W — EXCEEDS VP2000 2kW inverter limit",
+          "icon": "☕",
+          "watts": 2800,
+          "durationMinutes": 30,
+          "energyWh": 1400,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "estimated",
+          "warning": "EXCEEDS inverter limit (2000W)"
+        },
+        {
+          "id": "tool_charger",
+          "name": "Power Tool Charger (Bosch 18V)",
+          "description": "18V 2Ah — ~30min per charge",
+          "icon": "🔧",
+          "watts": 70,
+          "durationMinutes": 30,
+          "energyWh": 36,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "estimated"
+        },
+        {
+          "id": "inverter_idle",
+          "name": "Inverter Idle",
+          "description": "VP2000 no-load draw",
+          "icon": "⚡",
+          "watts": 9.6,
+          "durationMinutes": null,
+          "energyWh": null,
+          "isBackground": true,
+          "userSelectable": false,
+          "confidence": "confirmed"
+        }
+      ]
+    },
+    {
+      "name": "Chryston",
+      "battery_capacity_wh": 3840,
+      "usable_capacity_wh": 1920,
+      "inverter_limit_w": 1000,
+      "appliances": [
+        {
+          "id": "ebike",
+          "name": "Raleigh E-Bike Charge",
+          "description": "36V Li-ion est. — ~1.5hr charge",
+          "icon": "🚲",
+          "watts": 250,
+          "durationMinutes": 90,
+          "energyWh": 375,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "estimated"
+        },
+        {
+          "id": "kettle",
+          "name": "Mini Travel Kettle",
+          "description": "Livid 750W — ~2–3 boils/day",
+          "icon": "☕",
+          "watts": 750,
+          "durationMinutes": 6,
+          "energyWh": 75,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "estimated"
+        },
+        {
+          "id": "inverter_idle",
+          "name": "Inverter Idle",
+          "description": "VP1000 no-load draw",
+          "icon": "⚡",
+          "watts": 9.6,
+          "durationMinutes": null,
+          "energyWh": null,
+          "isBackground": true,
+          "userSelectable": false,
+          "confidence": "confirmed"
+        }
+      ]
+    },
+    {
+      "name": "Cumbernauld",
+      "battery_capacity_wh": 3000,
+      "usable_capacity_wh": 1500,
+      "inverter_limit_w": 1500,
+      "appliances": [
+        {
+          "id": "fluorescent",
+          "name": "Fluorescent Tubes (×3)",
+          "description": "OSRAM L 58W/835 T8 — old tech, consider LED upgrade",
+          "icon": "💡",
+          "watts": 174,
+          "durationMinutes": 600,
+          "energyWh": 1740,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "confirmed"
+        },
+        {
+          "id": "leaf_blower",
+          "name": "Leaf Blower Charger (Bosch 18V)",
+          "description": "~180W charger, ~15min — seasonal",
+          "icon": "🍃",
+          "watts": 180,
+          "durationMinutes": 15,
+          "energyWh": 36,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "estimated"
+        },
+        {
+          "id": "hedge_trimmer",
+          "name": "Hedge Trimmer Charger (Bosch 18V)",
+          "description": "~180W charger, ~15min — seasonal",
+          "icon": "✂️",
+          "watts": 180,
+          "durationMinutes": 15,
+          "energyWh": 36,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "estimated"
+        },
+        {
+          "id": "power_tools",
+          "name": "Power Tool Chargers (×2, Bosch 18V)",
+          "description": "180W each — ~30min per charge",
+          "icon": "🔧",
+          "watts": 360,
+          "durationMinutes": 30,
+          "energyWh": 144,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "estimated"
+        },
+        {
+          "id": "inverter_idle",
+          "name": "Inverter Idle",
+          "description": "VP1500 no-load draw",
+          "icon": "⚡",
+          "watts": 9.6,
+          "durationMinutes": null,
+          "energyWh": null,
+          "isBackground": true,
+          "userSelectable": false,
+          "confidence": "confirmed"
+        }
+      ]
+    },
+    {
+      "name": "Clyde CP1",
+      "battery_capacity_wh": 9600,
+      "usable_capacity_wh": 4800,
+      "inverter_limit_w": 5000,
+      "appliances": [
+        {
+          "id": "lights",
+          "name": "LED Tube Lights (×5)",
+          "description": "24W T8 batten LED — confirmed from label",
+          "icon": "💡",
+          "watts": 120,
+          "durationMinutes": 600,
+          "energyWh": 1200,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "confirmed"
+        },
+        {
+          "id": "printer",
+          "name": "HP Printer",
+          "description": "~120W active — check model (laser peak 400–600W)",
+          "icon": "🖨️",
+          "watts": 120,
+          "durationMinutes": 30,
+          "energyWh": 60,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "estimated"
+        },
+        {
+          "id": "walkie_talkies",
+          "name": "Walkie-Talkie Chargers (×6)",
+          "description": "6W per cradle — 36W total",
+          "icon": "📻",
+          "watts": 36,
+          "durationMinutes": 480,
+          "energyWh": 288,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "estimated"
+        },
+        {
+          "id": "bosch_ebike",
+          "name": "Bosch E-Bike Charge (PowerPack 400)",
+          "description": "400Wh battery — ~3.5hr full charge",
+          "icon": "🚲",
+          "watts": 150,
+          "durationMinutes": 210,
+          "energyWh": 444,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "confirmed"
+        },
+        {
+          "id": "inverter_idle",
+          "name": "Inverter Idle",
+          "description": "IP5000-42-Plus no-load draw at 48V",
+          "icon": "⚡",
+          "watts": 24,
+          "durationMinutes": null,
+          "energyWh": null,
+          "isBackground": true,
+          "userSelectable": false,
+          "confidence": "confirmed"
+        }
+      ]
+    },
+    {
+      "name": "Clyde CP2",
+      "battery_capacity_wh": 9600,
+      "usable_capacity_wh": 4800,
+      "inverter_limit_w": 5000,
+      "appliances": [
+        {
+          "id": "lights",
+          "name": "LED Tube Lights (×5)",
+          "description": "24W T8 batten LED — confirmed from label",
+          "icon": "💡",
+          "watts": 120,
+          "durationMinutes": 600,
+          "energyWh": 1200,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "confirmed"
+        },
+        {
+          "id": "fridge",
+          "name": "Fridge",
+          "description": "Currys Essentials CTT50W12 — continuous 12.3W avg",
+          "icon": "🧊",
+          "watts": 13,
+          "durationMinutes": null,
+          "energyWh": null,
+          "isBackground": true,
+          "userSelectable": false,
+          "confidence": "confirmed"
+        },
+        {
+          "id": "microwave",
+          "name": "Microwave",
+          "description": "Russell Hobbs RHM1714 — 700W, ~10min use",
+          "icon": "🍽️",
+          "watts": 700,
+          "durationMinutes": 10,
+          "energyWh": 117,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "confirmed"
+        },
+        {
+          "id": "vanraam",
+          "name": "VanRaam E-Bike Full Charge",
+          "description": "520Wh @ 36V — ~3hr full charge",
+          "icon": "🚲",
+          "watts": 200,
+          "durationMinutes": 180,
+          "energyWh": 520,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "confirmed"
+        },
+        {
+          "id": "gazelle",
+          "name": "Gazelle E-Bike Full Charge",
+          "description": "36V ~400Wh est. — ~3hr charge",
+          "icon": "🚲",
+          "watts": 150,
+          "durationMinutes": 180,
+          "energyWh": 400,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "estimated"
+        },
+        {
+          "id": "ebike_topup",
+          "name": "E-Bike Top-Up (~1hr)",
+          "description": "Partial charge, any bike",
+          "icon": "🚲",
+          "watts": 175,
+          "durationMinutes": 60,
+          "energyWh": 175,
+          "isBackground": false,
+          "userSelectable": true,
+          "confidence": "estimated"
+        },
+        {
+          "id": "inverter_idle",
+          "name": "Inverter Idle",
+          "description": "IP5000-42-Plus no-load draw at 48V",
+          "icon": "⚡",
+          "watts": 24,
+          "durationMinutes": null,
+          "energyWh": null,
+          "isBackground": true,
+          "userSelectable": false,
+          "confidence": "confirmed"
+        }
+      ]
+    }
+  ]
+}

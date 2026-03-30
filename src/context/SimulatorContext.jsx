@@ -1,57 +1,93 @@
-import { createContext, useContext, useState, useMemo, useCallback } from 'react';
+/**
+ * SimulatorContext.jsx
+ * --------------------
+ * Pure display layer — all predictions, weather icons, and generation data
+ * come directly from solar_simulation.py via simulation_output.json.
+ *
+ * NO physics re-calculation happens here. The context just:
+ *   1. Picks the selected site's data from the forecast
+ *   2. Selects the right date's rows and prediction
+ *   3. Finds the current hour's row for live readings
+ *   4. Passes everything through to components unchanged
+ */
+import { createContext, useState, useMemo, useCallback, useEffect } from 'react';
 import siteConfig from '../data/sitedata.json';
-import masterData from '../data/masterdata.json';
-import { mean, predictFullChargeHour, sampleStdDev } from '../utils/prediction';
+import allSitesConfig from '../data/allsites.json';
+import { useForecastData } from '../hooks/useForecastData';
 
-const SimulatorContext = createContext(null);
+export const SimulatorContext = createContext(null);
+
+function todayStr() {
+  return new Date().toISOString().slice(0, 10);
+}
 
 export function SimulatorProvider({ children }) {
-  // This provider is the app's data engine.
-  // See README_ARCHITECTURE.md for state ownership and DASHBOARD_CALCULATIONS.md for formulas.
-  const rowsByDate = useMemo(() => {
-    const grouped = {};
-    for (const row of masterData.rows ?? []) {
-      if (!grouped[row.date]) grouped[row.date] = [];
-      grouped[row.date].push(row);
-    }
-    Object.keys(grouped).forEach((dateKey) => {
-      grouped[dateKey].sort((a, b) => a.datetime.localeCompare(b.datetime));
-    });
-    return grouped;
-  }, []);
+  const { sites, generatedAt, error, loading } = useForecastData();
 
-  const availableDates = useMemo(
-    () => Object.keys(rowsByDate).sort(),
-    [rowsByDate]
+  // ── Site selection ────────────────────────────────────────────────────────
+  const [selectedSiteName, setSelectedSiteName] = useState('Clyde CP2');
+
+  const selectedSite = useMemo(
+    () => sites.find((s) => s.name === selectedSiteName) ?? sites[0] ?? null,
+    [sites, selectedSiteName]
   );
 
-  const latestDate = availableDates[availableDates.length - 1];
-  const firstDate = latestDate;
-  const now = new Date();
-  const nowMinutes = now.getHours() * 60;
+  // ── Appliances for selected site ──────────────────────────────────────────
+  const siteAppliances = useMemo(() => {
+    const found = allSitesConfig.sites.find((s) => s.name === selectedSiteName)
+               ?? allSitesConfig.sites.find((s) => s.name === 'Clyde CP2');
+    return found?.appliances ?? siteConfig.appliances;
+  }, [selectedSiteName]);
 
-  const [selectedDate, setSelectedDateState] = useState(firstDate);
-  const [simulatedTime, setSimulatedTime] = useState(nowMinutes);
-  const [isOperatorMode, setIsOperatorMode] = useState(false);
-  const [isSimulatorOpen, setIsSimulatorOpen] = useState(false);
-  const [activeTechnicalIssues, setActiveTechnicalIssues] = useState({});
+  // ── Available dates ───────────────────────────────────────────────────────
+  const availableDates = useMemo(() => {
+    if (!selectedSite) return [];
+    return Object.keys(selectedSite.rowsByDate).sort();
+  }, [selectedSite]);
+
+  // ── Default date = today (or nearest future) ──────────────────────────────
+  const defaultDate = useMemo(() => {
+    const today = todayStr();
+    if (availableDates.includes(today)) return today;
+    const future = availableDates.filter((d) => d >= today);
+    if (future.length) return future[0];
+    return availableDates[availableDates.length - 1] ?? today;
+  }, [availableDates]);
+
+  const now        = new Date();
+  const nowMinutes = now.getHours() * 60 + now.getMinutes();
+
+  const [selectedDate, setSelectedDateState]   = useState(todayStr());
+  const [simulatedTime, setSimulatedTime]       = useState(nowMinutes);
+  const [isOperatorMode, setIsOperatorMode]     = useState(false);
+  const [isSimulatorOpen, setIsSimulatorOpen]   = useState(false);
+  const [activeTechnicalIssues, setActiveTechnicalIssues]       = useState({});
   const [clearedTechnicalIssueIds, setClearedTechnicalIssueIds] = useState({});
 
+  // Jump to correct date once forecast loads, and when site changes
+  useEffect(() => {
+    if (availableDates.length > 0) {
+      setSelectedDateState(defaultDate);
+    }
+  }, [defaultDate]);                    // defaultDate already depends on availableDates
+
+  useEffect(() => {
+    if (availableDates.length > 0) {
+      setSelectedDateState(defaultDate);
+    }
+  }, [selectedSiteName]);
+
   const resolveToAvailableDate = useCallback((dateStr) => {
-    if (!dateStr) return firstDate;
+    if (!dateStr) return defaultDate;
     if (availableDates.includes(dateStr)) return dateStr;
-
     const targetMs = new Date(`${dateStr}T12:00:00`).getTime();
-    if (Number.isNaN(targetMs)) return firstDate;
-
+    if (Number.isNaN(targetMs)) return defaultDate;
     return availableDates.reduce((closest, candidate) => {
-      const closestMs = new Date(`${closest}T12:00:00`).getTime();
-      const candidateMs = new Date(`${candidate}T12:00:00`).getTime();
-      const closestDiff = Math.abs(closestMs - targetMs);
-      const candidateDiff = Math.abs(candidateMs - targetMs);
-      return candidateDiff < closestDiff ? candidate : closest;
+      const cMs = new Date(`${closest}T12:00:00`).getTime();
+      const aMs = new Date(`${candidate}T12:00:00`).getTime();
+      return Math.abs(aMs - targetMs) < Math.abs(cMs - targetMs) ? candidate : closest;
     }, availableDates[0]);
-  }, [availableDates, firstDate]);
+  }, [availableDates, defaultDate]);
 
   const setSelectedDate = useCallback((dateStr) => {
     setSelectedDateState(resolveToAvailableDate(dateStr));
@@ -62,45 +98,26 @@ export function SimulatorProvider({ children }) {
     setActiveTechnicalIssues((prev) => {
       const next = { ...prev };
       const nowIso = new Date().toISOString();
-      let hasChanges = false;
-
+      let changed = false;
       issues.forEach((issue) => {
         if (!issue?.id || clearedTechnicalIssueIds[issue.id]) return;
-
         if (next[issue.id]) {
-          const updated = {
-            ...next[issue.id],
-            ...issue,
-            lastSeenAt: nowIso,
-          };
-          const prevIssue = next[issue.id];
-          const changed = Object.keys(updated).some((key) => updated[key] !== prevIssue[key]);
-          if (changed) {
-            next[issue.id] = updated;
-            hasChanges = true;
+          const updated = { ...next[issue.id], ...issue, lastSeenAt: nowIso };
+          if (Object.keys(updated).some((k) => updated[k] !== next[issue.id][k])) {
+            next[issue.id] = updated; changed = true;
           }
         } else {
-          next[issue.id] = {
-            ...issue,
-            raisedAt: nowIso,
-            lastSeenAt: nowIso,
-          };
-          hasChanges = true;
+          next[issue.id] = { ...issue, raisedAt: nowIso, lastSeenAt: nowIso };
+          changed = true;
         }
       });
-
-      return hasChanges ? next : prev;
+      return changed ? next : prev;
     });
   }, [clearedTechnicalIssueIds]);
 
   const resolveTechnicalIssue = useCallback((issueId) => {
     if (!issueId) return;
-
-    setClearedTechnicalIssueIds((prev) => ({
-      ...prev,
-      [issueId]: true,
-    }));
-
+    setClearedTechnicalIssueIds((prev) => ({ ...prev, [issueId]: true }));
     setActiveTechnicalIssues((prev) => {
       if (!prev[issueId]) return prev;
       const next = { ...prev };
@@ -111,160 +128,92 @@ export function SimulatorProvider({ children }) {
 
   const simulatedHour = Math.floor(simulatedTime / 60) % 24;
 
+  // ── Rows for selected date ────────────────────────────────────────────────
+  // Mapped to the shape components expect (timestamp, soc, pv_power_w, gti, etc.)
   const mappedRowsByDate = useMemo(() => {
+    if (!selectedSite) return {};
     const mapped = {};
-    for (const [dateKey, rows] of Object.entries(rowsByDate)) {
-      // Normalize raw telemetry into the shared row shape consumed by all tabs.
-      mapped[dateKey] = rows.map((row) => ({
-        timestamp: row.datetime,
-        soc: row.bat_soc_pct,
-        voltage: row.bat_voltage_mean,
-        voltage_max: row.bat_voltage_max,
-        temperature: row.bat_temp_c,
-        pv_power_w: row.pv_power_w,
-        pv_energy_wh: row.pv_energy_wh,
-        gti: row.gti,
-        clearsky_gti: row.clearsky_gti,
-      }));
+    for (const [dateKey, rows] of Object.entries(selectedSite.rowsByDate)) {
+      mapped[dateKey] = rows;   // already in correct shape from useForecastData
     }
     return mapped;
-  }, [rowsByDate]);
+  }, [selectedSite]);
 
   const todayHourly = useMemo(
     () => mappedRowsByDate[selectedDate] ?? [],
     [mappedRowsByDate, selectedDate]
   );
 
+  // ── Current hour row — closest to simulated time ──────────────────────────
   const currentHourData = useMemo(() => {
     if (!todayHourly.length) return null;
-
     const found = todayHourly.find((row) => {
       const ts = new Date(row.timestamp);
-      const mins = ts.getHours() * 60 + ts.getMinutes();
-      return mins === simulatedTime;
+      return (ts.getUTCHours() * 60 + ts.getUTCMinutes()) === simulatedTime;
     });
     if (found) return found;
-
-    const atOrBefore = todayHourly
-      .filter((row) => {
+    return (
+      todayHourly.filter((row) => {
         const ts = new Date(row.timestamp);
-        const mins = ts.getHours() * 60 + ts.getMinutes();
-        return mins <= simulatedTime;
-      })
-      .at(-1);
-
-    return atOrBefore ?? todayHourly[0] ?? null;
+        return (ts.getUTCHours() * 60 + ts.getUTCMinutes()) <= simulatedTime;
+      }).at(-1) ?? todayHourly[0] ?? null
+    );
   }, [todayHourly, simulatedTime]);
 
-  const predictionsByDate = useMemo(() => {
-    const output = {};
-
-    for (const dateKey of availableDates) {
-      const dayRows = mappedRowsByDate[dateKey] ?? [];
-      if (!dayRows.length) {
-        output[dateKey] = null;
-        continue;
-      }
-
-      const hour8 = dayRows.filter((r) => new Date(r.timestamp).getHours() === 8);
-      const before9 = dayRows.filter((r) => {
-        const dt = new Date(r.timestamp);
-        return dt.getHours() < 9;
-      });
-      const latestBefore9 = before9.at(-1);
-      const soc8am = hour8.length ? mean(hour8.map((r) => r.soc)) : latestBefore9?.soc;
-
-      const morn = dayRows.filter((r) => {
-        const h = new Date(r.timestamp).getHours();
-        return h >= 7 && h <= 9;
-      });
-      const forecastMornGti = mean(morn.map((r) => r.gti));
-      const clearskyMornGti = mean(morn.map((r) => r.clearsky_gti));
-      const forecastMornCsRatio = Number.isFinite(forecastMornGti) && Number.isFinite(clearskyMornGti) && clearskyMornGti > 0
-        ? forecastMornGti / clearskyMornGti
-        : NaN;
-
-      const gtiStd = sampleStdDev(dayRows.filter((r) => r.gti > 10).map((r) => r.gti));
-      const firstSoc = dayRows[0]?.soc;
-      const socDeficit = Number.isFinite(firstSoc) ? 100 - firstSoc : NaN;
-      const forecastMeanGti = mean(dayRows.map((r) => r.gti));
-
-      const tempMornRows = dayRows.filter((r) => {
-        const h = new Date(r.timestamp).getHours();
-        return h >= 6 && h <= 8;
-      });
-      const batTempMorn = mean(tempMornRows.map((r) => r.temperature));
-
-      const month = Number(dateKey.split('-')[1]);
-      // Build model features for this day, then run the linear full-charge predictor.
-      const pred = predictFullChargeHour(
-        {
-          soc_8am: soc8am,
-          forecast_morn_gti: forecastMornGti,
-          forecast_morn_cs_ratio: forecastMornCsRatio,
-          gti_std: gtiStd,
-          soc_deficit: socDeficit,
-          forecast_mean_gti: forecastMeanGti,
-          bat_temp_morn: batTempMorn,
-          current_soc: dayRows[0]?.soc,
-          clearsky_morn_gti: clearskyMornGti,
-          clearsky_mean_gti: mean(dayRows.map((r) => r.clearsky_gti)),
-          start_soc: firstSoc,
-          month,
-        },
-        Math.floor(simulatedTime / 60)
-      );
-
-      const meanCsky = mean(dayRows.map((r) => r.clearsky_gti));
-      const ratio = Number.isFinite(forecastMeanGti) && Number.isFinite(meanCsky) && meanCsky > 0
-        ? forecastMeanGti / meanCsky
-        : 0;
-
-      let weatherIcon = 'overcast';
-      if (ratio > 0.75) weatherIcon = 'sunny';
-      else if (ratio > 0.5) weatherIcon = 'partly_cloudy';
-      else if (ratio > 0.25) weatherIcon = 'cloudy';
-      else weatherIcon = 'rainy';
-
-      const confidenceMap = {
-        high: 'high',
-        moderate: 'medium',
-        early_estimate: 'low',
-      };
-
-      const dailyGtiKwh = (dayRows.reduce((sum, r) => sum + (r.gti || 0), 0) * (10 / 60)) / 1000;
-
-      output[dateKey] = {
-        predicted_full_charge_time: pred.predicted_time_str,
-        actual_full_charge_time: null,
-        day_type: weatherIcon,
-        confidence: confidenceMap[pred.confidence] ?? 'low',
-        weather_description: `Predicted full charge around ${pred.predicted_time_str} using live model features from this day.`,
-        weather_icon: weatherIcon,
-        daily_gti_kwh: Number(dailyGtiKwh.toFixed(2)),
-        prediction_hour: pred.predicted_hour,
-      };
-    }
-
-    return output;
-  }, [availableDates, mappedRowsByDate, simulatedTime]);
+  // ── Predictions — straight from Python, no JS re-calculation ─────────────
+  const predictionsByDate = useMemo(
+    () => selectedSite?.predictionsByDate ?? {},
+    [selectedSite]
+  );
 
   const todayPrediction = useMemo(
     () => predictionsByDate[selectedDate] ?? null,
     [predictionsByDate, selectedDate]
   );
 
-  const siteData = useMemo(() => ({
-    ...siteConfig,
-    available_dates: availableDates,
-    daily_data: Object.fromEntries(
-      availableDates.map((dateKey) => [dateKey, { hourly: mappedRowsByDate[dateKey] ?? [] }])
-    ),
-    predictions: predictionsByDate,
-    appliances: siteConfig.appliances,
-  }), [availableDates, mappedRowsByDate, predictionsByDate]);
+  // ── siteData — the shape PlanTab and NowTab consume via siteData ──────────
+  const siteData = useMemo(() => {
+    // Get per-site battery specs from allsites.json
+    const siteBattery = allSitesConfig.sites.find((s) => s.name === selectedSiteName)
+                     ?? allSitesConfig.sites.find((s) => s.name === 'Clyde CP2');
+
+    const batteryCapacityWh  = siteBattery?.battery_capacity_wh  ?? siteConfig.physicsConstants.batteryCapacityWh;
+    const usableCapacityWh   = siteBattery?.usable_capacity_wh   ?? siteConfig.physicsConstants.usableCapacityWh;
+    const inverterLimitW     = siteBattery?.inverter_limit_w      ?? siteConfig.physicsConstants.maxInverterPowerW;
+    // min_soc is always 50% of total for AGM 50% DoD batteries
+    const minSoc = 50;
+
+    return {
+      // Base siteConfig for fields energyCalc needs
+      ...siteConfig,
+      // Override physics constants with per-site values
+      physicsConstants: {
+        ...siteConfig.physicsConstants,
+        batteryCapacityWh,
+        usableCapacityWh,
+        maxInverterPowerW: inverterLimitW,
+      },
+      energy: {
+        ...siteConfig.energy,
+        min_soc: minSoc,
+      },
+      site: {
+        ...siteConfig.site,
+        name:                selectedSiteName,
+        battery_capacity_wh: batteryCapacityWh,
+        usable_capacity_wh:  usableCapacityWh,
+      },
+      available_dates: availableDates,
+      daily_data: Object.fromEntries(
+        availableDates.map((d) => [d, { hourly: mappedRowsByDate[d] ?? [] }])
+      ),
+      predictions:  predictionsByDate,
+      appliances:   siteAppliances,
+    };
+  }, [availableDates, mappedRowsByDate, predictionsByDate, siteAppliances, selectedSiteName]);
 
   const value = {
+    // ── Core fields all components use ──────────────────────────────────────
     siteData,
     availableDates,
     selectedDate,
@@ -277,15 +226,23 @@ export function SimulatorProvider({ children }) {
     setIsOperatorMode,
     isSimulatorOpen,
     setIsSimulatorOpen,
-    technicalIssues: Object.values(activeTechnicalIssues),
+    technicalIssues:        Object.values(activeTechnicalIssues),
     registerTechnicalIssues,
     resolveTechnicalIssue,
     todayHourly,
     currentHourData,
-    todayPrediction,
-    site: siteConfig.site,
-    predictionsByDate,
-    rowsByDate: mappedRowsByDate,
+    todayPrediction,        // ← from Python, not JS model
+    site:                   siteData.site,
+    predictionsByDate,      // ← from Python, not JS model
+    rowsByDate:             mappedRowsByDate,
+    // ── Multi-site ───────────────────────────────────────────────────────────
+    allSites:               sites,
+    selectedSiteName,
+    setSelectedSiteName,
+    // ── Meta ─────────────────────────────────────────────────────────────────
+    generatedAt,
+    forecastLoading:        loading,
+    forecastError:          error,
   };
 
   return (
@@ -293,10 +250,4 @@ export function SimulatorProvider({ children }) {
       {children}
     </SimulatorContext.Provider>
   );
-}
-
-export function useSimulator() {
-  const ctx = useContext(SimulatorContext);
-  if (!ctx) throw new Error('useSimulator must be used inside SimulatorProvider');
-  return ctx;
 }

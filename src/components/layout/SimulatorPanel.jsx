@@ -1,5 +1,5 @@
 import { X } from 'lucide-react';
-import { useSimulator } from '../../context/SimulatorContext';
+import { useSimulator } from '../../context/useSimulator';
 import { minutesToHHMM } from '../../utils/formatters';
 
 export default function SimulatorPanel() {

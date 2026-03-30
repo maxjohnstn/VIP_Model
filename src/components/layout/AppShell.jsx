@@ -6,7 +6,7 @@ import NowTab from '../tabs/NowTab';
 import ForecastTab from '../tabs/ForecastTab';
 import PlanTab from '../tabs/PlanTab';
 import OperatorPanel from '../operator/OperatorPanel';
-import { useSimulator } from '../../context/SimulatorContext';
+import { useSimulator } from '../../context/useSimulator';
 
 export default function AppShell() {
   const [activeTab, setActiveTab] = useState('now');

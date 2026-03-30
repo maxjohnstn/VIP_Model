@@ -19,12 +19,17 @@ function CustomTooltip({ active, payload, label }) {
 }
 
 export default function SOCChart({ hourlyRows, simulatedTime }) {
-  const data = hourlyRows.map((row) => ({
-    time: `${String(new Date(row.timestamp).getHours()).padStart(2, '0')}:${String(new Date(row.timestamp).getMinutes()).padStart(2, '0')}`,
-    soc: row.soc,
-  }));
+  const data = hourlyRows.map((row) => {
+    const dt = new Date(row.timestamp);
+    // Use UTC hours to avoid browser timezone shifting the display
+    const hh = String(dt.getUTCHours()).padStart(2, '0');
+    const mm = String(dt.getUTCMinutes()).padStart(2, '0');
+    return { time: `${hh}:${mm}`, soc: row.soc };
+  });
 
-  const currentLabel = `${String(Math.floor(simulatedTime / 60)).padStart(2, '0')}:${String(simulatedTime % 60).padStart(2, '0')}`;
+  // Convert simulatedTime (local minutes) to UTC label for reference line
+  const nowUtcMins = new Date().getUTCHours() * 60 + new Date().getUTCMinutes();
+  const currentLabel = `${String(Math.floor(nowUtcMins / 60)).padStart(2, '0')}:${String(nowUtcMins % 60).padStart(2, '0')}`;
 
   return (
     <div style={{ height: 180 }}>
@@ -35,7 +40,7 @@ export default function SOCChart({ hourlyRows, simulatedTime }) {
             tick={{ fill: '#475569', fontSize: 10 }}
             axisLine={false}
             tickLine={false}
-            interval={17}
+            interval={3}
           />
           <YAxis
             domain={[0, 100]}

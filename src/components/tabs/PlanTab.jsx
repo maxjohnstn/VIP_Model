@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useSimulator } from '../../context/SimulatorContext';
+import { useSimulator } from '../../context/useSimulator';
 import WeekStrip from '../plan/WeekStrip';
 import VisitPlanner from '../plan/VisitPlanner';
 

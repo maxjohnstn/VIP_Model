@@ -1,13 +1,12 @@
 {
   "site": {
-    "name": "Clyde Cycle Park 2",
-    "battery_capacity_wh": 9600,
-    "usable_capacity_wh": 7680,
+    "name": "Clyde CP2",
+    "location": "Clyde Cycle Park, Glasgow",
+    "system_voltage": 48,
+    "charge_threshold_voltage": 57.6,
     "max_voltage": 59.2,
-    "charge_threshold_voltage": 59.2,
-    "lat": 55.86,
-    "lon": -4.25,
-    "panel_wattage": 400
+    "battery_capacity_wh": 9600,
+    "usable_capacity_wh": 4800
   },
   "physicsConstants": {
     "panelFactor": 0.9968,
@@ -15,101 +14,16 @@
     "maxChargePowerW": 4800,
     "maxInverterPowerW": 5000,
     "batteryCapacityWh": 9600,
-    "usableCapacityWh": 7680,
+    "usableCapacityWh": 4800,
     "intervalHours": 0.1667,
     "avgChargeRateW": 294,
     "batteryRTE": 0.85
   },
   "energy": {
     "panel_efficiency": 0.85,
-    "min_soc": 20,
+    "min_soc": 50,
     "overcharge_threshold_v": 59.2,
     "lvd_v": 44.0
   },
-  "appliances": [
-    {
-      "id": "fridge",
-      "name": "Fridge",
-      "description": "Currys Essentials CTT50W12 - continuous",
-      "icon": "\ud83e\uddc3",
-      "watts": 12.3,
-      "durationMinutes": null,
-      "energyWh": null,
-      "isBackground": true,
-      "userSelectable": false,
-      "confidence": "confirmed"
-    },
-    {
-      "id": "inverter_idle",
-      "name": "Inverter Idle",
-      "description": "IP5000-42-Plus no-load draw at 48V",
-      "icon": "\u26a1",
-      "watts": 24,
-      "durationMinutes": null,
-      "energyWh": null,
-      "isBackground": true,
-      "userSelectable": false,
-      "confidence": "confirmed"
-    },
-    {
-      "id": "vanraam_full",
-      "name": "VanRaam E-Bike Full Charge",
-      "description": "~3hr full charge",
-      "icon": "\ud83d\udeb2",
-      "watts": 200,
-      "durationMinutes": 180,
-      "energyWh": 600,
-      "isBackground": false,
-      "userSelectable": true,
-      "confidence": "confirmed"
-    },
-    {
-      "id": "gazelle_full",
-      "name": "Gazelle E-Bike Full Charge",
-      "description": "~3hr full charge",
-      "icon": "\ud83d\udeb2",
-      "watts": 150,
-      "durationMinutes": 180,
-      "energyWh": 450,
-      "isBackground": false,
-      "userSelectable": true,
-      "confidence": "estimated"
-    },
-    {
-      "id": "ebike_topup",
-      "name": "E-Bike Top-Up",
-      "description": "~1hr partial charge",
-      "icon": "\ud83d\udeb2",
-      "watts": 175,
-      "durationMinutes": 60,
-      "energyWh": 175,
-      "isBackground": false,
-      "userSelectable": true,
-      "confidence": "estimated"
-    },
-    {
-      "id": "microwave",
-      "name": "Microwave",
-      "description": "Russell Hobbs RHM1714 - ~10min use",
-      "icon": "\ud83c\udf7d\ufe0f",
-      "watts": 700,
-      "durationMinutes": 10,
-      "energyWh": 116.7,
-      "isBackground": false,
-      "userSelectable": true,
-      "confidence": "confirmed"
-    },
-    {
-      "id": "site_lights",
-      "name": "Site Lights",
-      "description": "5 x 24W LED tubes",
-      "icon": "\ud83d\udca1",
-      "watts": 120,
-      "durationMinutes": 180,
-      "energyWh": 360,
-      "isBackground": false,
-      "userSelectable": true,
-      "confidence": "confirmed"
-    }
-  ]
+  "appliances": []
 }

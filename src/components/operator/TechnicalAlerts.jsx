@@ -1,6 +1,6 @@
 import { useEffect, useMemo } from 'react';
 import AlertCard from '../shared/AlertCard';
-import { useSimulator } from '../../context/SimulatorContext';
+import { useSimulator } from '../../context/useSimulator';
 
 export default function TechnicalAlerts({ hourlyRows, site, selectedDate }) {
   const {
