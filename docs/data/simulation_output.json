@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-05T01:00:00+00:00",
+  "generated_at": "2026-04-05T04:00:00+00:00",
   "sites": [
     {
       "name": "Chryston",
       "capacity_kwp": 0.78,
       "system_derating": 1.0,
-      "current_soc_pct": 51.7,
+      "current_soc_pct": 49.8,
       "soc_source": "api",
       "weather_mode": "forecast",
       "hourly": [
@@ -13,97 +13,97 @@
           "time": "2026-04-05T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 51.7
+          "soc_pct": 49.8
         },
         {
           "time": "2026-04-05T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 51.5
+          "soc_pct": 49.5
         },
         {
           "time": "2026-04-05T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 51.2
+          "soc_pct": 49.2
         },
         {
           "time": "2026-04-05T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 51.0
+          "soc_pct": 49.0
         },
         {
           "time": "2026-04-05T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 50.7
+          "soc_pct": 48.7
         },
         {
           "time": "2026-04-05T05:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 50.5
+          "soc_pct": 48.5
         },
         {
           "time": "2026-04-05T06:00:00+00:00",
           "pv_w": 0.7,
           "pv_available": 0.7,
-          "soc_pct": 50.3
+          "soc_pct": 48.3
         },
         {
           "time": "2026-04-05T07:00:00+00:00",
-          "pv_w": 13.5,
-          "pv_available": 13.5,
-          "soc_pct": 50.4
+          "pv_w": 20.3,
+          "pv_available": 20.3,
+          "soc_pct": 48.5
         },
         {
           "time": "2026-04-05T08:00:00+00:00",
-          "pv_w": 84.0,
-          "pv_available": 84.0,
-          "soc_pct": 52.0
+          "pv_w": 270.8,
+          "pv_available": 270.8,
+          "soc_pct": 54.3
         },
         {
           "time": "2026-04-05T09:00:00+00:00",
-          "pv_w": 187.9,
-          "pv_available": 187.9,
-          "soc_pct": 55.9
+          "pv_w": 110.8,
+          "pv_available": 110.8,
+          "soc_pct": 56.5
         },
         {
           "time": "2026-04-05T10:00:00+00:00",
-          "pv_w": 391.6,
-          "pv_available": 391.6,
-          "soc_pct": 64.4
+          "pv_w": 371.5,
+          "pv_available": 371.5,
+          "soc_pct": 64.5
         },
         {
           "time": "2026-04-05T11:00:00+00:00",
-          "pv_w": 22.4,
-          "pv_available": 22.4,
-          "soc_pct": 64.7
+          "pv_w": 89.6,
+          "pv_available": 89.6,
+          "soc_pct": 66.3
         },
         {
           "time": "2026-04-05T12:00:00+00:00",
           "pv_w": 437.7,
           "pv_available": 437.7,
-          "soc_pct": 74.2
+          "soc_pct": 75.8
         },
         {
           "time": "2026-04-05T13:00:00+00:00",
           "pv_w": 357.1,
           "pv_available": 357.1,
-          "soc_pct": 81.9
+          "soc_pct": 83.5
         },
         {
           "time": "2026-04-05T14:00:00+00:00",
           "pv_w": 119.6,
           "pv_available": 119.6,
-          "soc_pct": 84.3
+          "soc_pct": 85.9
         },
         {
           "time": "2026-04-05T15:00:00+00:00",
           "pv_w": 197.8,
           "pv_available": 197.8,
-          "soc_pct": 88.5
+          "soc_pct": 89.9
         },
         {
           "time": "2026-04-05T16:00:00+00:00",
@@ -1021,8 +1021,8 @@
       "daily": [
         {
           "date": "2026-04-05",
-          "gen_kwh": 2.076,
-          "full_charge_time": "17:00",
+          "gen_kwh": 2.24,
+          "full_charge_time": "15:00",
           "fc_model_time": "10:00",
           "fc_confidence": "high",
           "weather_icon": "cloudy"
@@ -1131,39 +1131,39 @@
         },
         {
           "time": "2026-04-05T06:00:00+00:00",
-          "pv_w": 0.0,
-          "pv_available": 0.0,
+          "pv_w": 1.7,
+          "pv_available": 1.7,
           "soc_pct": 62.5
         },
         {
           "time": "2026-04-05T07:00:00+00:00",
-          "pv_w": 50.2,
-          "pv_available": 50.2,
-          "soc_pct": 63.8
+          "pv_w": 95.0,
+          "pv_available": 95.0,
+          "soc_pct": 65.3
         },
         {
           "time": "2026-04-05T08:00:00+00:00",
-          "pv_w": 192.8,
-          "pv_available": 192.8,
-          "soc_pct": 69.7
+          "pv_w": 321.0,
+          "pv_available": 321.0,
+          "soc_pct": 75.3
         },
         {
           "time": "2026-04-05T09:00:00+00:00",
-          "pv_w": 154.0,
-          "pv_available": 154.0,
-          "soc_pct": 74.3
+          "pv_w": 247.3,
+          "pv_available": 247.3,
+          "soc_pct": 82.9
         },
         {
           "time": "2026-04-05T10:00:00+00:00",
-          "pv_w": 591.8,
-          "pv_available": 591.8,
-          "soc_pct": 89.0
+          "pv_w": 702.0,
+          "pv_available": 702.0,
+          "soc_pct": 88.2
         },
         {
           "time": "2026-04-05T11:00:00+00:00",
-          "pv_w": 407.2,
-          "pv_available": 407.2,
-          "soc_pct": 85.1
+          "pv_w": 151.1,
+          "pv_available": 151.1,
+          "soc_pct": 83.2
         },
         {
           "time": "2026-04-05T12:00:00+00:00",
@@ -2105,9 +2105,9 @@
       "daily": [
         {
           "date": "2026-04-05",
-          "gen_kwh": 4.168,
-          "full_charge_time": "11:00",
-          "fc_model_time": "09:42",
+          "gen_kwh": 4.29,
+          "full_charge_time": "10:00",
+          "fc_model_time": "09:15",
           "fc_confidence": "high",
           "weather_icon": "cloudy"
         },
@@ -2173,7 +2173,7 @@
       "name": "Cumbernauld",
       "capacity_kwp": 1.39,
       "system_derating": 1.0,
-      "current_soc_pct": 56.7,
+      "current_soc_pct": 55.7,
       "soc_source": "api",
       "weather_mode": "forecast",
       "hourly": [
@@ -2181,85 +2181,85 @@
           "time": "2026-04-05T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 56.7
+          "soc_pct": 55.7
         },
         {
           "time": "2026-04-05T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 56.4
+          "soc_pct": 55.4
         },
         {
           "time": "2026-04-05T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 56.0
+          "soc_pct": 55.0
         },
         {
           "time": "2026-04-05T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 55.7
+          "soc_pct": 54.7
         },
         {
           "time": "2026-04-05T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 55.4
+          "soc_pct": 54.4
         },
         {
           "time": "2026-04-05T05:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 55.1
+          "soc_pct": 54.1
         },
         {
           "time": "2026-04-05T06:00:00+00:00",
-          "pv_w": 0.0,
-          "pv_available": 0.0,
-          "soc_pct": 54.8
+          "pv_w": 1.3,
+          "pv_available": 1.3,
+          "soc_pct": 53.8
         },
         {
           "time": "2026-04-05T07:00:00+00:00",
-          "pv_w": 44.0,
-          "pv_available": 44.0,
-          "soc_pct": 55.7
+          "pv_w": 11.7,
+          "pv_available": 11.7,
+          "soc_pct": 53.9
         },
         {
           "time": "2026-04-05T08:00:00+00:00",
-          "pv_w": 135.9,
-          "pv_available": 135.9,
-          "soc_pct": 59.3
+          "pv_w": 61.6,
+          "pv_available": 61.6,
+          "soc_pct": 55.3
         },
         {
           "time": "2026-04-05T09:00:00+00:00",
-          "pv_w": 57.0,
-          "pv_available": 57.0,
-          "soc_pct": 60.7
+          "pv_w": 31.2,
+          "pv_available": 31.2,
+          "soc_pct": 55.9
         },
         {
           "time": "2026-04-05T10:00:00+00:00",
-          "pv_w": 304.4,
-          "pv_available": 304.4,
-          "soc_pct": 69.0
+          "pv_w": 337.8,
+          "pv_available": 337.8,
+          "soc_pct": 65.2
         },
         {
           "time": "2026-04-05T11:00:00+00:00",
-          "pv_w": 69.0,
-          "pv_available": 69.0,
-          "soc_pct": 70.7
+          "pv_w": 86.9,
+          "pv_available": 86.9,
+          "soc_pct": 67.4
         },
         {
           "time": "2026-04-05T12:00:00+00:00",
           "pv_w": 494.0,
           "pv_available": 494.0,
-          "soc_pct": 84.4
+          "soc_pct": 81.2
         },
         {
           "time": "2026-04-05T13:00:00+00:00",
           "pv_w": 247.4,
           "pv_available": 247.4,
-          "soc_pct": 91.2
+          "soc_pct": 87.9
         },
         {
           "time": "2026-04-05T14:00:00+00:00",
@@ -3189,9 +3189,9 @@
       "daily": [
         {
           "date": "2026-04-05",
-          "gen_kwh": 3.623,
+          "gen_kwh": 3.543,
           "full_charge_time": "15:00",
-          "fc_model_time": "10:10",
+          "fc_model_time": "10:20",
           "fc_confidence": "high",
           "weather_icon": "cloudy"
         },
@@ -3257,7 +3257,7 @@
       "name": "Denmilne",
       "capacity_kwp": 2.205,
       "system_derating": 1.0,
-      "current_soc_pct": 59.8,
+      "current_soc_pct": 57.8,
       "soc_source": "api",
       "weather_mode": "forecast",
       "hourly": [
@@ -3265,73 +3265,73 @@
           "time": "2026-04-05T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 59.8
+          "soc_pct": 57.8
         },
         {
           "time": "2026-04-05T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 59.6
+          "soc_pct": 57.6
         },
         {
           "time": "2026-04-05T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 59.4
+          "soc_pct": 57.4
         },
         {
           "time": "2026-04-05T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 59.2
+          "soc_pct": 57.2
         },
         {
           "time": "2026-04-05T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 59.0
+          "soc_pct": 57.0
         },
         {
           "time": "2026-04-05T05:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 58.8
+          "soc_pct": 56.8
         },
         {
           "time": "2026-04-05T06:00:00+00:00",
-          "pv_w": 8.7,
-          "pv_available": 8.7,
-          "soc_pct": 58.8
+          "pv_w": 10.9,
+          "pv_available": 10.9,
+          "soc_pct": 56.8
         },
         {
           "time": "2026-04-05T07:00:00+00:00",
-          "pv_w": 171.6,
-          "pv_available": 171.6,
-          "soc_pct": 61.6
+          "pv_w": 158.8,
+          "pv_available": 158.8,
+          "soc_pct": 59.5
         },
         {
           "time": "2026-04-05T08:00:00+00:00",
-          "pv_w": 241.5,
-          "pv_available": 241.5,
-          "soc_pct": 65.8
+          "pv_w": 260.0,
+          "pv_available": 260.0,
+          "soc_pct": 63.9
         },
         {
           "time": "2026-04-05T09:00:00+00:00",
           "pv_w": 741.0,
           "pv_available": 741.0,
-          "soc_pct": 78.7
+          "soc_pct": 76.8
         },
         {
           "time": "2026-04-05T10:00:00+00:00",
           "pv_w": 741.0,
           "pv_available": 741.0,
-          "soc_pct": 91.7
+          "soc_pct": 89.8
         },
         {
           "time": "2026-04-05T11:00:00+00:00",
-          "pv_w": 545.0,
-          "pv_available": 545.0,
-          "soc_pct": 89.0
+          "pv_w": 741.0,
+          "pv_available": 741.0,
+          "soc_pct": 91.1
         },
         {
           "time": "2026-04-05T12:00:00+00:00",
@@ -4273,9 +4273,9 @@
       "daily": [
         {
           "date": "2026-04-05",
-          "gen_kwh": 6.984,
-          "full_charge_time": "11:00",
-          "fc_model_time": "09:25",
+          "gen_kwh": 7.188,
+          "full_charge_time": "12:00",
+          "fc_model_time": "09:28",
           "fc_confidence": "high",
           "weather_icon": "partly_cloudy"
         },
@@ -4341,7 +4341,7 @@
       "name": "Clyde CP1",
       "capacity_kwp": 5.4,
       "system_derating": 0.876,
-      "current_soc_pct": 56.8,
+      "current_soc_pct": 54.8,
       "soc_source": "api",
       "weather_mode": "forecast",
       "hourly": [
@@ -4349,73 +4349,73 @@
           "time": "2026-04-05T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 56.8
+          "soc_pct": 54.8
         },
         {
           "time": "2026-04-05T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 56.5
+          "soc_pct": 54.5
         },
         {
           "time": "2026-04-05T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 56.2
+          "soc_pct": 54.3
         },
         {
           "time": "2026-04-05T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 56.0
+          "soc_pct": 54.0
         },
         {
           "time": "2026-04-05T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 55.8
+          "soc_pct": 53.8
         },
         {
           "time": "2026-04-05T05:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 55.5
+          "soc_pct": 53.5
         },
         {
           "time": "2026-04-05T06:00:00+00:00",
-          "pv_w": 0.0,
-          "pv_available": 0.0,
-          "soc_pct": 55.2
+          "pv_w": 4.0,
+          "pv_available": 4.0,
+          "soc_pct": 53.3
         },
         {
           "time": "2026-04-05T07:00:00+00:00",
-          "pv_w": 43.6,
-          "pv_available": 43.6,
-          "soc_pct": 55.4
+          "pv_w": 110.8,
+          "pv_available": 110.8,
+          "soc_pct": 54.1
         },
         {
           "time": "2026-04-05T08:00:00+00:00",
-          "pv_w": 686.5,
-          "pv_available": 686.5,
-          "soc_pct": 61.3
+          "pv_w": 1168.5,
+          "pv_available": 1168.5,
+          "soc_pct": 64.2
         },
         {
           "time": "2026-04-05T09:00:00+00:00",
-          "pv_w": 276.3,
-          "pv_available": 276.3,
-          "soc_pct": 63.5
+          "pv_w": 406.1,
+          "pv_available": 406.1,
+          "soc_pct": 67.6
         },
         {
           "time": "2026-04-05T10:00:00+00:00",
-          "pv_w": 623.6,
-          "pv_available": 623.6,
-          "soc_pct": 68.8
+          "pv_w": 2768.3,
+          "pv_available": 2768.3,
+          "soc_pct": 87.8
         },
         {
           "time": "2026-04-05T11:00:00+00:00",
-          "pv_w": 1297.3,
-          "pv_available": 1297.3,
-          "soc_pct": 80.1
+          "pv_w": 662.1,
+          "pv_available": 662.1,
+          "soc_pct": 83.9
         },
         {
           "time": "2026-04-05T12:00:00+00:00",
@@ -5357,9 +5357,9 @@
       "daily": [
         {
           "date": "2026-04-05",
-          "gen_kwh": 14.13,
-          "full_charge_time": "13:00",
-          "fc_model_time": "10:08",
+          "gen_kwh": 16.323,
+          "full_charge_time": "11:00",
+          "fc_model_time": "09:24",
           "fc_confidence": "high",
           "weather_icon": "cloudy"
         },
@@ -5425,7 +5425,7 @@
       "name": "Clyde CP2",
       "capacity_kwp": 5.4,
       "system_derating": 0.876,
-      "current_soc_pct": 56.6,
+      "current_soc_pct": 54.6,
       "soc_source": "api",
       "weather_mode": "forecast",
       "hourly": [
@@ -5433,73 +5433,73 @@
           "time": "2026-04-05T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 56.6
+          "soc_pct": 54.6
         },
         {
           "time": "2026-04-05T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 56.2
+          "soc_pct": 54.2
         },
         {
           "time": "2026-04-05T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 55.8
+          "soc_pct": 53.8
         },
         {
           "time": "2026-04-05T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 55.5
+          "soc_pct": 53.5
         },
         {
           "time": "2026-04-05T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 55.1
+          "soc_pct": 53.1
         },
         {
           "time": "2026-04-05T05:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 54.7
+          "soc_pct": 52.7
         },
         {
           "time": "2026-04-05T06:00:00+00:00",
-          "pv_w": 0.0,
-          "pv_available": 0.0,
-          "soc_pct": 54.3
+          "pv_w": 4.0,
+          "pv_available": 4.0,
+          "soc_pct": 52.3
         },
         {
           "time": "2026-04-05T07:00:00+00:00",
-          "pv_w": 43.6,
-          "pv_available": 43.6,
-          "soc_pct": 54.4
+          "pv_w": 110.8,
+          "pv_available": 110.8,
+          "soc_pct": 53.0
         },
         {
           "time": "2026-04-05T08:00:00+00:00",
-          "pv_w": 686.5,
-          "pv_available": 686.5,
-          "soc_pct": 60.1
+          "pv_w": 1168.5,
+          "pv_available": 1168.5,
+          "soc_pct": 63.0
         },
         {
           "time": "2026-04-05T09:00:00+00:00",
-          "pv_w": 276.3,
-          "pv_available": 276.3,
-          "soc_pct": 62.2
+          "pv_w": 406.1,
+          "pv_available": 406.1,
+          "soc_pct": 66.3
         },
         {
           "time": "2026-04-05T10:00:00+00:00",
-          "pv_w": 623.6,
-          "pv_available": 623.6,
-          "soc_pct": 67.4
+          "pv_w": 2768.3,
+          "pv_available": 2768.3,
+          "soc_pct": 87.8
         },
         {
           "time": "2026-04-05T11:00:00+00:00",
-          "pv_w": 1297.3,
-          "pv_available": 1297.3,
-          "soc_pct": 78.6
+          "pv_w": 662.1,
+          "pv_available": 662.1,
+          "soc_pct": 83.9
         },
         {
           "time": "2026-04-05T12:00:00+00:00",
@@ -6441,9 +6441,9 @@
       "daily": [
         {
           "date": "2026-04-05",
-          "gen_kwh": 14.13,
-          "full_charge_time": "13:00",
-          "fc_model_time": "10:12",
+          "gen_kwh": 16.323,
+          "full_charge_time": "11:00",
+          "fc_model_time": "09:28",
           "fc_confidence": "high",
           "weather_icon": "cloudy"
         },
