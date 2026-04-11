@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-11T09:00:00+00:00",
+  "generated_at": "2026-04-11T10:00:00+00:00",
   "sites": [
     {
       "name": "Chryston",
@@ -4341,7 +4341,7 @@
       "name": "Clyde CP1",
       "capacity_kwp": 5.4,
       "system_derating": 0.876,
-      "current_soc_pct": 93.0,
+      "current_soc_pct": 87.8,
       "soc_source": "api",
       "weather_mode": "forecast",
       "hourly": [
@@ -4349,43 +4349,43 @@
           "time": "2026-04-11T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 93.0
+          "soc_pct": 87.8
         },
         {
           "time": "2026-04-11T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 91.8
+          "soc_pct": 87.5
         },
         {
           "time": "2026-04-11T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 91.6
+          "soc_pct": 87.3
         },
         {
           "time": "2026-04-11T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 91.3
+          "soc_pct": 87.0
         },
         {
           "time": "2026-04-11T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 89.2
+          "soc_pct": 86.8
         },
         {
           "time": "2026-04-11T05:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 89.0
+          "soc_pct": 86.5
         },
         {
           "time": "2026-04-11T06:00:00+00:00",
           "pv_w": 15.8,
           "pv_available": 15.8,
-          "soc_pct": 88.2
+          "soc_pct": 86.4
         },
         {
           "time": "2026-04-11T07:00:00+00:00",
@@ -5358,7 +5358,7 @@
         {
           "date": "2026-04-11",
           "gen_kwh": 17.319,
-          "full_charge_time": "07:00",
+          "full_charge_time": "08:00",
           "fc_model_time": "07:41",
           "fc_confidence": "high",
           "weather_icon": "partly_cloudy"
@@ -5425,7 +5425,7 @@
       "name": "Clyde CP2",
       "capacity_kwp": 5.4,
       "system_derating": 0.876,
-      "current_soc_pct": 93.0,
+      "current_soc_pct": 87.6,
       "soc_source": "api",
       "weather_mode": "forecast",
       "hourly": [
@@ -5433,49 +5433,49 @@
           "time": "2026-04-11T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 93.0
+          "soc_pct": 87.6
         },
         {
           "time": "2026-04-11T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 91.8
+          "soc_pct": 87.2
         },
         {
           "time": "2026-04-11T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 91.5
+          "soc_pct": 86.8
         },
         {
           "time": "2026-04-11T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 91.1
+          "soc_pct": 86.5
         },
         {
           "time": "2026-04-11T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 89.2
+          "soc_pct": 86.1
         },
         {
           "time": "2026-04-11T05:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 88.8
+          "soc_pct": 85.7
         },
         {
           "time": "2026-04-11T06:00:00+00:00",
           "pv_w": 15.8,
           "pv_available": 15.8,
-          "soc_pct": 88.2
+          "soc_pct": 85.5
         },
         {
           "time": "2026-04-11T07:00:00+00:00",
           "pv_w": 106.5,
           "pv_available": 106.5,
-          "soc_pct": 86.6
+          "soc_pct": 86.1
         },
         {
           "time": "2026-04-11T08:00:00+00:00",
@@ -6442,8 +6442,8 @@
         {
           "date": "2026-04-11",
           "gen_kwh": 17.319,
-          "full_charge_time": "07:00",
-          "fc_model_time": "07:41",
+          "full_charge_time": "08:00",
+          "fc_model_time": "07:43",
           "fc_confidence": "high",
           "weather_icon": "partly_cloudy"
         },
