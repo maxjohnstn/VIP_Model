@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-13T19:00:00+00:00",
+  "generated_at": "2026-05-13T21:00:00+00:00",
   "sites": [
     {
       "name": "Chryston",
       "capacity_kwp": 0.78,
       "system_derating": 1.0,
-      "current_soc_pct": 70.8,
+      "current_soc_pct": 60.8,
       "soc_source": "api",
       "weather_mode": "forecast",
       "hourly": [
@@ -13,427 +13,427 @@
           "time": "2026-05-13T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 70.8
+          "soc_pct": 60.8
         },
         {
           "time": "2026-05-13T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 70.5
+          "soc_pct": 60.5
         },
         {
           "time": "2026-05-13T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 70.3
+          "soc_pct": 60.3
         },
         {
           "time": "2026-05-13T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 70.0
+          "soc_pct": 60.0
         },
         {
           "time": "2026-05-13T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 69.8
+          "soc_pct": 59.8
         },
         {
           "time": "2026-05-13T05:00:00+00:00",
           "pv_w": 6.7,
           "pv_available": 6.7,
-          "soc_pct": 69.7
+          "soc_pct": 59.7
         },
         {
           "time": "2026-05-13T06:00:00+00:00",
           "pv_w": 49.4,
           "pv_available": 49.4,
-          "soc_pct": 70.6
+          "soc_pct": 60.6
         },
         {
           "time": "2026-05-13T07:00:00+00:00",
           "pv_w": 156.9,
           "pv_available": 156.9,
-          "soc_pct": 73.8
+          "soc_pct": 63.8
         },
         {
           "time": "2026-05-13T08:00:00+00:00",
           "pv_w": 61.1,
           "pv_available": 61.1,
-          "soc_pct": 75.0
+          "soc_pct": 65.0
         },
         {
           "time": "2026-05-13T09:00:00+00:00",
           "pv_w": 228.6,
           "pv_available": 228.6,
-          "soc_pct": 79.8
+          "soc_pct": 69.8
         },
         {
           "time": "2026-05-13T10:00:00+00:00",
           "pv_w": 337.7,
           "pv_available": 337.7,
-          "soc_pct": 87.1
+          "soc_pct": 77.1
         },
         {
           "time": "2026-05-13T11:00:00+00:00",
           "pv_w": 195.0,
           "pv_available": 195.0,
-          "soc_pct": 91.2
+          "soc_pct": 81.2
         },
         {
           "time": "2026-05-13T12:00:00+00:00",
           "pv_w": 234.9,
           "pv_available": 234.9,
-          "soc_pct": 96.2
+          "soc_pct": 86.2
         },
         {
           "time": "2026-05-13T13:00:00+00:00",
           "pv_w": 126.8,
           "pv_available": 126.8,
-          "soc_pct": 98.3
+          "soc_pct": 88.7
         },
         {
           "time": "2026-05-13T14:00:00+00:00",
           "pv_w": 192.8,
           "pv_available": 192.8,
-          "soc_pct": 96.6
+          "soc_pct": 92.8
         },
         {
           "time": "2026-05-13T15:00:00+00:00",
-          "pv_w": 242.2,
-          "pv_available": 242.2,
-          "soc_pct": 100.0
+          "pv_w": 228.2,
+          "pv_available": 228.2,
+          "soc_pct": 97.6
         },
         {
           "time": "2026-05-13T16:00:00+00:00",
-          "pv_w": 157.4,
-          "pv_available": 157.4,
-          "soc_pct": 100.0
-        },
-        {
-          "time": "2026-05-13T17:00:00+00:00",
-          "pv_w": 127.1,
-          "pv_available": 127.1,
-          "soc_pct": 100.0
-        },
-        {
-          "time": "2026-05-13T18:00:00+00:00",
-          "pv_w": 102.7,
-          "pv_available": 102.7,
+          "pv_w": 188.0,
+          "pv_available": 188.0,
           "soc_pct": 97.8
         },
         {
+          "time": "2026-05-13T17:00:00+00:00",
+          "pv_w": 135.5,
+          "pv_available": 135.5,
+          "soc_pct": 99.3
+        },
+        {
+          "time": "2026-05-13T18:00:00+00:00",
+          "pv_w": 66.2,
+          "pv_available": 66.2,
+          "soc_pct": 96.2
+        },
+        {
           "time": "2026-05-13T19:00:00+00:00",
-          "pv_w": 45.5,
-          "pv_available": 45.5,
-          "soc_pct": 96.4
+          "pv_w": 44.8,
+          "pv_available": 44.8,
+          "soc_pct": 95.9
         },
         {
           "time": "2026-05-13T20:00:00+00:00",
-          "pv_w": 3.3,
-          "pv_available": 3.3,
-          "soc_pct": 93.3
+          "pv_w": 18.6,
+          "pv_available": 18.6,
+          "soc_pct": 92.6
         },
         {
           "time": "2026-05-13T21:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 93.0
+          "soc_pct": 92.3
         },
         {
           "time": "2026-05-13T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 92.3
+          "soc_pct": 92.1
         },
         {
           "time": "2026-05-13T23:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 89.7
+          "soc_pct": 90.6
         },
         {
           "time": "2026-05-14T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 89.4
+          "soc_pct": 90.4
         },
         {
           "time": "2026-05-14T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 87.8
+          "soc_pct": 90.1
         },
         {
           "time": "2026-05-14T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 87.5
+          "soc_pct": 89.9
         },
         {
           "time": "2026-05-14T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 87.3
+          "soc_pct": 89.6
         },
         {
           "time": "2026-05-14T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 87.0
+          "soc_pct": 89.4
         },
         {
           "time": "2026-05-14T05:00:00+00:00",
-          "pv_w": 13.5,
-          "pv_available": 13.5,
-          "soc_pct": 87.1
+          "pv_w": 14.1,
+          "pv_available": 14.1,
+          "soc_pct": 88.5
         },
         {
           "time": "2026-05-14T06:00:00+00:00",
-          "pv_w": 197.7,
-          "pv_available": 197.7,
-          "soc_pct": 91.3
+          "pv_w": 191.6,
+          "pv_available": 191.6,
+          "soc_pct": 91.6
         },
         {
           "time": "2026-05-14T07:00:00+00:00",
-          "pv_w": 352.8,
-          "pv_available": 352.8,
-          "soc_pct": 95.2
+          "pv_w": 289.3,
+          "pv_available": 289.3,
+          "soc_pct": 94.7
         },
         {
           "time": "2026-05-14T08:00:00+00:00",
-          "pv_w": 254.6,
-          "pv_available": 254.6,
+          "pv_w": 195.0,
+          "pv_available": 195.0,
           "soc_pct": 97.4
         },
         {
           "time": "2026-05-14T09:00:00+00:00",
-          "pv_w": 237.7,
-          "pv_available": 237.7,
-          "soc_pct": 100.0
+          "pv_w": 162.8,
+          "pv_available": 162.8,
+          "soc_pct": 98.6
         },
         {
           "time": "2026-05-14T10:00:00+00:00",
-          "pv_w": 149.2,
-          "pv_available": 149.2,
+          "pv_w": 237.8,
+          "pv_available": 237.8,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T11:00:00+00:00",
-          "pv_w": 95.8,
-          "pv_available": 95.8,
+          "pv_w": 208.3,
+          "pv_available": 208.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T12:00:00+00:00",
-          "pv_w": 209.9,
-          "pv_available": 209.9,
+          "pv_w": 244.2,
+          "pv_available": 244.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T13:00:00+00:00",
-          "pv_w": 219.9,
-          "pv_available": 219.9,
+          "pv_w": 131.9,
+          "pv_available": 131.9,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T14:00:00+00:00",
-          "pv_w": 232.8,
-          "pv_available": 232.8,
+          "pv_w": 233.4,
+          "pv_available": 233.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T15:00:00+00:00",
-          "pv_w": 208.0,
-          "pv_available": 208.0,
+          "pv_w": 216.2,
+          "pv_available": 216.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T16:00:00+00:00",
-          "pv_w": 107.4,
-          "pv_available": 107.4,
-          "soc_pct": 100.0
+          "pv_w": 99.5,
+          "pv_available": 99.5,
+          "soc_pct": 98.1
         },
         {
           "time": "2026-05-14T17:00:00+00:00",
-          "pv_w": 119.9,
-          "pv_available": 119.9,
-          "soc_pct": 100.0
+          "pv_w": 112.8,
+          "pv_available": 112.8,
+          "soc_pct": 99.3
         },
         {
           "time": "2026-05-14T18:00:00+00:00",
-          "pv_w": 102.9,
-          "pv_available": 102.9,
-          "soc_pct": 97.8
+          "pv_w": 80.0,
+          "pv_available": 80.0,
+          "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T19:00:00+00:00",
-          "pv_w": 58.4,
-          "pv_available": 58.4,
-          "soc_pct": 96.6
+          "pv_w": 48.4,
+          "pv_available": 48.4,
+          "soc_pct": 99.3
         },
         {
           "time": "2026-05-14T20:00:00+00:00",
-          "pv_w": 16.6,
-          "pv_available": 16.6,
-          "soc_pct": 95.0
+          "pv_w": 19.2,
+          "pv_available": 19.2,
+          "soc_pct": 95.7
         },
         {
           "time": "2026-05-14T21:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 93.5
+          "soc_pct": 92.3
         },
         {
           "time": "2026-05-14T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 88.2
+          "soc_pct": 92.1
         },
         {
           "time": "2026-05-14T23:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 88.0
+          "soc_pct": 90.9
         },
         {
           "time": "2026-05-15T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 87.7
+          "soc_pct": 85.4
         },
         {
           "time": "2026-05-15T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 87.0
+          "soc_pct": 85.1
         },
         {
           "time": "2026-05-15T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 85.4
+          "soc_pct": 84.9
         },
         {
           "time": "2026-05-15T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 84.9
+          "soc_pct": 84.6
         },
         {
           "time": "2026-05-15T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 84.6
+          "soc_pct": 84.4
         },
         {
           "time": "2026-05-15T05:00:00+00:00",
           "pv_w": 47.2,
           "pv_available": 47.2,
-          "soc_pct": 85.5
+          "soc_pct": 85.2
         },
         {
           "time": "2026-05-15T06:00:00+00:00",
-          "pv_w": 208.7,
-          "pv_available": 208.7,
-          "soc_pct": 88.5
+          "pv_w": 211.9,
+          "pv_available": 211.9,
+          "soc_pct": 88.7
         },
         {
           "time": "2026-05-15T07:00:00+00:00",
-          "pv_w": 345.4,
-          "pv_available": 345.4,
+          "pv_w": 266.2,
+          "pv_available": 266.2,
           "soc_pct": 92.1
         },
         {
           "time": "2026-05-15T08:00:00+00:00",
-          "pv_w": 442.7,
-          "pv_available": 442.7,
-          "soc_pct": 95.9
+          "pv_w": 327.4,
+          "pv_available": 327.4,
+          "soc_pct": 95.0
         },
         {
           "time": "2026-05-15T09:00:00+00:00",
-          "pv_w": 488.1,
-          "pv_available": 488.1,
-          "soc_pct": 98.8
+          "pv_w": 390.4,
+          "pv_available": 390.4,
+          "soc_pct": 97.8
         },
         {
           "time": "2026-05-15T10:00:00+00:00",
-          "pv_w": 500.0,
-          "pv_available": 500.0,
+          "pv_w": 454.1,
+          "pv_available": 454.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T11:00:00+00:00",
-          "pv_w": 464.6,
-          "pv_available": 464.6,
+          "pv_w": 465.3,
+          "pv_available": 465.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T12:00:00+00:00",
-          "pv_w": 369.0,
-          "pv_available": 369.0,
+          "pv_w": 356.0,
+          "pv_available": 356.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T13:00:00+00:00",
-          "pv_w": 315.4,
-          "pv_available": 315.4,
-          "soc_pct": 100.0
-        },
-        {
-          "time": "2026-05-15T14:00:00+00:00",
-          "pv_w": 284.4,
-          "pv_available": 284.4,
-          "soc_pct": 100.0
-        },
-        {
-          "time": "2026-05-15T15:00:00+00:00",
           "pv_w": 228.2,
           "pv_available": 228.2,
           "soc_pct": 100.0
         },
         {
+          "time": "2026-05-15T14:00:00+00:00",
+          "pv_w": 155.6,
+          "pv_available": 155.6,
+          "soc_pct": 100.0
+        },
+        {
+          "time": "2026-05-15T15:00:00+00:00",
+          "pv_w": 138.8,
+          "pv_available": 138.8,
+          "soc_pct": 100.0
+        },
+        {
           "time": "2026-05-15T16:00:00+00:00",
-          "pv_w": 147.2,
-          "pv_available": 147.2,
+          "pv_w": 155.0,
+          "pv_available": 155.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T17:00:00+00:00",
-          "pv_w": 103.2,
-          "pv_available": 103.2,
+          "pv_w": 127.3,
+          "pv_available": 127.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T18:00:00+00:00",
-          "pv_w": 73.5,
-          "pv_available": 73.5,
+          "pv_w": 77.3,
+          "pv_available": 77.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T19:00:00+00:00",
-          "pv_w": 43.4,
-          "pv_available": 43.4,
-          "soc_pct": 100.0
+          "pv_w": 50.2,
+          "pv_available": 50.2,
+          "soc_pct": 99.8
         },
         {
           "time": "2026-05-15T20:00:00+00:00",
-          "pv_w": 17.6,
-          "pv_available": 17.6,
-          "soc_pct": 100.0
+          "pv_w": 14.8,
+          "pv_available": 14.8,
+          "soc_pct": 97.1
         },
         {
           "time": "2026-05-15T21:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 97.4
+          "soc_pct": 94.7
         },
         {
           "time": "2026-05-15T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 94.5
+          "soc_pct": 93.8
         },
         {
           "time": "2026-05-15T23:00:00+00:00",
@@ -473,39 +473,39 @@
         },
         {
           "time": "2026-05-16T05:00:00+00:00",
-          "pv_w": 44.0,
-          "pv_available": 44.0,
+          "pv_w": 43.9,
+          "pv_available": 43.9,
           "soc_pct": 74.3
         },
         {
           "time": "2026-05-16T06:00:00+00:00",
-          "pv_w": 185.3,
-          "pv_available": 185.3,
-          "soc_pct": 78.2
+          "pv_w": 185.1,
+          "pv_available": 185.1,
+          "soc_pct": 78.1
         },
         {
           "time": "2026-05-16T07:00:00+00:00",
-          "pv_w": 325.7,
-          "pv_available": 325.7,
+          "pv_w": 325.3,
+          "pv_available": 325.3,
           "soc_pct": 85.1
         },
         {
           "time": "2026-05-16T08:00:00+00:00",
-          "pv_w": 349.5,
-          "pv_available": 349.5,
-          "soc_pct": 92.7
+          "pv_w": 349.0,
+          "pv_available": 349.0,
+          "soc_pct": 92.6
         },
         {
           "time": "2026-05-16T09:00:00+00:00",
-          "pv_w": 414.4,
-          "pv_available": 414.4,
-          "soc_pct": 94.2
+          "pv_w": 413.8,
+          "pv_available": 413.8,
+          "soc_pct": 95.2
         },
         {
           "time": "2026-05-16T10:00:00+00:00",
-          "pv_w": 336.9,
-          "pv_available": 336.9,
-          "soc_pct": 95.9
+          "pv_w": 336.6,
+          "pv_available": 336.6,
+          "soc_pct": 96.4
         },
         {
           "time": "2026-05-16T11:00:00+00:00",
@@ -515,69 +515,69 @@
         },
         {
           "time": "2026-05-16T12:00:00+00:00",
-          "pv_w": 333.8,
-          "pv_available": 333.8,
-          "soc_pct": 98.8
+          "pv_w": 333.9,
+          "pv_available": 333.9,
+          "soc_pct": 98.6
         },
         {
           "time": "2026-05-16T13:00:00+00:00",
-          "pv_w": 293.4,
-          "pv_available": 293.4,
-          "soc_pct": 99.5
+          "pv_w": 293.3,
+          "pv_available": 293.3,
+          "soc_pct": 99.8
         },
         {
           "time": "2026-05-16T14:00:00+00:00",
-          "pv_w": 206.0,
-          "pv_available": 206.0,
+          "pv_w": 205.6,
+          "pv_available": 205.6,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T15:00:00+00:00",
-          "pv_w": 194.7,
-          "pv_available": 194.7,
+          "pv_w": 194.1,
+          "pv_available": 194.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T16:00:00+00:00",
-          "pv_w": 145.6,
-          "pv_available": 145.6,
+          "pv_w": 145.1,
+          "pv_available": 145.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T17:00:00+00:00",
-          "pv_w": 113.8,
-          "pv_available": 113.8,
+          "pv_w": 113.5,
+          "pv_available": 113.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T18:00:00+00:00",
-          "pv_w": 77.2,
-          "pv_available": 77.2,
+          "pv_w": 77.0,
+          "pv_available": 77.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T19:00:00+00:00",
-          "pv_w": 44.5,
-          "pv_available": 44.5,
+          "pv_w": 44.4,
+          "pv_available": 44.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T20:00:00+00:00",
           "pv_w": 14.5,
           "pv_available": 14.5,
-          "soc_pct": 97.6
+          "soc_pct": 99.3
         },
         {
           "time": "2026-05-16T21:00:00+00:00",
           "pv_w": 0.7,
           "pv_available": 0.7,
-          "soc_pct": 95.4
+          "soc_pct": 96.9
         },
         {
           "time": "2026-05-16T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 94.7
+          "soc_pct": 95.7
         },
         {
           "time": "2026-05-16T23:00:00+00:00",
@@ -623,80 +623,80 @@
         },
         {
           "time": "2026-05-17T06:00:00+00:00",
-          "pv_w": 68.6,
-          "pv_available": 68.6,
+          "pv_w": 68.5,
+          "pv_available": 68.5,
           "soc_pct": 74.8
         },
         {
           "time": "2026-05-17T07:00:00+00:00",
-          "pv_w": 128.4,
-          "pv_available": 128.4,
+          "pv_w": 128.5,
+          "pv_available": 128.5,
           "soc_pct": 77.4
         },
         {
           "time": "2026-05-17T08:00:00+00:00",
-          "pv_w": 199.7,
-          "pv_available": 199.7,
-          "soc_pct": 81.6
+          "pv_w": 200.5,
+          "pv_available": 200.5,
+          "soc_pct": 81.7
         },
         {
           "time": "2026-05-17T09:00:00+00:00",
-          "pv_w": 262.6,
-          "pv_available": 262.6,
-          "soc_pct": 87.2
+          "pv_w": 263.9,
+          "pv_available": 263.9,
+          "soc_pct": 87.3
         },
         {
           "time": "2026-05-17T10:00:00+00:00",
-          "pv_w": 292.0,
-          "pv_available": 292.0,
+          "pv_w": 292.7,
+          "pv_available": 292.7,
           "soc_pct": 93.5
         },
         {
           "time": "2026-05-17T11:00:00+00:00",
-          "pv_w": 298.9,
-          "pv_available": 298.9,
+          "pv_w": 298.2,
+          "pv_available": 298.2,
           "soc_pct": 99.9
         },
         {
           "time": "2026-05-17T12:00:00+00:00",
-          "pv_w": 308.7,
-          "pv_available": 308.7,
+          "pv_w": 306.7,
+          "pv_available": 306.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T13:00:00+00:00",
-          "pv_w": 330.6,
-          "pv_available": 330.6,
+          "pv_w": 328.1,
+          "pv_available": 328.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T14:00:00+00:00",
-          "pv_w": 317.6,
-          "pv_available": 317.6,
+          "pv_w": 315.0,
+          "pv_available": 315.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T15:00:00+00:00",
-          "pv_w": 242.4,
-          "pv_available": 242.4,
+          "pv_w": 240.6,
+          "pv_available": 240.6,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T16:00:00+00:00",
-          "pv_w": 143.1,
-          "pv_available": 143.1,
+          "pv_w": 142.1,
+          "pv_available": 142.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T17:00:00+00:00",
-          "pv_w": 129.0,
-          "pv_available": 129.0,
+          "pv_w": 128.3,
+          "pv_available": 128.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T18:00:00+00:00",
-          "pv_w": 104.6,
-          "pv_available": 104.6,
+          "pv_w": 104.1,
+          "pv_available": 104.1,
           "soc_pct": 100.0
         },
         {
@@ -707,21 +707,21 @@
         },
         {
           "time": "2026-05-17T20:00:00+00:00",
-          "pv_w": 26.1,
-          "pv_available": 26.1,
-          "soc_pct": 100.0
+          "pv_w": 26.2,
+          "pv_available": 26.2,
+          "soc_pct": 98.6
         },
         {
           "time": "2026-05-17T21:00:00+00:00",
           "pv_w": 1.4,
           "pv_available": 1.4,
-          "soc_pct": 98.8
+          "soc_pct": 95.0
         },
         {
           "time": "2026-05-17T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 97.6
+          "soc_pct": 92.8
         },
         {
           "time": "2026-05-17T23:00:00+00:00",
@@ -761,86 +761,86 @@
         },
         {
           "time": "2026-05-18T05:00:00+00:00",
-          "pv_w": 26.0,
-          "pv_available": 26.0,
+          "pv_w": 26.2,
+          "pv_available": 26.2,
           "soc_pct": 73.9
         },
         {
           "time": "2026-05-18T06:00:00+00:00",
-          "pv_w": 75.9,
-          "pv_available": 75.9,
+          "pv_w": 76.2,
+          "pv_available": 76.2,
           "soc_pct": 75.3
         },
         {
           "time": "2026-05-18T07:00:00+00:00",
-          "pv_w": 165.8,
-          "pv_available": 165.8,
+          "pv_w": 166.1,
+          "pv_available": 166.1,
           "soc_pct": 78.8
         },
         {
           "time": "2026-05-18T08:00:00+00:00",
-          "pv_w": 287.0,
-          "pv_available": 287.0,
+          "pv_w": 286.8,
+          "pv_available": 286.8,
           "soc_pct": 84.9
         },
         {
           "time": "2026-05-18T09:00:00+00:00",
-          "pv_w": 375.4,
-          "pv_available": 375.4,
+          "pv_w": 374.5,
+          "pv_available": 374.5,
           "soc_pct": 93.0
         },
         {
           "time": "2026-05-18T10:00:00+00:00",
-          "pv_w": 367.2,
-          "pv_available": 367.2,
+          "pv_w": 366.3,
+          "pv_available": 366.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T11:00:00+00:00",
-          "pv_w": 309.3,
-          "pv_available": 309.3,
+          "pv_w": 308.8,
+          "pv_available": 308.8,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T12:00:00+00:00",
-          "pv_w": 285.7,
-          "pv_available": 285.7,
+          "pv_w": 285.2,
+          "pv_available": 285.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T13:00:00+00:00",
-          "pv_w": 319.0,
-          "pv_available": 319.0,
+          "pv_w": 318.3,
+          "pv_available": 318.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T14:00:00+00:00",
-          "pv_w": 318.9,
-          "pv_available": 318.9,
+          "pv_w": 317.8,
+          "pv_available": 317.8,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T15:00:00+00:00",
-          "pv_w": 233.5,
-          "pv_available": 233.5,
+          "pv_w": 232.5,
+          "pv_available": 232.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T16:00:00+00:00",
-          "pv_w": 99.6,
-          "pv_available": 99.6,
+          "pv_w": 99.2,
+          "pv_available": 99.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T17:00:00+00:00",
-          "pv_w": 75.6,
-          "pv_available": 75.6,
+          "pv_w": 75.3,
+          "pv_available": 75.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T18:00:00+00:00",
-          "pv_w": 61.7,
-          "pv_available": 61.7,
+          "pv_w": 61.5,
+          "pv_available": 61.5,
           "soc_pct": 100.0
         },
         {
@@ -851,8 +851,8 @@
         },
         {
           "time": "2026-05-18T20:00:00+00:00",
-          "pv_w": 21.3,
-          "pv_available": 21.3,
+          "pv_w": 21.4,
+          "pv_available": 21.4,
           "soc_pct": 100.0
         },
         {
@@ -923,8 +923,8 @@
         },
         {
           "time": "2026-05-19T08:00:00+00:00",
-          "pv_w": 28.7,
-          "pv_available": 28.7,
+          "pv_w": 28.8,
+          "pv_available": 28.8,
           "soc_pct": 74.0
         },
         {
@@ -935,56 +935,56 @@
         },
         {
           "time": "2026-05-19T10:00:00+00:00",
-          "pv_w": 108.7,
-          "pv_available": 108.7,
+          "pv_w": 108.0,
+          "pv_available": 108.0,
           "soc_pct": 77.1
         },
         {
           "time": "2026-05-19T11:00:00+00:00",
-          "pv_w": 187.3,
-          "pv_available": 187.3,
+          "pv_w": 185.7,
+          "pv_available": 185.7,
           "soc_pct": 81.0
         },
         {
           "time": "2026-05-19T12:00:00+00:00",
-          "pv_w": 239.7,
-          "pv_available": 239.7,
-          "soc_pct": 86.1
+          "pv_w": 237.2,
+          "pv_available": 237.2,
+          "soc_pct": 86.0
         },
         {
           "time": "2026-05-19T13:00:00+00:00",
-          "pv_w": 241.1,
-          "pv_available": 241.1,
-          "soc_pct": 91.2
+          "pv_w": 238.6,
+          "pv_available": 238.6,
+          "soc_pct": 91.1
         },
         {
           "time": "2026-05-19T14:00:00+00:00",
-          "pv_w": 221.7,
-          "pv_available": 221.7,
-          "soc_pct": 95.9
+          "pv_w": 219.7,
+          "pv_available": 219.7,
+          "soc_pct": 95.7
         },
         {
           "time": "2026-05-19T15:00:00+00:00",
-          "pv_w": 184.9,
-          "pv_available": 184.9,
-          "soc_pct": 99.8
+          "pv_w": 183.5,
+          "pv_available": 183.5,
+          "soc_pct": 99.6
         },
         {
           "time": "2026-05-19T16:00:00+00:00",
-          "pv_w": 136.5,
-          "pv_available": 136.5,
+          "pv_w": 135.7,
+          "pv_available": 135.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T17:00:00+00:00",
-          "pv_w": 104.7,
-          "pv_available": 104.7,
+          "pv_w": 104.3,
+          "pv_available": 104.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T18:00:00+00:00",
-          "pv_w": 75.4,
-          "pv_available": 75.4,
+          "pv_w": 75.2,
+          "pv_available": 75.2,
           "soc_pct": 100.0
         },
         {
@@ -1021,39 +1021,39 @@
       "daily": [
         {
           "date": "2026-05-13",
-          "gen_kwh": 2.268,
-          "full_charge_time": "14:00",
-          "fc_model_time": "09:45",
+          "gen_kwh": 2.271,
+          "full_charge_time": "17:00",
+          "fc_model_time": "10:22",
           "fc_confidence": "high",
           "weather_icon": "cloudy"
         },
         {
           "date": "2026-05-14",
-          "gen_kwh": 2.577,
-          "full_charge_time": "07:00",
-          "fc_model_time": "08:19",
+          "gen_kwh": 2.484,
+          "full_charge_time": "06:00",
+          "fc_model_time": "08:26",
           "fc_confidence": "high",
           "weather_icon": "partly_cloudy"
         },
         {
           "date": "2026-05-15",
-          "gen_kwh": 4.079,
-          "full_charge_time": "06:00",
-          "fc_model_time": "07:45",
+          "gen_kwh": 3.466,
+          "full_charge_time": "07:00",
+          "fc_model_time": "08:01",
           "fc_confidence": "high",
-          "weather_icon": "sunny"
+          "weather_icon": "partly_cloudy"
         },
         {
           "date": "2026-05-16",
-          "gen_kwh": 3.431,
-          "full_charge_time": "09:00",
-          "fc_model_time": "08:36",
+          "gen_kwh": 3.426,
+          "full_charge_time": "10:00",
+          "fc_model_time": "08:37",
           "fc_confidence": "high",
           "weather_icon": "partly_cloudy"
         },
         {
           "date": "2026-05-17",
-          "gen_kwh": 2.928,
+          "gen_kwh": 2.919,
           "full_charge_time": "12:00",
           "fc_model_time": "09:28",
           "fc_confidence": "high",
@@ -1061,17 +1061,17 @@
         },
         {
           "date": "2026-05-18",
-          "gen_kwh": 3.067,
+          "gen_kwh": 3.061,
           "full_charge_time": "11:00",
-          "fc_model_time": "09:13",
+          "fc_model_time": "09:12",
           "fc_confidence": "high",
           "weather_icon": "partly_cloudy"
         },
         {
           "date": "2026-05-19",
-          "gen_kwh": 1.681,
+          "gen_kwh": 1.669,
           "full_charge_time": "16:00",
-          "fc_model_time": "10:13",
+          "fc_model_time": "10:11",
           "fc_confidence": "high",
           "weather_icon": "cloudy"
         },
@@ -1089,7 +1089,7 @@
       "name": "Sunny Cycles",
       "capacity_kwp": 2.0,
       "system_derating": 0.85,
-      "current_soc_pct": 64.6,
+      "current_soc_pct": 61.6,
       "soc_source": "api",
       "weather_mode": "forecast",
       "hourly": [
@@ -1097,61 +1097,61 @@
           "time": "2026-05-13T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 64.6
+          "soc_pct": 61.6
         },
         {
           "time": "2026-05-13T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 64.3
+          "soc_pct": 61.3
         },
         {
           "time": "2026-05-13T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 63.9
+          "soc_pct": 60.9
         },
         {
           "time": "2026-05-13T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 63.5
+          "soc_pct": 60.5
         },
         {
           "time": "2026-05-13T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 63.2
+          "soc_pct": 60.2
         },
         {
           "time": "2026-05-13T05:00:00+00:00",
           "pv_w": 23.2,
           "pv_available": 23.2,
-          "soc_pct": 63.6
+          "soc_pct": 60.6
         },
         {
           "time": "2026-05-13T06:00:00+00:00",
           "pv_w": 74.1,
           "pv_available": 74.1,
-          "soc_pct": 65.7
+          "soc_pct": 62.7
         },
         {
           "time": "2026-05-13T07:00:00+00:00",
           "pv_w": 338.4,
           "pv_available": 338.4,
-          "soc_pct": 76.3
+          "soc_pct": 73.3
         },
         {
           "time": "2026-05-13T08:00:00+00:00",
           "pv_w": 353.3,
           "pv_available": 353.3,
-          "soc_pct": 87.3
+          "soc_pct": 84.3
         },
         {
           "time": "2026-05-13T09:00:00+00:00",
           "pv_w": 394.2,
           "pv_available": 394.2,
-          "soc_pct": 99.5
+          "soc_pct": 96.7
         },
         {
           "time": "2026-05-13T10:00:00+00:00",
@@ -1185,225 +1185,225 @@
         },
         {
           "time": "2026-05-13T15:00:00+00:00",
-          "pv_w": 631.1,
-          "pv_available": 631.1,
+          "pv_w": 457.8,
+          "pv_available": 457.8,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-13T16:00:00+00:00",
-          "pv_w": 615.7,
-          "pv_available": 615.7,
+          "pv_w": 542.7,
+          "pv_available": 542.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-13T17:00:00+00:00",
-          "pv_w": 398.3,
-          "pv_available": 398.3,
+          "pv_w": 331.8,
+          "pv_available": 331.8,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-13T18:00:00+00:00",
-          "pv_w": 92.1,
-          "pv_available": 92.1,
+          "pv_w": 116.5,
+          "pv_available": 116.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-13T19:00:00+00:00",
-          "pv_w": 35.9,
-          "pv_available": 35.9,
-          "soc_pct": 98.1
+          "pv_w": 131.3,
+          "pv_available": 131.3,
+          "soc_pct": 98.6
         },
         {
           "time": "2026-05-13T20:00:00+00:00",
-          "pv_w": 18.0,
-          "pv_available": 18.0,
-          "soc_pct": 97.6
+          "pv_w": 44.1,
+          "pv_available": 44.1,
+          "soc_pct": 97.8
         },
         {
           "time": "2026-05-13T21:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 96.2
+          "soc_pct": 97.5
         },
         {
           "time": "2026-05-13T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 95.2
+          "soc_pct": 95.4
         },
         {
           "time": "2026-05-13T23:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 94.8
+          "soc_pct": 94.5
         },
         {
           "time": "2026-05-14T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 94.5
+          "soc_pct": 94.1
         },
         {
           "time": "2026-05-14T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 93.8
+          "soc_pct": 93.5
         },
         {
           "time": "2026-05-14T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 92.8
+          "soc_pct": 93.0
         },
         {
           "time": "2026-05-14T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 92.4
+          "soc_pct": 92.7
         },
         {
           "time": "2026-05-14T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 92.1
-        },
-        {
-          "time": "2026-05-14T05:00:00+00:00",
-          "pv_w": 23.1,
-          "pv_available": 23.1,
           "soc_pct": 92.3
         },
         {
+          "time": "2026-05-14T05:00:00+00:00",
+          "pv_w": 19.8,
+          "pv_available": 19.8,
+          "soc_pct": 92.1
+        },
+        {
           "time": "2026-05-14T06:00:00+00:00",
-          "pv_w": 193.7,
-          "pv_available": 193.7,
-          "soc_pct": 93.0
+          "pv_w": 177.6,
+          "pv_available": 177.6,
+          "soc_pct": 93.3
         },
         {
           "time": "2026-05-14T07:00:00+00:00",
-          "pv_w": 407.6,
-          "pv_available": 407.6,
-          "soc_pct": 95.7
+          "pv_w": 355.2,
+          "pv_available": 355.2,
+          "soc_pct": 95.4
         },
         {
           "time": "2026-05-14T08:00:00+00:00",
-          "pv_w": 495.0,
-          "pv_available": 495.0,
-          "soc_pct": 98.8
+          "pv_w": 364.1,
+          "pv_available": 364.1,
+          "soc_pct": 98.6
         },
         {
           "time": "2026-05-14T09:00:00+00:00",
-          "pv_w": 568.4,
-          "pv_available": 568.4,
+          "pv_w": 471.0,
+          "pv_available": 471.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T10:00:00+00:00",
-          "pv_w": 476.3,
-          "pv_available": 476.3,
+          "pv_w": 540.6,
+          "pv_available": 540.6,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T11:00:00+00:00",
-          "pv_w": 286.8,
-          "pv_available": 286.8,
+          "pv_w": 502.4,
+          "pv_available": 502.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T12:00:00+00:00",
-          "pv_w": 317.3,
-          "pv_available": 317.3,
+          "pv_w": 549.2,
+          "pv_available": 549.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T13:00:00+00:00",
-          "pv_w": 702.0,
-          "pv_available": 702.0,
+          "pv_w": 291.4,
+          "pv_available": 291.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T14:00:00+00:00",
-          "pv_w": 590.4,
-          "pv_available": 590.4,
+          "pv_w": 602.7,
+          "pv_available": 602.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T15:00:00+00:00",
-          "pv_w": 648.5,
-          "pv_available": 648.5,
+          "pv_w": 658.8,
+          "pv_available": 658.8,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T16:00:00+00:00",
-          "pv_w": 687.3,
-          "pv_available": 687.3,
+          "pv_w": 336.5,
+          "pv_available": 336.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T17:00:00+00:00",
-          "pv_w": 577.5,
-          "pv_available": 577.5,
+          "pv_w": 177.5,
+          "pv_available": 177.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T18:00:00+00:00",
-          "pv_w": 445.3,
-          "pv_available": 445.3,
+          "pv_w": 181.2,
+          "pv_available": 181.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T19:00:00+00:00",
-          "pv_w": 60.0,
-          "pv_available": 60.0,
+          "pv_w": 171.8,
+          "pv_available": 171.8,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T20:00:00+00:00",
-          "pv_w": 55.4,
-          "pv_available": 55.4,
-          "soc_pct": 98.6
+          "pv_w": 43.9,
+          "pv_available": 43.9,
+          "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T21:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 97.1
+          "soc_pct": 98.3
         },
         {
           "time": "2026-05-14T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 96.4
+          "soc_pct": 97.1
         },
         {
           "time": "2026-05-14T23:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 94.5
+          "soc_pct": 95.9
         },
         {
           "time": "2026-05-15T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 93.0
+          "soc_pct": 94.0
         },
         {
           "time": "2026-05-15T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 91.8
+          "soc_pct": 92.6
         },
         {
           "time": "2026-05-15T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 90.6
+          "soc_pct": 90.9
         },
         {
           "time": "2026-05-15T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 89.7
+          "soc_pct": 90.2
         },
         {
           "time": "2026-05-15T04:00:00+00:00",
@@ -1415,31 +1415,31 @@
           "time": "2026-05-15T05:00:00+00:00",
           "pv_w": 33.2,
           "pv_available": 33.2,
-          "soc_pct": 88.7
+          "soc_pct": 89.2
         },
         {
           "time": "2026-05-15T06:00:00+00:00",
-          "pv_w": 188.3,
-          "pv_available": 188.3,
-          "soc_pct": 89.9
+          "pv_w": 202.7,
+          "pv_available": 202.7,
+          "soc_pct": 90.2
         },
         {
           "time": "2026-05-15T07:00:00+00:00",
-          "pv_w": 421.7,
-          "pv_available": 421.7,
+          "pv_w": 381.4,
+          "pv_available": 381.4,
           "soc_pct": 93.3
         },
         {
           "time": "2026-05-15T08:00:00+00:00",
-          "pv_w": 567.1,
-          "pv_available": 567.1,
-          "soc_pct": 97.1
+          "pv_w": 560.5,
+          "pv_available": 560.5,
+          "soc_pct": 96.2
         },
         {
           "time": "2026-05-15T09:00:00+00:00",
-          "pv_w": 702.0,
-          "pv_available": 702.0,
-          "soc_pct": 100.0
+          "pv_w": 691.8,
+          "pv_available": 691.8,
+          "soc_pct": 99.3
         },
         {
           "time": "2026-05-15T10:00:00+00:00",
@@ -1455,69 +1455,69 @@
         },
         {
           "time": "2026-05-15T12:00:00+00:00",
-          "pv_w": 690.8,
-          "pv_available": 690.8,
+          "pv_w": 702.0,
+          "pv_available": 702.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T13:00:00+00:00",
-          "pv_w": 702.0,
-          "pv_available": 702.0,
+          "pv_w": 603.8,
+          "pv_available": 603.8,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T14:00:00+00:00",
-          "pv_w": 702.0,
-          "pv_available": 702.0,
+          "pv_w": 680.9,
+          "pv_available": 680.9,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T15:00:00+00:00",
-          "pv_w": 563.6,
-          "pv_available": 563.6,
+          "pv_w": 650.2,
+          "pv_available": 650.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T16:00:00+00:00",
-          "pv_w": 485.0,
-          "pv_available": 485.0,
+          "pv_w": 547.0,
+          "pv_available": 547.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T17:00:00+00:00",
-          "pv_w": 418.9,
-          "pv_available": 418.9,
+          "pv_w": 415.1,
+          "pv_available": 415.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T18:00:00+00:00",
-          "pv_w": 297.0,
-          "pv_available": 297.0,
+          "pv_w": 169.2,
+          "pv_available": 169.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T19:00:00+00:00",
-          "pv_w": 149.2,
-          "pv_available": 149.2,
+          "pv_w": 129.2,
+          "pv_available": 129.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T20:00:00+00:00",
-          "pv_w": 74.6,
-          "pv_available": 74.6,
-          "soc_pct": 100.0
+          "pv_w": 60.2,
+          "pv_available": 60.2,
+          "soc_pct": 99.8
         },
         {
           "time": "2026-05-15T21:00:00+00:00",
-          "pv_w": 1.6,
-          "pv_available": 1.6,
-          "soc_pct": 97.6
+          "pv_w": 1.3,
+          "pv_available": 1.3,
+          "soc_pct": 96.6
         },
         {
           "time": "2026-05-15T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 94.0
+          "soc_pct": 91.8
         },
         {
           "time": "2026-05-15T23:00:00+00:00",
@@ -1563,14 +1563,14 @@
         },
         {
           "time": "2026-05-16T06:00:00+00:00",
-          "pv_w": 197.2,
-          "pv_available": 197.2,
+          "pv_w": 197.5,
+          "pv_available": 197.5,
           "soc_pct": 79.8
         },
         {
           "time": "2026-05-16T07:00:00+00:00",
-          "pv_w": 410.5,
-          "pv_available": 410.5,
+          "pv_w": 411.0,
+          "pv_available": 411.0,
           "soc_pct": 92.7
         },
         {
@@ -1581,87 +1581,87 @@
         },
         {
           "time": "2026-05-16T09:00:00+00:00",
-          "pv_w": 686.0,
-          "pv_available": 686.0,
-          "soc_pct": 96.2
+          "pv_w": 685.7,
+          "pv_available": 685.7,
+          "soc_pct": 96.4
         },
         {
           "time": "2026-05-16T10:00:00+00:00",
-          "pv_w": 660.0,
-          "pv_available": 660.0,
-          "soc_pct": 97.4
+          "pv_w": 660.2,
+          "pv_available": 660.2,
+          "soc_pct": 97.1
         },
         {
           "time": "2026-05-16T11:00:00+00:00",
-          "pv_w": 693.5,
-          "pv_available": 693.5,
-          "soc_pct": 98.6
+          "pv_w": 695.0,
+          "pv_available": 695.0,
+          "soc_pct": 97.4
         },
         {
           "time": "2026-05-16T12:00:00+00:00",
-          "pv_w": 655.7,
-          "pv_available": 655.7,
-          "soc_pct": 99.8
+          "pv_w": 657.7,
+          "pv_available": 657.7,
+          "soc_pct": 98.1
         },
         {
           "time": "2026-05-16T13:00:00+00:00",
-          "pv_w": 631.2,
-          "pv_available": 631.2,
-          "soc_pct": 100.0
+          "pv_w": 632.8,
+          "pv_available": 632.8,
+          "soc_pct": 99.3
         },
         {
           "time": "2026-05-16T14:00:00+00:00",
-          "pv_w": 532.6,
-          "pv_available": 532.6,
+          "pv_w": 533.5,
+          "pv_available": 533.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T15:00:00+00:00",
-          "pv_w": 466.2,
-          "pv_available": 466.2,
+          "pv_w": 466.4,
+          "pv_available": 466.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T16:00:00+00:00",
-          "pv_w": 413.0,
-          "pv_available": 413.0,
+          "pv_w": 412.7,
+          "pv_available": 412.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T17:00:00+00:00",
-          "pv_w": 330.5,
-          "pv_available": 330.5,
+          "pv_w": 329.7,
+          "pv_available": 329.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T18:00:00+00:00",
-          "pv_w": 222.0,
-          "pv_available": 222.0,
+          "pv_w": 221.4,
+          "pv_available": 221.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T19:00:00+00:00",
-          "pv_w": 103.6,
-          "pv_available": 103.6,
+          "pv_w": 103.3,
+          "pv_available": 103.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T20:00:00+00:00",
           "pv_w": 29.4,
           "pv_available": 29.4,
-          "soc_pct": 98.3
+          "soc_pct": 99.5
         },
         {
           "time": "2026-05-16T21:00:00+00:00",
           "pv_w": 1.6,
           "pv_available": 1.6,
-          "soc_pct": 96.4
+          "soc_pct": 97.1
         },
         {
           "time": "2026-05-16T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 95.7
+          "soc_pct": 95.9
         },
         {
           "time": "2026-05-16T23:00:00+00:00",
@@ -1701,50 +1701,50 @@
         },
         {
           "time": "2026-05-17T05:00:00+00:00",
-          "pv_w": 21.4,
-          "pv_available": 21.4,
+          "pv_w": 21.3,
+          "pv_available": 21.3,
           "soc_pct": 73.2
         },
         {
           "time": "2026-05-17T06:00:00+00:00",
-          "pv_w": 128.8,
-          "pv_available": 128.8,
+          "pv_w": 128.6,
+          "pv_available": 128.6,
           "soc_pct": 77.0
         },
         {
           "time": "2026-05-17T07:00:00+00:00",
-          "pv_w": 249.4,
-          "pv_available": 249.4,
+          "pv_w": 249.9,
+          "pv_available": 249.9,
           "soc_pct": 84.8
         },
         {
           "time": "2026-05-17T08:00:00+00:00",
-          "pv_w": 393.9,
-          "pv_available": 393.9,
-          "soc_pct": 97.1
+          "pv_w": 396.5,
+          "pv_available": 396.5,
+          "soc_pct": 96.2
         },
         {
           "time": "2026-05-17T09:00:00+00:00",
-          "pv_w": 532.6,
-          "pv_available": 532.6,
-          "soc_pct": 100.0
+          "pv_w": 537.2,
+          "pv_available": 537.2,
+          "soc_pct": 97.1
         },
         {
           "time": "2026-05-17T10:00:00+00:00",
-          "pv_w": 626.7,
-          "pv_available": 626.7,
+          "pv_w": 629.1,
+          "pv_available": 629.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T11:00:00+00:00",
-          "pv_w": 678.4,
-          "pv_available": 678.4,
+          "pv_w": 675.8,
+          "pv_available": 675.8,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T12:00:00+00:00",
-          "pv_w": 689.4,
-          "pv_available": 689.4,
+          "pv_w": 683.2,
+          "pv_available": 683.2,
           "soc_pct": 100.0
         },
         {
@@ -1773,39 +1773,39 @@
         },
         {
           "time": "2026-05-17T17:00:00+00:00",
-          "pv_w": 588.3,
-          "pv_available": 588.3,
+          "pv_w": 585.0,
+          "pv_available": 585.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T18:00:00+00:00",
-          "pv_w": 412.7,
-          "pv_available": 412.7,
+          "pv_w": 411.1,
+          "pv_available": 411.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T19:00:00+00:00",
-          "pv_w": 253.5,
-          "pv_available": 253.5,
+          "pv_w": 253.3,
+          "pv_available": 253.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T20:00:00+00:00",
-          "pv_w": 108.5,
-          "pv_available": 108.5,
-          "soc_pct": 100.0
+          "pv_w": 108.8,
+          "pv_available": 108.8,
+          "soc_pct": 98.3
         },
         {
           "time": "2026-05-17T21:00:00+00:00",
           "pv_w": 3.3,
           "pv_available": 3.3,
-          "soc_pct": 98.3
+          "soc_pct": 94.7
         },
         {
           "time": "2026-05-17T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 97.1
+          "soc_pct": 93.3
         },
         {
           "time": "2026-05-17T23:00:00+00:00",
@@ -1845,44 +1845,44 @@
         },
         {
           "time": "2026-05-18T05:00:00+00:00",
-          "pv_w": 29.6,
-          "pv_available": 29.6,
+          "pv_w": 29.8,
+          "pv_available": 29.8,
           "soc_pct": 73.5
         },
         {
           "time": "2026-05-18T06:00:00+00:00",
-          "pv_w": 115.8,
-          "pv_available": 115.8,
+          "pv_w": 116.3,
+          "pv_available": 116.3,
           "soc_pct": 76.9
         },
         {
           "time": "2026-05-18T07:00:00+00:00",
-          "pv_w": 246.2,
-          "pv_available": 246.2,
+          "pv_w": 246.7,
+          "pv_available": 246.7,
           "soc_pct": 84.5
         },
         {
           "time": "2026-05-18T08:00:00+00:00",
-          "pv_w": 427.6,
-          "pv_available": 427.6,
+          "pv_w": 428.0,
+          "pv_available": 428.0,
           "soc_pct": 98.0
         },
         {
           "time": "2026-05-18T09:00:00+00:00",
-          "pv_w": 606.7,
-          "pv_available": 606.7,
+          "pv_w": 606.5,
+          "pv_available": 606.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T10:00:00+00:00",
-          "pv_w": 703.2,
-          "pv_available": 703.2,
+          "pv_w": 701.7,
+          "pv_available": 701.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T11:00:00+00:00",
-          "pv_w": 692.7,
-          "pv_available": 692.7,
+          "pv_w": 690.3,
+          "pv_available": 690.3,
           "soc_pct": 100.0
         },
         {
@@ -1917,20 +1917,20 @@
         },
         {
           "time": "2026-05-18T17:00:00+00:00",
-          "pv_w": 589.7,
-          "pv_available": 589.7,
+          "pv_w": 586.4,
+          "pv_available": 586.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T18:00:00+00:00",
-          "pv_w": 377.2,
-          "pv_available": 377.2,
+          "pv_w": 375.3,
+          "pv_available": 375.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T19:00:00+00:00",
-          "pv_w": 208.9,
-          "pv_available": 208.9,
+          "pv_w": 208.4,
+          "pv_available": 208.4,
           "soc_pct": 100.0
         },
         {
@@ -1941,8 +1941,8 @@
         },
         {
           "time": "2026-05-18T21:00:00+00:00",
-          "pv_w": 3.2,
-          "pv_available": 3.2,
+          "pv_w": 3.3,
+          "pv_available": 3.3,
           "soc_pct": 99.8
         },
         {
@@ -1989,98 +1989,98 @@
         },
         {
           "time": "2026-05-19T05:00:00+00:00",
-          "pv_w": 9.7,
-          "pv_available": 9.7,
+          "pv_w": 9.8,
+          "pv_available": 9.8,
           "soc_pct": 72.8
         },
         {
           "time": "2026-05-19T06:00:00+00:00",
-          "pv_w": 34.0,
-          "pv_available": 34.0,
+          "pv_w": 34.1,
+          "pv_available": 34.1,
           "soc_pct": 73.6
         },
         {
           "time": "2026-05-19T07:00:00+00:00",
-          "pv_w": 58.1,
-          "pv_available": 58.1,
+          "pv_w": 58.3,
+          "pv_available": 58.3,
           "soc_pct": 75.2
         },
         {
           "time": "2026-05-19T08:00:00+00:00",
-          "pv_w": 83.8,
-          "pv_available": 83.8,
+          "pv_w": 84.0,
+          "pv_available": 84.0,
           "soc_pct": 77.6
         },
         {
           "time": "2026-05-19T09:00:00+00:00",
-          "pv_w": 129.9,
-          "pv_available": 129.9,
-          "soc_pct": 81.4
+          "pv_w": 130.0,
+          "pv_available": 130.0,
+          "soc_pct": 81.5
         },
         {
           "time": "2026-05-19T10:00:00+00:00",
-          "pv_w": 231.9,
-          "pv_available": 231.9,
+          "pv_w": 230.3,
+          "pv_available": 230.3,
           "soc_pct": 88.6
         },
         {
           "time": "2026-05-19T11:00:00+00:00",
-          "pv_w": 374.8,
-          "pv_available": 374.8,
+          "pv_w": 371.1,
+          "pv_available": 371.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T12:00:00+00:00",
-          "pv_w": 483.9,
-          "pv_available": 483.9,
+          "pv_w": 478.6,
+          "pv_available": 478.6,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T13:00:00+00:00",
-          "pv_w": 511.2,
-          "pv_available": 511.2,
+          "pv_w": 505.6,
+          "pv_available": 505.6,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T14:00:00+00:00",
-          "pv_w": 503.0,
-          "pv_available": 503.0,
+          "pv_w": 497.6,
+          "pv_available": 497.6,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T15:00:00+00:00",
-          "pv_w": 464.8,
-          "pv_available": 464.8,
+          "pv_w": 460.8,
+          "pv_available": 460.8,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T16:00:00+00:00",
-          "pv_w": 405.8,
-          "pv_available": 405.8,
+          "pv_w": 403.0,
+          "pv_available": 403.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T17:00:00+00:00",
-          "pv_w": 333.1,
-          "pv_available": 333.1,
+          "pv_w": 331.5,
+          "pv_available": 331.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T18:00:00+00:00",
-          "pv_w": 252.3,
-          "pv_available": 252.3,
+          "pv_w": 251.4,
+          "pv_available": 251.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T19:00:00+00:00",
-          "pv_w": 167.4,
-          "pv_available": 167.4,
+          "pv_w": 167.0,
+          "pv_available": 167.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T20:00:00+00:00",
-          "pv_w": 78.1,
-          "pv_available": 78.1,
+          "pv_w": 78.0,
+          "pv_available": 78.0,
           "soc_pct": 100.0
         },
         {
@@ -2105,23 +2105,23 @@
       "daily": [
         {
           "date": "2026-05-13",
-          "gen_kwh": 5.376,
-          "full_charge_time": "10:00",
-          "fc_model_time": "09:36",
+          "gen_kwh": 5.209,
+          "full_charge_time": "11:00",
+          "fc_model_time": "09:50",
           "fc_confidence": "high",
           "weather_icon": "cloudy"
         },
         {
           "date": "2026-05-14",
-          "gen_kwh": 6.535,
+          "gen_kwh": 5.444,
           "full_charge_time": "06:00",
-          "fc_model_time": "08:15",
+          "fc_model_time": "08:26",
           "fc_confidence": "high",
-          "weather_icon": "partly_cloudy"
+          "weather_icon": "cloudy"
         },
         {
           "date": "2026-05-15",
-          "gen_kwh": 7.401,
+          "gen_kwh": 7.233,
           "full_charge_time": "06:00",
           "fc_model_time": "08:12",
           "fc_confidence": "high",
@@ -2129,33 +2129,33 @@
         },
         {
           "date": "2026-05-16",
-          "gen_kwh": 6.577,
-          "full_charge_time": "09:00",
+          "gen_kwh": 6.582,
+          "full_charge_time": "08:00",
           "fc_model_time": "08:25",
           "fc_confidence": "high",
           "weather_icon": "partly_cloudy"
         },
         {
           "date": "2026-05-17",
-          "gen_kwh": 7.495,
-          "full_charge_time": "10:00",
-          "fc_model_time": "08:55",
+          "gen_kwh": 7.491,
+          "full_charge_time": "09:00",
+          "fc_model_time": "08:54",
           "fc_confidence": "high",
           "weather_icon": "partly_cloudy"
         },
         {
           "date": "2026-05-18",
-          "gen_kwh": 7.59,
+          "gen_kwh": 7.582,
           "full_charge_time": "10:00",
-          "fc_model_time": "08:50",
+          "fc_model_time": "08:49",
           "fc_confidence": "high",
           "weather_icon": "partly_cloudy"
         },
         {
           "date": "2026-05-19",
-          "gen_kwh": 4.125,
+          "gen_kwh": 4.094,
           "full_charge_time": "12:00",
-          "fc_model_time": "10:07",
+          "fc_model_time": "10:05",
           "fc_confidence": "high",
           "weather_icon": "cloudy"
         },
@@ -2173,7 +2173,7 @@
       "name": "Cumbernauld",
       "capacity_kwp": 1.39,
       "system_derating": 1.0,
-      "current_soc_pct": 80.7,
+      "current_soc_pct": 66.7,
       "soc_source": "api",
       "weather_mode": "forecast",
       "hourly": [
@@ -2181,67 +2181,67 @@
           "time": "2026-05-13T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 80.7
+          "soc_pct": 66.7
         },
         {
           "time": "2026-05-13T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 80.4
+          "soc_pct": 66.4
         },
         {
           "time": "2026-05-13T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 80.0
+          "soc_pct": 66.0
         },
         {
           "time": "2026-05-13T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 79.7
+          "soc_pct": 65.7
         },
         {
           "time": "2026-05-13T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 79.4
+          "soc_pct": 65.4
         },
         {
           "time": "2026-05-13T05:00:00+00:00",
           "pv_w": 10.3,
           "pv_available": 10.3,
-          "soc_pct": 79.4
+          "soc_pct": 65.4
         },
         {
           "time": "2026-05-13T06:00:00+00:00",
           "pv_w": 88.2,
           "pv_available": 88.2,
-          "soc_pct": 81.6
+          "soc_pct": 67.6
         },
         {
           "time": "2026-05-13T07:00:00+00:00",
           "pv_w": 157.8,
           "pv_available": 157.8,
-          "soc_pct": 85.8
+          "soc_pct": 71.8
         },
         {
           "time": "2026-05-13T08:00:00+00:00",
           "pv_w": 209.7,
           "pv_available": 209.7,
-          "soc_pct": 91.5
+          "soc_pct": 77.5
         },
         {
           "time": "2026-05-13T09:00:00+00:00",
           "pv_w": 337.1,
           "pv_available": 337.1,
-          "soc_pct": 99.3
+          "soc_pct": 86.8
         },
         {
           "time": "2026-05-13T10:00:00+00:00",
           "pv_w": 375.9,
           "pv_available": 375.9,
-          "soc_pct": 100.0
+          "soc_pct": 97.2
         },
         {
           "time": "2026-05-13T11:00:00+00:00",
@@ -2269,128 +2269,128 @@
         },
         {
           "time": "2026-05-13T15:00:00+00:00",
-          "pv_w": 323.4,
-          "pv_available": 323.4,
-          "soc_pct": 100.0
+          "pv_w": 472.5,
+          "pv_available": 472.5,
+          "soc_pct": 99.3
         },
         {
           "time": "2026-05-13T16:00:00+00:00",
-          "pv_w": 244.8,
-          "pv_available": 244.8,
-          "soc_pct": 99.8
+          "pv_w": 380.4,
+          "pv_available": 380.4,
+          "soc_pct": 97.6
         },
         {
           "time": "2026-05-13T17:00:00+00:00",
-          "pv_w": 245.0,
-          "pv_available": 245.0,
-          "soc_pct": 98.5
+          "pv_w": 339.1,
+          "pv_available": 339.1,
+          "soc_pct": 98.6
         },
         {
           "time": "2026-05-13T18:00:00+00:00",
-          "pv_w": 174.8,
-          "pv_available": 174.8,
-          "soc_pct": 97.1
+          "pv_w": 201.6,
+          "pv_available": 201.6,
+          "soc_pct": 96.9
         },
         {
           "time": "2026-05-13T19:00:00+00:00",
-          "pv_w": 139.0,
-          "pv_available": 139.0,
+          "pv_w": 113.3,
+          "pv_available": 113.3,
           "soc_pct": 96.8
         },
         {
           "time": "2026-05-13T20:00:00+00:00",
-          "pv_w": 17.8,
-          "pv_available": 17.8,
-          "soc_pct": 96.1
+          "pv_w": 34.5,
+          "pv_available": 34.5,
+          "soc_pct": 93.2
         },
         {
           "time": "2026-05-13T21:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 94.9
+          "soc_pct": 92.9
         },
         {
           "time": "2026-05-13T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 94.2
+          "soc_pct": 92.6
         },
         {
           "time": "2026-05-13T23:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 89.8
+          "soc_pct": 90.3
         },
         {
           "time": "2026-05-14T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 89.5
+          "soc_pct": 90.0
         },
         {
           "time": "2026-05-14T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 89.2
+          "soc_pct": 89.7
         },
         {
           "time": "2026-05-14T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 88.8
+          "soc_pct": 89.4
         },
         {
           "time": "2026-05-14T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 88.5
+          "soc_pct": 89.0
         },
         {
           "time": "2026-05-14T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 88.2
+          "soc_pct": 88.7
         },
         {
           "time": "2026-05-14T05:00:00+00:00",
-          "pv_w": 12.8,
-          "pv_available": 12.8,
-          "soc_pct": 88.3
+          "pv_w": 16.7,
+          "pv_available": 16.7,
+          "soc_pct": 88.9
         },
         {
           "time": "2026-05-14T06:00:00+00:00",
-          "pv_w": 76.1,
-          "pv_available": 76.1,
-          "soc_pct": 90.2
+          "pv_w": 59.8,
+          "pv_available": 59.8,
+          "soc_pct": 90.3
         },
         {
           "time": "2026-05-14T07:00:00+00:00",
-          "pv_w": 167.9,
-          "pv_available": 167.9,
-          "soc_pct": 94.7
+          "pv_w": 91.4,
+          "pv_available": 91.4,
+          "soc_pct": 92.7
         },
         {
           "time": "2026-05-14T08:00:00+00:00",
-          "pv_w": 216.3,
-          "pv_available": 216.3,
-          "soc_pct": 98.8
+          "pv_w": 229.7,
+          "pv_available": 229.7,
+          "soc_pct": 98.3
         },
         {
           "time": "2026-05-14T09:00:00+00:00",
-          "pv_w": 363.7,
-          "pv_available": 363.7,
-          "soc_pct": 100.0
+          "pv_w": 303.9,
+          "pv_available": 303.9,
+          "soc_pct": 99.1
         },
         {
           "time": "2026-05-14T10:00:00+00:00",
-          "pv_w": 368.7,
-          "pv_available": 368.7,
+          "pv_w": 426.1,
+          "pv_available": 426.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T11:00:00+00:00",
-          "pv_w": 443.2,
-          "pv_available": 443.2,
+          "pv_w": 494.0,
+          "pv_available": 494.0,
           "soc_pct": 100.0
         },
         {
@@ -2407,123 +2407,123 @@
         },
         {
           "time": "2026-05-14T14:00:00+00:00",
-          "pv_w": 180.2,
-          "pv_available": 180.2,
+          "pv_w": 409.2,
+          "pv_available": 409.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T15:00:00+00:00",
-          "pv_w": 419.4,
-          "pv_available": 419.4,
+          "pv_w": 494.0,
+          "pv_available": 494.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T16:00:00+00:00",
-          "pv_w": 252.1,
-          "pv_available": 252.1,
+          "pv_w": 494.0,
+          "pv_available": 494.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T17:00:00+00:00",
-          "pv_w": 322.0,
-          "pv_available": 322.0,
+          "pv_w": 494.0,
+          "pv_available": 494.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T18:00:00+00:00",
-          "pv_w": 259.3,
-          "pv_available": 259.3,
-          "soc_pct": 99.5
+          "pv_w": 217.0,
+          "pv_available": 217.0,
+          "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T19:00:00+00:00",
-          "pv_w": 282.5,
-          "pv_available": 282.5,
-          "soc_pct": 98.1
+          "pv_w": 64.1,
+          "pv_available": 64.1,
+          "soc_pct": 99.3
         },
         {
           "time": "2026-05-14T20:00:00+00:00",
-          "pv_w": 57.2,
-          "pv_available": 57.2,
-          "soc_pct": 94.9
+          "pv_w": 38.1,
+          "pv_available": 38.1,
+          "soc_pct": 95.4
         },
         {
           "time": "2026-05-14T21:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 94.0
+          "soc_pct": 93.2
         },
         {
           "time": "2026-05-14T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 92.7
+          "soc_pct": 92.9
         },
         {
           "time": "2026-05-14T23:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 91.3
+          "soc_pct": 90.8
         },
         {
           "time": "2026-05-15T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 88.9
+          "soc_pct": 90.1
         },
         {
           "time": "2026-05-15T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 88.6
+          "soc_pct": 89.8
         },
         {
           "time": "2026-05-15T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 88.3
+          "soc_pct": 89.1
         },
         {
           "time": "2026-05-15T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 88.0
+          "soc_pct": 88.8
         },
         {
           "time": "2026-05-15T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 87.7
+          "soc_pct": 87.9
         },
         {
           "time": "2026-05-15T05:00:00+00:00",
-          "pv_w": 15.7,
-          "pv_available": 15.7,
-          "soc_pct": 87.8
+          "pv_w": 15.6,
+          "pv_available": 15.6,
+          "soc_pct": 88.1
         },
         {
           "time": "2026-05-15T06:00:00+00:00",
-          "pv_w": 59.1,
-          "pv_available": 59.1,
-          "soc_pct": 89.2
+          "pv_w": 67.9,
+          "pv_available": 67.9,
+          "soc_pct": 89.7
         },
         {
           "time": "2026-05-15T07:00:00+00:00",
-          "pv_w": 140.8,
-          "pv_available": 140.8,
-          "soc_pct": 93.0
+          "pv_w": 166.1,
+          "pv_available": 166.1,
+          "soc_pct": 94.2
         },
         {
           "time": "2026-05-15T08:00:00+00:00",
-          "pv_w": 192.2,
-          "pv_available": 192.2,
-          "soc_pct": 97.3
+          "pv_w": 253.3,
+          "pv_available": 253.3,
+          "soc_pct": 96.4
         },
         {
           "time": "2026-05-15T09:00:00+00:00",
-          "pv_w": 401.6,
-          "pv_available": 401.6,
-          "soc_pct": 99.1
+          "pv_w": 393.1,
+          "pv_available": 393.1,
+          "soc_pct": 98.5
         },
         {
           "time": "2026-05-15T10:00:00+00:00",
@@ -2551,8 +2551,8 @@
         },
         {
           "time": "2026-05-15T14:00:00+00:00",
-          "pv_w": 494.0,
-          "pv_available": 494.0,
+          "pv_w": 491.2,
+          "pv_available": 491.2,
           "soc_pct": 100.0
         },
         {
@@ -2563,45 +2563,45 @@
         },
         {
           "time": "2026-05-15T16:00:00+00:00",
-          "pv_w": 494.0,
-          "pv_available": 494.0,
+          "pv_w": 383.8,
+          "pv_available": 383.8,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T17:00:00+00:00",
-          "pv_w": 418.5,
-          "pv_available": 418.5,
+          "pv_w": 472.9,
+          "pv_available": 472.9,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T18:00:00+00:00",
-          "pv_w": 276.1,
-          "pv_available": 276.1,
+          "pv_w": 493.6,
+          "pv_available": 493.6,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T19:00:00+00:00",
-          "pv_w": 156.3,
-          "pv_available": 156.3,
+          "pv_w": 124.5,
+          "pv_available": 124.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T20:00:00+00:00",
-          "pv_w": 357.4,
-          "pv_available": 357.4,
-          "soc_pct": 100.0
+          "pv_w": 196.8,
+          "pv_available": 196.8,
+          "soc_pct": 98.3
         },
         {
           "time": "2026-05-15T21:00:00+00:00",
-          "pv_w": 203.4,
-          "pv_available": 203.4,
-          "soc_pct": 98.5
+          "pv_w": 204.3,
+          "pv_available": 204.3,
+          "soc_pct": 96.6
         },
         {
           "time": "2026-05-15T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 95.4
+          "soc_pct": 94.9
         },
         {
           "time": "2026-05-15T23:00:00+00:00",
@@ -2647,33 +2647,33 @@
         },
         {
           "time": "2026-05-16T06:00:00+00:00",
-          "pv_w": 61.3,
-          "pv_available": 61.3,
-          "soc_pct": 74.8
+          "pv_w": 61.2,
+          "pv_available": 61.2,
+          "soc_pct": 74.7
         },
         {
           "time": "2026-05-16T07:00:00+00:00",
-          "pv_w": 106.9,
-          "pv_available": 106.9,
+          "pv_w": 106.8,
+          "pv_available": 106.8,
           "soc_pct": 77.5
         },
         {
           "time": "2026-05-16T08:00:00+00:00",
-          "pv_w": 214.6,
-          "pv_available": 214.6,
+          "pv_w": 214.4,
+          "pv_available": 214.4,
           "soc_pct": 83.3
         },
         {
           "time": "2026-05-16T09:00:00+00:00",
-          "pv_w": 383.7,
-          "pv_available": 383.7,
+          "pv_w": 383.4,
+          "pv_available": 383.4,
           "soc_pct": 93.9
         },
         {
           "time": "2026-05-16T10:00:00+00:00",
-          "pv_w": 487.5,
-          "pv_available": 487.5,
-          "soc_pct": 97.6
+          "pv_w": 487.3,
+          "pv_available": 487.3,
+          "soc_pct": 97.8
         },
         {
           "time": "2026-05-16T11:00:00+00:00",
@@ -2685,7 +2685,7 @@
           "time": "2026-05-16T12:00:00+00:00",
           "pv_w": 494.0,
           "pv_available": 494.0,
-          "soc_pct": 99.5
+          "soc_pct": 99.3
         },
         {
           "time": "2026-05-16T13:00:00+00:00",
@@ -2695,57 +2695,57 @@
         },
         {
           "time": "2026-05-16T14:00:00+00:00",
-          "pv_w": 418.7,
-          "pv_available": 418.7,
+          "pv_w": 418.5,
+          "pv_available": 418.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T15:00:00+00:00",
-          "pv_w": 475.8,
-          "pv_available": 475.8,
+          "pv_w": 475.4,
+          "pv_available": 475.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T16:00:00+00:00",
-          "pv_w": 324.3,
-          "pv_available": 324.3,
+          "pv_w": 323.6,
+          "pv_available": 323.6,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T17:00:00+00:00",
-          "pv_w": 259.2,
-          "pv_available": 259.2,
+          "pv_w": 258.6,
+          "pv_available": 258.6,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T18:00:00+00:00",
-          "pv_w": 156.4,
-          "pv_available": 156.4,
+          "pv_w": 155.9,
+          "pv_available": 155.9,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T19:00:00+00:00",
-          "pv_w": 89.3,
-          "pv_available": 89.3,
-          "soc_pct": 99.8
+          "pv_w": 88.9,
+          "pv_available": 88.9,
+          "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T20:00:00+00:00",
-          "pv_w": 27.8,
-          "pv_available": 27.8,
-          "soc_pct": 98.1
+          "pv_w": 27.7,
+          "pv_available": 27.7,
+          "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T21:00:00+00:00",
           "pv_w": 1.3,
           "pv_available": 1.3,
-          "soc_pct": 96.8
+          "soc_pct": 98.6
         },
         {
           "time": "2026-05-16T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 96.3
+          "soc_pct": 97.6
         },
         {
           "time": "2026-05-16T23:00:00+00:00",
@@ -2797,27 +2797,27 @@
         },
         {
           "time": "2026-05-17T07:00:00+00:00",
-          "pv_w": 165.4,
-          "pv_available": 165.4,
+          "pv_w": 165.8,
+          "pv_available": 165.8,
           "soc_pct": 80.0
         },
         {
           "time": "2026-05-17T08:00:00+00:00",
-          "pv_w": 257.4,
-          "pv_available": 257.4,
-          "soc_pct": 87.0
+          "pv_w": 259.3,
+          "pv_available": 259.3,
+          "soc_pct": 87.1
         },
         {
           "time": "2026-05-17T09:00:00+00:00",
-          "pv_w": 367.4,
-          "pv_available": 367.4,
-          "soc_pct": 97.2
+          "pv_w": 370.7,
+          "pv_available": 370.7,
+          "soc_pct": 97.3
         },
         {
           "time": "2026-05-17T10:00:00+00:00",
-          "pv_w": 452.2,
-          "pv_available": 452.2,
-          "soc_pct": 100.0
+          "pv_w": 454.4,
+          "pv_available": 454.4,
+          "soc_pct": 99.3
         },
         {
           "time": "2026-05-17T11:00:00+00:00",
@@ -2863,33 +2863,33 @@
         },
         {
           "time": "2026-05-17T18:00:00+00:00",
-          "pv_w": 463.4,
-          "pv_available": 463.4,
+          "pv_w": 461.1,
+          "pv_available": 461.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T19:00:00+00:00",
-          "pv_w": 339.5,
-          "pv_available": 339.5,
+          "pv_w": 339.7,
+          "pv_available": 339.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T20:00:00+00:00",
-          "pv_w": 344.4,
-          "pv_available": 344.4,
-          "soc_pct": 99.7
+          "pv_w": 347.1,
+          "pv_available": 347.1,
+          "soc_pct": 96.4
         },
         {
           "time": "2026-05-17T21:00:00+00:00",
-          "pv_w": 215.2,
-          "pv_available": 215.2,
-          "soc_pct": 98.1
+          "pv_w": 217.8,
+          "pv_available": 217.8,
+          "soc_pct": 93.0
         },
         {
           "time": "2026-05-17T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 97.1
+          "soc_pct": 92.5
         },
         {
           "time": "2026-05-17T23:00:00+00:00",
@@ -2929,38 +2929,38 @@
         },
         {
           "time": "2026-05-18T05:00:00+00:00",
-          "pv_w": 15.4,
-          "pv_available": 15.4,
+          "pv_w": 15.5,
+          "pv_available": 15.5,
           "soc_pct": 73.2
         },
         {
           "time": "2026-05-18T06:00:00+00:00",
-          "pv_w": 59.9,
-          "pv_available": 59.9,
+          "pv_w": 60.1,
+          "pv_available": 60.1,
           "soc_pct": 74.7
         },
         {
           "time": "2026-05-18T07:00:00+00:00",
-          "pv_w": 111.8,
-          "pv_available": 111.8,
+          "pv_w": 111.9,
+          "pv_available": 111.9,
           "soc_pct": 77.6
         },
         {
           "time": "2026-05-18T08:00:00+00:00",
-          "pv_w": 208.8,
-          "pv_available": 208.8,
+          "pv_w": 208.3,
+          "pv_available": 208.3,
           "soc_pct": 83.2
         },
         {
           "time": "2026-05-18T09:00:00+00:00",
-          "pv_w": 371.4,
-          "pv_available": 371.4,
-          "soc_pct": 93.5
+          "pv_w": 369.7,
+          "pv_available": 369.7,
+          "soc_pct": 93.4
         },
         {
           "time": "2026-05-18T10:00:00+00:00",
-          "pv_w": 487.9,
-          "pv_available": 487.9,
+          "pv_w": 485.7,
+          "pv_available": 485.7,
           "soc_pct": 100.0
         },
         {
@@ -3013,14 +3013,14 @@
         },
         {
           "time": "2026-05-18T19:00:00+00:00",
-          "pv_w": 394.6,
-          "pv_available": 394.6,
+          "pv_w": 393.6,
+          "pv_available": 393.6,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T20:00:00+00:00",
-          "pv_w": 245.9,
-          "pv_available": 245.9,
+          "pv_w": 246.2,
+          "pv_available": 246.2,
           "soc_pct": 100.0
         },
         {
@@ -3079,98 +3079,98 @@
         },
         {
           "time": "2026-05-19T06:00:00+00:00",
-          "pv_w": 20.0,
-          "pv_available": 20.0,
+          "pv_w": 20.2,
+          "pv_available": 20.2,
           "soc_pct": 73.3
         },
         {
           "time": "2026-05-19T07:00:00+00:00",
-          "pv_w": 36.3,
-          "pv_available": 36.3,
+          "pv_w": 36.4,
+          "pv_available": 36.4,
           "soc_pct": 74.0
         },
         {
           "time": "2026-05-19T08:00:00+00:00",
-          "pv_w": 54.9,
-          "pv_available": 54.9,
+          "pv_w": 55.0,
+          "pv_available": 55.0,
           "soc_pct": 75.3
         },
         {
           "time": "2026-05-19T09:00:00+00:00",
-          "pv_w": 96.9,
-          "pv_available": 96.9,
+          "pv_w": 96.7,
+          "pv_available": 96.7,
           "soc_pct": 77.8
         },
         {
           "time": "2026-05-19T10:00:00+00:00",
-          "pv_w": 186.2,
-          "pv_available": 186.2,
-          "soc_pct": 82.8
+          "pv_w": 184.8,
+          "pv_available": 184.8,
+          "soc_pct": 82.7
         },
         {
           "time": "2026-05-19T11:00:00+00:00",
-          "pv_w": 325.0,
-          "pv_available": 325.0,
-          "soc_pct": 91.7
+          "pv_w": 321.8,
+          "pv_available": 321.8,
+          "soc_pct": 91.6
         },
         {
           "time": "2026-05-19T12:00:00+00:00",
-          "pv_w": 442.4,
-          "pv_available": 442.4,
+          "pv_w": 437.0,
+          "pv_available": 437.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T13:00:00+00:00",
-          "pv_w": 479.9,
-          "pv_available": 479.9,
+          "pv_w": 474.2,
+          "pv_available": 474.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T14:00:00+00:00",
-          "pv_w": 485.1,
-          "pv_available": 485.1,
+          "pv_w": 480.2,
+          "pv_available": 480.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T15:00:00+00:00",
-          "pv_w": 461.4,
-          "pv_available": 461.4,
+          "pv_w": 457.9,
+          "pv_available": 457.9,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T16:00:00+00:00",
-          "pv_w": 417.7,
-          "pv_available": 417.7,
+          "pv_w": 415.6,
+          "pv_available": 415.6,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T17:00:00+00:00",
-          "pv_w": 361.7,
-          "pv_available": 361.7,
+          "pv_w": 361.0,
+          "pv_available": 361.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T18:00:00+00:00",
-          "pv_w": 300.3,
-          "pv_available": 300.3,
+          "pv_w": 300.2,
+          "pv_available": 300.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T19:00:00+00:00",
-          "pv_w": 238.5,
-          "pv_available": 238.5,
+          "pv_w": 238.6,
+          "pv_available": 238.6,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T20:00:00+00:00",
-          "pv_w": 235.9,
-          "pv_available": 235.9,
+          "pv_w": 236.2,
+          "pv_available": 236.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T21:00:00+00:00",
-          "pv_w": 219.9,
-          "pv_available": 219.9,
+          "pv_w": 220.3,
+          "pv_available": 220.3,
           "soc_pct": 100.0
         },
         {
@@ -3189,57 +3189,57 @@
       "daily": [
         {
           "date": "2026-05-13",
-          "gen_kwh": 4.074,
-          "full_charge_time": "10:00",
-          "fc_model_time": "09:06",
+          "gen_kwh": 4.471,
+          "full_charge_time": "12:00",
+          "fc_model_time": "09:57",
           "fc_confidence": "high",
-          "weather_icon": "cloudy"
+          "weather_icon": "partly_cloudy"
         },
         {
           "date": "2026-05-14",
-          "gen_kwh": 4.409,
+          "gen_kwh": 4.82,
           "full_charge_time": "09:00",
-          "fc_model_time": "08:27",
+          "fc_model_time": "08:06",
           "fc_confidence": "high",
           "weather_icon": "partly_cloudy"
         },
         {
           "date": "2026-05-15",
-          "gen_kwh": 5.679,
-          "full_charge_time": "09:00",
-          "fc_model_time": "08:19",
+          "gen_kwh": 5.733,
+          "full_charge_time": "08:00",
+          "fc_model_time": "08:17",
           "fc_confidence": "high",
           "weather_icon": "partly_cloudy"
         },
         {
           "date": "2026-05-16",
-          "gen_kwh": 4.506,
+          "gen_kwh": 4.502,
           "full_charge_time": "11:00",
-          "fc_model_time": "09:28",
+          "fc_model_time": "09:29",
           "fc_confidence": "high",
           "weather_icon": "partly_cloudy"
         },
         {
           "date": "2026-05-17",
-          "gen_kwh": 6.171,
+          "gen_kwh": 6.182,
+          "full_charge_time": "10:00",
+          "fc_model_time": "09:07",
+          "fc_confidence": "high",
+          "weather_icon": "partly_cloudy"
+        },
+        {
+          "date": "2026-05-18",
+          "gen_kwh": 5.847,
           "full_charge_time": "11:00",
           "fc_model_time": "09:09",
           "fc_confidence": "high",
           "weather_icon": "partly_cloudy"
         },
         {
-          "date": "2026-05-18",
-          "gen_kwh": 5.852,
-          "full_charge_time": "11:00",
-          "fc_model_time": "09:10",
-          "fc_confidence": "high",
-          "weather_icon": "partly_cloudy"
-        },
-        {
           "date": "2026-05-19",
-          "gen_kwh": 4.368,
+          "gen_kwh": 4.342,
           "full_charge_time": "13:00",
-          "fc_model_time": "10:07",
+          "fc_model_time": "10:04",
           "fc_confidence": "high",
           "weather_icon": "partly_cloudy"
         },
@@ -3257,7 +3257,7 @@
       "name": "Denmilne",
       "capacity_kwp": 2.205,
       "system_derating": 1.0,
-      "current_soc_pct": 90.9,
+      "current_soc_pct": 66.8,
       "soc_source": "api",
       "weather_mode": "forecast",
       "hourly": [
@@ -3265,61 +3265,61 @@
           "time": "2026-05-13T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 90.9
+          "soc_pct": 66.8
         },
         {
           "time": "2026-05-13T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 90.7
+          "soc_pct": 66.6
         },
         {
           "time": "2026-05-13T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 90.5
+          "soc_pct": 66.4
         },
         {
           "time": "2026-05-13T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 90.3
+          "soc_pct": 66.2
         },
         {
           "time": "2026-05-13T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 90.1
+          "soc_pct": 66.0
         },
         {
           "time": "2026-05-13T05:00:00+00:00",
           "pv_w": 21.5,
           "pv_available": 21.5,
-          "soc_pct": 89.9
+          "soc_pct": 66.2
         },
         {
           "time": "2026-05-13T06:00:00+00:00",
           "pv_w": 87.7,
           "pv_available": 87.7,
-          "soc_pct": 91.3
+          "soc_pct": 67.6
         },
         {
           "time": "2026-05-13T07:00:00+00:00",
           "pv_w": 423.5,
           "pv_available": 423.5,
-          "soc_pct": 93.8
+          "soc_pct": 74.9
         },
         {
           "time": "2026-05-13T08:00:00+00:00",
           "pv_w": 542.5,
           "pv_available": 542.5,
-          "soc_pct": 95.9
+          "soc_pct": 84.4
         },
         {
           "time": "2026-05-13T09:00:00+00:00",
           "pv_w": 600.2,
           "pv_available": 600.2,
-          "soc_pct": 97.6
+          "soc_pct": 94.8
         },
         {
           "time": "2026-05-13T10:00:00+00:00",
@@ -3353,266 +3353,266 @@
         },
         {
           "time": "2026-05-13T15:00:00+00:00",
-          "pv_w": 310.3,
-          "pv_available": 310.3,
-          "soc_pct": 95.0
-        },
-        {
-          "time": "2026-05-13T16:00:00+00:00",
-          "pv_w": 531.4,
-          "pv_available": 531.4,
-          "soc_pct": 95.0
-        },
-        {
-          "time": "2026-05-13T17:00:00+00:00",
-          "pv_w": 475.0,
-          "pv_available": 475.0,
+          "pv_w": 428.6,
+          "pv_available": 428.6,
           "soc_pct": 95.2
         },
         {
-          "time": "2026-05-13T18:00:00+00:00",
-          "pv_w": 169.2,
-          "pv_available": 169.2,
+          "time": "2026-05-13T16:00:00+00:00",
+          "pv_w": 433.7,
+          "pv_available": 433.7,
+          "soc_pct": 93.8
+        },
+        {
+          "time": "2026-05-13T17:00:00+00:00",
+          "pv_w": 603.0,
+          "pv_available": 603.0,
           "soc_pct": 95.0
         },
         {
+          "time": "2026-05-13T18:00:00+00:00",
+          "pv_w": 250.1,
+          "pv_available": 250.1,
+          "soc_pct": 95.7
+        },
+        {
           "time": "2026-05-13T19:00:00+00:00",
-          "pv_w": 131.5,
-          "pv_available": 131.5,
-          "soc_pct": 94.7
+          "pv_w": 139.8,
+          "pv_available": 139.8,
+          "soc_pct": 95.2
         },
         {
           "time": "2026-05-13T20:00:00+00:00",
-          "pv_w": 53.4,
-          "pv_available": 53.4,
-          "soc_pct": 93.0
+          "pv_w": 38.4,
+          "pv_available": 38.4,
+          "soc_pct": 94.5
         },
         {
           "time": "2026-05-13T21:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 92.8
+          "soc_pct": 93.5
         },
         {
           "time": "2026-05-13T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 92.3
+          "soc_pct": 92.8
         },
         {
           "time": "2026-05-13T23:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 92.1
+          "soc_pct": 91.6
         },
         {
           "time": "2026-05-14T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 91.6
+          "soc_pct": 91.4
         },
         {
           "time": "2026-05-14T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 91.1
+          "soc_pct": 91.2
         },
         {
           "time": "2026-05-14T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 90.9
+          "soc_pct": 91.0
         },
         {
           "time": "2026-05-14T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 90.6
+          "soc_pct": 90.8
         },
         {
           "time": "2026-05-14T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 90.4
-        },
-        {
-          "time": "2026-05-14T05:00:00+00:00",
-          "pv_w": 30.1,
-          "pv_available": 30.1,
           "soc_pct": 90.6
         },
         {
+          "time": "2026-05-14T05:00:00+00:00",
+          "pv_w": 34.3,
+          "pv_available": 34.3,
+          "soc_pct": 90.9
+        },
+        {
           "time": "2026-05-14T06:00:00+00:00",
-          "pv_w": 100.3,
-          "pv_available": 100.3,
-          "soc_pct": 92.1
+          "pv_w": 298.7,
+          "pv_available": 298.7,
+          "soc_pct": 93.5
         },
         {
           "time": "2026-05-14T07:00:00+00:00",
-          "pv_w": 576.7,
-          "pv_available": 576.7,
+          "pv_w": 303.9,
+          "pv_available": 303.9,
           "soc_pct": 95.4
         },
         {
           "time": "2026-05-14T08:00:00+00:00",
-          "pv_w": 741.0,
-          "pv_available": 741.0,
-          "soc_pct": 98.3
+          "pv_w": 357.9,
+          "pv_available": 357.9,
+          "soc_pct": 97.6
         },
         {
           "time": "2026-05-14T09:00:00+00:00",
-          "pv_w": 638.8,
-          "pv_available": 638.8,
+          "pv_w": 700.4,
+          "pv_available": 700.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T10:00:00+00:00",
-          "pv_w": 441.3,
-          "pv_available": 441.3,
-          "soc_pct": 99.8
+          "pv_w": 412.1,
+          "pv_available": 412.1,
+          "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T11:00:00+00:00",
-          "pv_w": 741.0,
-          "pv_available": 741.0,
+          "pv_w": 536.8,
+          "pv_available": 536.8,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T12:00:00+00:00",
-          "pv_w": 741.0,
-          "pv_available": 741.0,
+          "pv_w": 591.8,
+          "pv_available": 591.8,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T13:00:00+00:00",
-          "pv_w": 593.6,
-          "pv_available": 593.6,
-          "soc_pct": 100.0
+          "pv_w": 605.6,
+          "pv_available": 605.6,
+          "soc_pct": 98.1
         },
         {
           "time": "2026-05-14T14:00:00+00:00",
+          "pv_w": 340.3,
+          "pv_available": 340.3,
+          "soc_pct": 96.4
+        },
+        {
+          "time": "2026-05-14T15:00:00+00:00",
           "pv_w": 741.0,
           "pv_available": 741.0,
           "soc_pct": 100.0
         },
         {
-          "time": "2026-05-14T15:00:00+00:00",
-          "pv_w": 497.8,
-          "pv_available": 497.8,
-          "soc_pct": 100.0
-        },
-        {
           "time": "2026-05-14T16:00:00+00:00",
-          "pv_w": 594.5,
-          "pv_available": 594.5,
-          "soc_pct": 99.3
+          "pv_w": 492.0,
+          "pv_available": 492.0,
+          "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T17:00:00+00:00",
-          "pv_w": 276.8,
-          "pv_available": 276.8,
-          "soc_pct": 100.0
+          "pv_w": 99.2,
+          "pv_available": 99.2,
+          "soc_pct": 98.6
         },
         {
           "time": "2026-05-14T18:00:00+00:00",
-          "pv_w": 268.6,
-          "pv_available": 268.6,
-          "soc_pct": 100.0
+          "pv_w": 356.0,
+          "pv_available": 356.0,
+          "soc_pct": 97.4
         },
         {
           "time": "2026-05-14T19:00:00+00:00",
-          "pv_w": 289.9,
-          "pv_available": 289.9,
-          "soc_pct": 98.8
+          "pv_w": 101.4,
+          "pv_available": 101.4,
+          "soc_pct": 98.3
         },
         {
           "time": "2026-05-14T20:00:00+00:00",
-          "pv_w": 63.8,
-          "pv_available": 63.8,
-          "soc_pct": 95.7
+          "pv_w": 29.8,
+          "pv_available": 29.8,
+          "soc_pct": 95.9
         },
         {
           "time": "2026-05-14T21:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 95.2
+          "soc_pct": 94.5
         },
         {
           "time": "2026-05-14T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 93.5
+          "soc_pct": 91.1
         },
         {
           "time": "2026-05-14T23:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 92.3
+          "soc_pct": 89.9
         },
         {
           "time": "2026-05-15T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 90.2
+          "soc_pct": 89.2
         },
         {
           "time": "2026-05-15T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 88.5
+          "soc_pct": 88.0
         },
         {
           "time": "2026-05-15T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 87.8
+          "soc_pct": 86.8
         },
         {
           "time": "2026-05-15T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 87.6
+          "soc_pct": 86.6
         },
         {
           "time": "2026-05-15T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 87.4
+          "soc_pct": 86.4
         },
         {
           "time": "2026-05-15T05:00:00+00:00",
-          "pv_w": 36.6,
-          "pv_available": 36.6,
-          "soc_pct": 87.8
+          "pv_w": 55.9,
+          "pv_available": 55.9,
+          "soc_pct": 87.2
         },
         {
           "time": "2026-05-15T06:00:00+00:00",
-          "pv_w": 316.0,
-          "pv_available": 316.0,
-          "soc_pct": 92.1
+          "pv_w": 316.6,
+          "pv_available": 316.6,
+          "soc_pct": 90.9
         },
         {
           "time": "2026-05-15T07:00:00+00:00",
-          "pv_w": 457.4,
-          "pv_available": 457.4,
-          "soc_pct": 94.5
+          "pv_w": 617.6,
+          "pv_available": 617.6,
+          "soc_pct": 94.2
         },
         {
           "time": "2026-05-15T08:00:00+00:00",
-          "pv_w": 547.8,
-          "pv_available": 547.8,
-          "soc_pct": 96.6
+          "pv_w": 741.0,
+          "pv_available": 741.0,
+          "soc_pct": 96.9
         },
         {
           "time": "2026-05-15T09:00:00+00:00",
           "pv_w": 741.0,
           "pv_available": 741.0,
-          "soc_pct": 98.1
+          "soc_pct": 99.5
         },
         {
           "time": "2026-05-15T10:00:00+00:00",
-          "pv_w": 731.8,
-          "pv_available": 731.8,
+          "pv_w": 741.0,
+          "pv_available": 741.0,
           "soc_pct": 100.0
         },
         {
@@ -3647,45 +3647,45 @@
         },
         {
           "time": "2026-05-15T16:00:00+00:00",
-          "pv_w": 678.8,
-          "pv_available": 678.8,
+          "pv_w": 741.0,
+          "pv_available": 741.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T17:00:00+00:00",
-          "pv_w": 645.8,
-          "pv_available": 645.8,
+          "pv_w": 741.0,
+          "pv_available": 741.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T18:00:00+00:00",
-          "pv_w": 489.8,
-          "pv_available": 489.8,
+          "pv_w": 589.9,
+          "pv_available": 589.9,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T19:00:00+00:00",
-          "pv_w": 328.2,
-          "pv_available": 328.2,
+          "pv_w": 309.8,
+          "pv_available": 309.8,
           "soc_pct": 99.8
         },
         {
           "time": "2026-05-15T20:00:00+00:00",
-          "pv_w": 103.6,
-          "pv_available": 103.6,
-          "soc_pct": 97.4
+          "pv_w": 83.7,
+          "pv_available": 83.7,
+          "soc_pct": 96.9
         },
         {
           "time": "2026-05-15T21:00:00+00:00",
-          "pv_w": 2.1,
-          "pv_available": 2.1,
-          "soc_pct": 94.7
+          "pv_w": 1.7,
+          "pv_available": 1.7,
+          "soc_pct": 93.8
         },
         {
           "time": "2026-05-15T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 91.8
+          "soc_pct": 90.9
         },
         {
           "time": "2026-05-15T23:00:00+00:00",
@@ -3725,14 +3725,14 @@
         },
         {
           "time": "2026-05-16T05:00:00+00:00",
-          "pv_w": 70.8,
-          "pv_available": 70.8,
+          "pv_w": 70.9,
+          "pv_available": 70.9,
           "soc_pct": 74.9
         },
         {
           "time": "2026-05-16T06:00:00+00:00",
-          "pv_w": 306.3,
-          "pv_available": 306.3,
+          "pv_w": 306.4,
+          "pv_available": 306.4,
           "soc_pct": 80.1
         },
         {
@@ -3745,19 +3745,19 @@
           "time": "2026-05-16T08:00:00+00:00",
           "pv_w": 741.0,
           "pv_available": 741.0,
-          "soc_pct": 93.0
+          "soc_pct": 94.0
         },
         {
           "time": "2026-05-16T09:00:00+00:00",
           "pv_w": 741.0,
           "pv_available": 741.0,
-          "soc_pct": 94.2
+          "soc_pct": 95.4
         },
         {
           "time": "2026-05-16T10:00:00+00:00",
           "pv_w": 741.0,
           "pv_available": 741.0,
-          "soc_pct": 95.7
+          "soc_pct": 96.4
         },
         {
           "time": "2026-05-16T11:00:00+00:00",
@@ -3769,67 +3769,67 @@
           "time": "2026-05-16T12:00:00+00:00",
           "pv_w": 741.0,
           "pv_available": 741.0,
-          "soc_pct": 98.3
+          "soc_pct": 98.1
         },
         {
           "time": "2026-05-16T13:00:00+00:00",
           "pv_w": 741.0,
           "pv_available": 741.0,
-          "soc_pct": 98.1
+          "soc_pct": 98.6
         },
         {
           "time": "2026-05-16T14:00:00+00:00",
           "pv_w": 741.0,
           "pv_available": 741.0,
-          "soc_pct": 97.6
+          "soc_pct": 99.3
         },
         {
           "time": "2026-05-16T15:00:00+00:00",
           "pv_w": 741.0,
           "pv_available": 741.0,
-          "soc_pct": 97.1
+          "soc_pct": 99.3
         },
         {
           "time": "2026-05-16T16:00:00+00:00",
           "pv_w": 741.0,
           "pv_available": 741.0,
-          "soc_pct": 97.4
+          "soc_pct": 99.0
         },
         {
           "time": "2026-05-16T17:00:00+00:00",
-          "pv_w": 564.4,
-          "pv_available": 564.4,
-          "soc_pct": 97.8
+          "pv_w": 564.0,
+          "pv_available": 564.0,
+          "soc_pct": 98.3
         },
         {
           "time": "2026-05-16T18:00:00+00:00",
-          "pv_w": 259.3,
-          "pv_available": 259.3,
-          "soc_pct": 98.3
+          "pv_w": 259.6,
+          "pv_available": 259.6,
+          "soc_pct": 97.6
         },
         {
           "time": "2026-05-16T19:00:00+00:00",
-          "pv_w": 143.2,
-          "pv_available": 143.2,
-          "soc_pct": 98.3
+          "pv_w": 143.5,
+          "pv_available": 143.5,
+          "soc_pct": 97.1
         },
         {
           "time": "2026-05-16T20:00:00+00:00",
-          "pv_w": 40.3,
-          "pv_available": 40.3,
-          "soc_pct": 98.3
+          "pv_w": 40.4,
+          "pv_available": 40.4,
+          "soc_pct": 96.4
         },
         {
           "time": "2026-05-16T21:00:00+00:00",
           "pv_w": 2.1,
           "pv_available": 2.1,
-          "soc_pct": 97.8
+          "soc_pct": 95.9
         },
         {
           "time": "2026-05-16T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 96.4
+          "soc_pct": 95.7
         },
         {
           "time": "2026-05-16T23:00:00+00:00",
@@ -3875,27 +3875,27 @@
         },
         {
           "time": "2026-05-17T06:00:00+00:00",
-          "pv_w": 141.6,
-          "pv_available": 141.6,
+          "pv_w": 142.0,
+          "pv_available": 142.0,
           "soc_pct": 76.4
         },
         {
           "time": "2026-05-17T07:00:00+00:00",
-          "pv_w": 279.6,
-          "pv_available": 279.6,
+          "pv_w": 280.9,
+          "pv_available": 280.9,
           "soc_pct": 81.2
         },
         {
           "time": "2026-05-17T08:00:00+00:00",
-          "pv_w": 461.7,
-          "pv_available": 461.7,
-          "soc_pct": 89.2
+          "pv_w": 464.6,
+          "pv_available": 464.6,
+          "soc_pct": 89.3
         },
         {
           "time": "2026-05-17T09:00:00+00:00",
-          "pv_w": 654.9,
-          "pv_available": 654.9,
-          "soc_pct": 100.0
+          "pv_w": 660.5,
+          "pv_available": 660.5,
+          "soc_pct": 99.8
         },
         {
           "time": "2026-05-17T10:00:00+00:00",
@@ -3941,39 +3941,39 @@
         },
         {
           "time": "2026-05-17T17:00:00+00:00",
-          "pv_w": 656.0,
-          "pv_available": 656.0,
+          "pv_w": 657.1,
+          "pv_available": 657.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T18:00:00+00:00",
-          "pv_w": 474.9,
-          "pv_available": 474.9,
+          "pv_w": 476.7,
+          "pv_available": 476.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T19:00:00+00:00",
-          "pv_w": 283.8,
-          "pv_available": 283.8,
-          "soc_pct": 100.0
+          "pv_w": 285.7,
+          "pv_available": 285.7,
+          "soc_pct": 99.0
         },
         {
           "time": "2026-05-17T20:00:00+00:00",
-          "pv_w": 109.4,
-          "pv_available": 109.4,
-          "soc_pct": 100.0
+          "pv_w": 110.5,
+          "pv_available": 110.5,
+          "soc_pct": 94.0
         },
         {
           "time": "2026-05-17T21:00:00+00:00",
-          "pv_w": 2.1,
-          "pv_available": 2.1,
-          "soc_pct": 97.4
+          "pv_w": 2.2,
+          "pv_available": 2.2,
+          "soc_pct": 90.2
         },
         {
           "time": "2026-05-17T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 95.9
+          "soc_pct": 89.0
         },
         {
           "time": "2026-05-17T23:00:00+00:00",
@@ -4013,27 +4013,27 @@
         },
         {
           "time": "2026-05-18T05:00:00+00:00",
-          "pv_w": 87.3,
-          "pv_available": 87.3,
+          "pv_w": 88.2,
+          "pv_available": 88.2,
           "soc_pct": 75.2
         },
         {
           "time": "2026-05-18T06:00:00+00:00",
-          "pv_w": 266.9,
-          "pv_available": 266.9,
-          "soc_pct": 79.7
+          "pv_w": 268.4,
+          "pv_available": 268.4,
+          "soc_pct": 79.8
         },
         {
           "time": "2026-05-18T07:00:00+00:00",
-          "pv_w": 473.4,
-          "pv_available": 473.4,
-          "soc_pct": 87.9
+          "pv_w": 474.8,
+          "pv_available": 474.8,
+          "soc_pct": 88.0
         },
         {
           "time": "2026-05-18T08:00:00+00:00",
-          "pv_w": 705.4,
-          "pv_available": 705.4,
-          "soc_pct": 99.5
+          "pv_w": 705.7,
+          "pv_available": 705.7,
+          "soc_pct": 99.3
         },
         {
           "time": "2026-05-18T09:00:00+00:00",
@@ -4091,14 +4091,14 @@
         },
         {
           "time": "2026-05-18T18:00:00+00:00",
-          "pv_w": 660.7,
-          "pv_available": 660.7,
+          "pv_w": 662.1,
+          "pv_available": 662.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T19:00:00+00:00",
-          "pv_w": 395.4,
-          "pv_available": 395.4,
+          "pv_w": 395.9,
+          "pv_available": 395.9,
           "soc_pct": 100.0
         },
         {
@@ -4157,98 +4157,98 @@
         },
         {
           "time": "2026-05-19T05:00:00+00:00",
-          "pv_w": 21.1,
-          "pv_available": 21.1,
+          "pv_w": 21.2,
+          "pv_available": 21.2,
           "soc_pct": 74.0
         },
         {
           "time": "2026-05-19T06:00:00+00:00",
-          "pv_w": 65.0,
-          "pv_available": 65.0,
+          "pv_w": 65.5,
+          "pv_available": 65.5,
           "soc_pct": 75.0
         },
         {
           "time": "2026-05-19T07:00:00+00:00",
-          "pv_w": 127.4,
-          "pv_available": 127.4,
+          "pv_w": 128.1,
+          "pv_available": 128.1,
           "soc_pct": 77.1
         },
         {
           "time": "2026-05-19T08:00:00+00:00",
-          "pv_w": 209.7,
-          "pv_available": 209.7,
-          "soc_pct": 80.6
+          "pv_w": 210.5,
+          "pv_available": 210.5,
+          "soc_pct": 80.7
         },
         {
           "time": "2026-05-19T09:00:00+00:00",
-          "pv_w": 309.2,
-          "pv_available": 309.2,
-          "soc_pct": 85.9
+          "pv_w": 310.1,
+          "pv_available": 310.1,
+          "soc_pct": 86.0
         },
         {
           "time": "2026-05-19T10:00:00+00:00",
-          "pv_w": 411.0,
-          "pv_available": 411.0,
-          "soc_pct": 93.0
+          "pv_w": 414.1,
+          "pv_available": 414.1,
+          "soc_pct": 93.1
         },
         {
           "time": "2026-05-19T11:00:00+00:00",
-          "pv_w": 531.1,
-          "pv_available": 531.1,
+          "pv_w": 535.1,
+          "pv_available": 535.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T12:00:00+00:00",
-          "pv_w": 615.9,
-          "pv_available": 615.9,
+          "pv_w": 620.8,
+          "pv_available": 620.8,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T13:00:00+00:00",
-          "pv_w": 647.5,
-          "pv_available": 647.5,
+          "pv_w": 653.3,
+          "pv_available": 653.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T14:00:00+00:00",
-          "pv_w": 640.6,
-          "pv_available": 640.6,
+          "pv_w": 646.7,
+          "pv_available": 646.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T15:00:00+00:00",
-          "pv_w": 598.7,
-          "pv_available": 598.7,
+          "pv_w": 605.4,
+          "pv_available": 605.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T16:00:00+00:00",
-          "pv_w": 526.3,
-          "pv_available": 526.3,
+          "pv_w": 532.6,
+          "pv_available": 532.6,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T17:00:00+00:00",
-          "pv_w": 430.1,
-          "pv_available": 430.1,
+          "pv_w": 435.4,
+          "pv_available": 435.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T18:00:00+00:00",
-          "pv_w": 321.3,
-          "pv_available": 321.3,
+          "pv_w": 325.2,
+          "pv_available": 325.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T19:00:00+00:00",
-          "pv_w": 203.1,
-          "pv_available": 203.1,
+          "pv_w": 205.3,
+          "pv_available": 205.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T20:00:00+00:00",
-          "pv_w": 87.0,
-          "pv_available": 87.0,
+          "pv_w": 87.7,
+          "pv_available": 87.7,
           "soc_pct": 100.0
         },
         {
@@ -4273,31 +4273,31 @@
       "daily": [
         {
           "date": "2026-05-13",
-          "gen_kwh": 6.677,
-          "full_charge_time": "06:00",
-          "fc_model_time": "08:28",
-          "fc_confidence": "high",
-          "weather_icon": "cloudy"
-        },
-        {
-          "date": "2026-05-14",
-          "gen_kwh": 7.336,
-          "full_charge_time": "06:00",
-          "fc_model_time": "08:18",
+          "gen_kwh": 6.9,
+          "full_charge_time": "11:00",
+          "fc_model_time": "09:39",
           "fc_confidence": "high",
           "weather_icon": "partly_cloudy"
         },
         {
+          "date": "2026-05-14",
+          "gen_kwh": 6.001,
+          "full_charge_time": "06:00",
+          "fc_model_time": "08:31",
+          "fc_confidence": "high",
+          "weather_icon": "cloudy"
+        },
+        {
           "date": "2026-05-15",
-          "gen_kwh": 8.784,
+          "gen_kwh": 9.385,
           "full_charge_time": "07:00",
-          "fc_model_time": "08:12",
+          "fc_model_time": "08:06",
           "fc_confidence": "high",
           "weather_icon": "partly_cloudy"
         },
         {
           "date": "2026-05-16",
-          "gen_kwh": 8.653,
+          "gen_kwh": 8.654,
           "full_charge_time": "09:00",
           "fc_model_time": "08:06",
           "fc_confidence": "high",
@@ -4305,25 +4305,25 @@
         },
         {
           "date": "2026-05-17",
-          "gen_kwh": 8.275,
+          "gen_kwh": 8.291,
           "full_charge_time": "10:00",
-          "fc_model_time": "09:15",
+          "fc_model_time": "09:12",
           "fc_confidence": "high",
           "weather_icon": "partly_cloudy"
         },
         {
           "date": "2026-05-18",
-          "gen_kwh": 9.396,
+          "gen_kwh": 9.402,
           "full_charge_time": "09:00",
-          "fc_model_time": "08:42",
+          "fc_model_time": "08:40",
           "fc_confidence": "high",
           "weather_icon": "partly_cloudy"
         },
         {
           "date": "2026-05-19",
-          "gen_kwh": 5.749,
+          "gen_kwh": 5.801,
           "full_charge_time": "12:00",
-          "fc_model_time": "09:60",
+          "fc_model_time": "09:56",
           "fc_confidence": "high",
           "weather_icon": "cloudy"
         },
@@ -4341,7 +4341,7 @@
       "name": "Clyde CP1",
       "capacity_kwp": 5.4,
       "system_derating": 0.876,
-      "current_soc_pct": 93.3,
+      "current_soc_pct": 62.8,
       "soc_source": "api",
       "weather_mode": "forecast",
       "hourly": [
@@ -4349,67 +4349,67 @@
           "time": "2026-05-13T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 93.3
+          "soc_pct": 62.8
         },
         {
           "time": "2026-05-13T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 92.3
+          "soc_pct": 62.5
         },
         {
           "time": "2026-05-13T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 91.8
+          "soc_pct": 62.3
         },
         {
           "time": "2026-05-13T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 91.6
+          "soc_pct": 62.0
         },
         {
           "time": "2026-05-13T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 90.4
+          "soc_pct": 61.8
         },
         {
           "time": "2026-05-13T05:00:00+00:00",
           "pv_w": 39.3,
           "pv_available": 39.3,
-          "soc_pct": 89.9
+          "soc_pct": 61.9
         },
         {
           "time": "2026-05-13T06:00:00+00:00",
           "pv_w": 195.8,
           "pv_available": 195.8,
-          "soc_pct": 91.4
+          "soc_pct": 63.4
         },
         {
           "time": "2026-05-13T07:00:00+00:00",
           "pv_w": 725.0,
           "pv_available": 725.0,
-          "soc_pct": 95.0
+          "soc_pct": 69.6
         },
         {
           "time": "2026-05-13T08:00:00+00:00",
           "pv_w": 549.7,
           "pv_available": 549.7,
-          "soc_pct": 98.1
+          "soc_pct": 74.3
         },
         {
           "time": "2026-05-13T09:00:00+00:00",
           "pv_w": 1104.0,
           "pv_available": 1104.0,
-          "soc_pct": 99.5
+          "soc_pct": 83.8
         },
         {
           "time": "2026-05-13T10:00:00+00:00",
           "pv_w": 1294.8,
           "pv_available": 1294.8,
-          "soc_pct": 100.0
+          "soc_pct": 95.1
         },
         {
           "time": "2026-05-13T11:00:00+00:00",
@@ -4437,51 +4437,51 @@
         },
         {
           "time": "2026-05-13T15:00:00+00:00",
-          "pv_w": 1099.2,
-          "pv_available": 1099.2,
+          "pv_w": 1199.2,
+          "pv_available": 1199.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-13T16:00:00+00:00",
-          "pv_w": 1400.5,
-          "pv_available": 1400.5,
-          "soc_pct": 100.0
+          "pv_w": 275.1,
+          "pv_available": 275.1,
+          "soc_pct": 99.5
         },
         {
           "time": "2026-05-13T17:00:00+00:00",
-          "pv_w": 1024.1,
-          "pv_available": 1024.1,
+          "pv_w": 947.0,
+          "pv_available": 947.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-13T18:00:00+00:00",
-          "pv_w": 131.8,
-          "pv_available": 131.8,
+          "pv_w": 347.3,
+          "pv_available": 347.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-13T19:00:00+00:00",
-          "pv_w": 70.1,
-          "pv_available": 70.1,
-          "soc_pct": 98.6
+          "pv_w": 330.0,
+          "pv_available": 330.0,
+          "soc_pct": 98.1
         },
         {
           "time": "2026-05-13T20:00:00+00:00",
-          "pv_w": 46.8,
-          "pv_available": 46.8,
-          "soc_pct": 97.6
+          "pv_w": 105.3,
+          "pv_available": 105.3,
+          "soc_pct": 96.9
         },
         {
           "time": "2026-05-13T21:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 95.9
+          "soc_pct": 96.6
         },
         {
           "time": "2026-05-13T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 95.4
+          "soc_pct": 96.2
         },
         {
           "time": "2026-05-13T23:00:00+00:00",
@@ -4493,7 +4493,7 @@
           "time": "2026-05-14T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 94.5
+          "soc_pct": 94.7
         },
         {
           "time": "2026-05-14T01:00:00+00:00",
@@ -4505,13 +4505,13 @@
           "time": "2026-05-14T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 92.8
+          "soc_pct": 93.3
         },
         {
           "time": "2026-05-14T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 92.6
+          "soc_pct": 92.8
         },
         {
           "time": "2026-05-14T04:00:00+00:00",
@@ -4521,255 +4521,255 @@
         },
         {
           "time": "2026-05-14T05:00:00+00:00",
-          "pv_w": 43.2,
-          "pv_available": 43.2,
+          "pv_w": 51.4,
+          "pv_available": 51.4,
           "soc_pct": 92.1
         },
         {
           "time": "2026-05-14T06:00:00+00:00",
-          "pv_w": 174.7,
-          "pv_available": 174.7,
-          "soc_pct": 93.0
+          "pv_w": 219.8,
+          "pv_available": 219.8,
+          "soc_pct": 93.3
         },
         {
           "time": "2026-05-14T07:00:00+00:00",
-          "pv_w": 838.5,
-          "pv_available": 838.5,
+          "pv_w": 796.1,
+          "pv_available": 796.1,
           "soc_pct": 95.7
         },
         {
           "time": "2026-05-14T08:00:00+00:00",
-          "pv_w": 1317.3,
-          "pv_available": 1317.3,
+          "pv_w": 914.2,
+          "pv_available": 914.2,
           "soc_pct": 98.8
         },
         {
           "time": "2026-05-14T09:00:00+00:00",
-          "pv_w": 1638.1,
-          "pv_available": 1638.1,
+          "pv_w": 1063.6,
+          "pv_available": 1063.6,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T10:00:00+00:00",
-          "pv_w": 1494.1,
-          "pv_available": 1494.1,
+          "pv_w": 1244.3,
+          "pv_available": 1244.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T11:00:00+00:00",
-          "pv_w": 609.1,
-          "pv_available": 609.1,
+          "pv_w": 999.1,
+          "pv_available": 999.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T12:00:00+00:00",
-          "pv_w": 1516.4,
-          "pv_available": 1516.4,
+          "pv_w": 2492.4,
+          "pv_available": 2492.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T13:00:00+00:00",
-          "pv_w": 2792.7,
-          "pv_available": 2792.7,
+          "pv_w": 1556.3,
+          "pv_available": 1556.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T14:00:00+00:00",
-          "pv_w": 1550.9,
-          "pv_available": 1550.9,
+          "pv_w": 1897.8,
+          "pv_available": 1897.8,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T15:00:00+00:00",
-          "pv_w": 1847.3,
-          "pv_available": 1847.3,
+          "pv_w": 1705.9,
+          "pv_available": 1705.9,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T16:00:00+00:00",
-          "pv_w": 866.0,
-          "pv_available": 866.0,
+          "pv_w": 769.8,
+          "pv_available": 769.8,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T17:00:00+00:00",
-          "pv_w": 1307.3,
-          "pv_available": 1307.3,
+          "pv_w": 464.5,
+          "pv_available": 464.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T18:00:00+00:00",
-          "pv_w": 426.2,
-          "pv_available": 426.2,
+          "pv_w": 651.4,
+          "pv_available": 651.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T19:00:00+00:00",
-          "pv_w": 104.9,
-          "pv_available": 104.9,
-          "soc_pct": 99.8
+          "pv_w": 305.1,
+          "pv_available": 305.1,
+          "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T20:00:00+00:00",
-          "pv_w": 113.5,
-          "pv_available": 113.5,
-          "soc_pct": 98.3
+          "pv_w": 112.6,
+          "pv_available": 112.6,
+          "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T21:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 96.9
+          "soc_pct": 97.6
         },
         {
           "time": "2026-05-14T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 95.7
+          "soc_pct": 96.9
         },
         {
           "time": "2026-05-14T23:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 94.0
+          "soc_pct": 95.9
         },
         {
           "time": "2026-05-15T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 92.6
+          "soc_pct": 93.3
         },
         {
           "time": "2026-05-15T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 91.1
+          "soc_pct": 92.1
         },
         {
           "time": "2026-05-15T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 90.2
+          "soc_pct": 89.9
         },
         {
           "time": "2026-05-15T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 88.7
+          "soc_pct": 89.0
         },
         {
           "time": "2026-05-15T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 88.0
+          "soc_pct": 88.5
         },
         {
           "time": "2026-05-15T05:00:00+00:00",
           "pv_w": 44.8,
           "pv_available": 44.8,
-          "soc_pct": 88.2
+          "soc_pct": 88.5
         },
         {
           "time": "2026-05-15T06:00:00+00:00",
           "pv_w": 181.6,
           "pv_available": 181.6,
-          "soc_pct": 89.6
+          "soc_pct": 89.9
         },
         {
           "time": "2026-05-15T07:00:00+00:00",
-          "pv_w": 864.5,
-          "pv_available": 864.5,
+          "pv_w": 839.5,
+          "pv_available": 839.5,
           "soc_pct": 93.5
         },
         {
           "time": "2026-05-15T08:00:00+00:00",
-          "pv_w": 1547.2,
-          "pv_available": 1547.2,
-          "soc_pct": 97.4
+          "pv_w": 1206.4,
+          "pv_available": 1206.4,
+          "soc_pct": 95.9
         },
         {
           "time": "2026-05-15T09:00:00+00:00",
-          "pv_w": 2211.6,
-          "pv_available": 2211.6,
-          "soc_pct": 100.0
+          "pv_w": 1658.2,
+          "pv_available": 1658.2,
+          "soc_pct": 98.6
         },
         {
           "time": "2026-05-15T10:00:00+00:00",
-          "pv_w": 2331.2,
-          "pv_available": 2331.2,
+          "pv_w": 2166.1,
+          "pv_available": 2166.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T11:00:00+00:00",
-          "pv_w": 2283.2,
-          "pv_available": 2283.2,
+          "pv_w": 2476.6,
+          "pv_available": 2476.6,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T12:00:00+00:00",
-          "pv_w": 2327.0,
-          "pv_available": 2327.0,
+          "pv_w": 2202.7,
+          "pv_available": 2202.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T13:00:00+00:00",
-          "pv_w": 2488.1,
-          "pv_available": 2488.1,
+          "pv_w": 1142.9,
+          "pv_available": 1142.9,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T14:00:00+00:00",
-          "pv_w": 2930.4,
-          "pv_available": 2930.4,
+          "pv_w": 937.2,
+          "pv_available": 937.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T15:00:00+00:00",
-          "pv_w": 1688.5,
-          "pv_available": 1688.5,
+          "pv_w": 1084.3,
+          "pv_available": 1084.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T16:00:00+00:00",
-          "pv_w": 927.7,
-          "pv_available": 927.7,
+          "pv_w": 628.0,
+          "pv_available": 628.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T17:00:00+00:00",
-          "pv_w": 865.1,
-          "pv_available": 865.1,
+          "pv_w": 680.5,
+          "pv_available": 680.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T18:00:00+00:00",
-          "pv_w": 535.5,
-          "pv_available": 535.5,
+          "pv_w": 347.1,
+          "pv_available": 347.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T19:00:00+00:00",
-          "pv_w": 254.4,
-          "pv_available": 254.4,
+          "pv_w": 298.4,
+          "pv_available": 298.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T20:00:00+00:00",
-          "pv_w": 103.5,
-          "pv_available": 103.5,
-          "soc_pct": 100.0
+          "pv_w": 110.1,
+          "pv_available": 110.1,
+          "soc_pct": 99.5
         },
         {
           "time": "2026-05-15T21:00:00+00:00",
-          "pv_w": 4.0,
-          "pv_available": 4.0,
-          "soc_pct": 97.6
+          "pv_w": 3.2,
+          "pv_available": 3.2,
+          "soc_pct": 96.4
         },
         {
           "time": "2026-05-15T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 94.0
+          "soc_pct": 91.8
         },
         {
           "time": "2026-05-15T23:00:00+00:00",
@@ -4809,20 +4809,20 @@
         },
         {
           "time": "2026-05-16T05:00:00+00:00",
-          "pv_w": 52.4,
-          "pv_available": 52.4,
+          "pv_w": 52.5,
+          "pv_available": 52.5,
           "soc_pct": 73.8
         },
         {
           "time": "2026-05-16T06:00:00+00:00",
-          "pv_w": 194.5,
-          "pv_available": 194.5,
+          "pv_w": 194.7,
+          "pv_available": 194.7,
           "soc_pct": 75.3
         },
         {
           "time": "2026-05-16T07:00:00+00:00",
-          "pv_w": 839.2,
-          "pv_available": 839.2,
+          "pv_w": 839.9,
+          "pv_available": 839.9,
           "soc_pct": 82.5
         },
         {
@@ -4833,87 +4833,87 @@
         },
         {
           "time": "2026-05-16T09:00:00+00:00",
-          "pv_w": 2073.7,
-          "pv_available": 2073.7,
-          "soc_pct": 96.2
+          "pv_w": 2073.1,
+          "pv_available": 2073.1,
+          "soc_pct": 96.4
         },
         {
           "time": "2026-05-16T10:00:00+00:00",
-          "pv_w": 1788.4,
-          "pv_available": 1788.4,
-          "soc_pct": 97.4
+          "pv_w": 1788.9,
+          "pv_available": 1788.9,
+          "soc_pct": 97.1
         },
         {
           "time": "2026-05-16T11:00:00+00:00",
-          "pv_w": 1860.3,
-          "pv_available": 1860.3,
-          "soc_pct": 98.6
+          "pv_w": 1863.0,
+          "pv_available": 1863.0,
+          "soc_pct": 97.4
         },
         {
           "time": "2026-05-16T12:00:00+00:00",
-          "pv_w": 1713.3,
-          "pv_available": 1713.3,
-          "soc_pct": 99.8
+          "pv_w": 1716.8,
+          "pv_available": 1716.8,
+          "soc_pct": 98.1
         },
         {
           "time": "2026-05-16T13:00:00+00:00",
-          "pv_w": 1703.8,
-          "pv_available": 1703.8,
-          "soc_pct": 100.0
+          "pv_w": 1706.7,
+          "pv_available": 1706.7,
+          "soc_pct": 99.3
         },
         {
           "time": "2026-05-16T14:00:00+00:00",
-          "pv_w": 1367.6,
-          "pv_available": 1367.6,
+          "pv_w": 1369.2,
+          "pv_available": 1369.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T15:00:00+00:00",
-          "pv_w": 1197.4,
-          "pv_available": 1197.4,
+          "pv_w": 1197.7,
+          "pv_available": 1197.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T16:00:00+00:00",
-          "pv_w": 1018.1,
-          "pv_available": 1018.1,
+          "pv_w": 1017.5,
+          "pv_available": 1017.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T17:00:00+00:00",
-          "pv_w": 792.9,
-          "pv_available": 792.9,
+          "pv_w": 791.5,
+          "pv_available": 791.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T18:00:00+00:00",
-          "pv_w": 523.8,
-          "pv_available": 523.8,
+          "pv_w": 522.7,
+          "pv_available": 522.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T19:00:00+00:00",
-          "pv_w": 244.0,
-          "pv_available": 244.0,
+          "pv_w": 243.5,
+          "pv_available": 243.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T20:00:00+00:00",
-          "pv_w": 70.1,
-          "pv_available": 70.1,
-          "soc_pct": 98.3
+          "pv_w": 70.0,
+          "pv_available": 70.0,
+          "soc_pct": 99.5
         },
         {
           "time": "2026-05-16T21:00:00+00:00",
           "pv_w": 3.9,
           "pv_available": 3.9,
-          "soc_pct": 96.4
+          "soc_pct": 97.1
         },
         {
           "time": "2026-05-16T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 95.7
+          "soc_pct": 95.9
         },
         {
           "time": "2026-05-16T23:00:00+00:00",
@@ -4953,111 +4953,111 @@
         },
         {
           "time": "2026-05-17T05:00:00+00:00",
-          "pv_w": 47.1,
-          "pv_available": 47.1,
+          "pv_w": 47.0,
+          "pv_available": 47.0,
           "soc_pct": 73.7
         },
         {
           "time": "2026-05-17T06:00:00+00:00",
-          "pv_w": 275.3,
-          "pv_available": 275.3,
+          "pv_w": 275.0,
+          "pv_available": 275.0,
           "soc_pct": 75.9
         },
         {
           "time": "2026-05-17T07:00:00+00:00",
-          "pv_w": 578.3,
-          "pv_available": 578.3,
+          "pv_w": 579.1,
+          "pv_available": 579.1,
           "soc_pct": 80.8
         },
         {
           "time": "2026-05-17T08:00:00+00:00",
-          "pv_w": 970.4,
-          "pv_available": 970.4,
-          "soc_pct": 89.2
+          "pv_w": 974.8,
+          "pv_available": 974.8,
+          "soc_pct": 89.3
         },
         {
           "time": "2026-05-17T09:00:00+00:00",
-          "pv_w": 1378.1,
-          "pv_available": 1378.1,
-          "soc_pct": 100.0
+          "pv_w": 1386.0,
+          "pv_available": 1386.0,
+          "soc_pct": 97.1
         },
         {
           "time": "2026-05-17T10:00:00+00:00",
-          "pv_w": 1671.5,
-          "pv_available": 1671.5,
+          "pv_w": 1675.9,
+          "pv_available": 1675.9,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T11:00:00+00:00",
-          "pv_w": 1846.5,
-          "pv_available": 1846.5,
+          "pv_w": 1841.7,
+          "pv_available": 1841.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T12:00:00+00:00",
-          "pv_w": 2036.9,
-          "pv_available": 2036.9,
+          "pv_w": 2024.5,
+          "pv_available": 2024.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T13:00:00+00:00",
-          "pv_w": 2326.3,
-          "pv_available": 2326.3,
+          "pv_w": 2310.0,
+          "pv_available": 2310.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T14:00:00+00:00",
-          "pv_w": 2623.4,
-          "pv_available": 2623.4,
+          "pv_w": 2608.0,
+          "pv_available": 2608.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T15:00:00+00:00",
-          "pv_w": 2542.4,
-          "pv_available": 2542.4,
+          "pv_w": 2529.7,
+          "pv_available": 2529.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T16:00:00+00:00",
-          "pv_w": 2082.3,
-          "pv_available": 2082.3,
+          "pv_w": 2073.3,
+          "pv_available": 2073.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T17:00:00+00:00",
-          "pv_w": 1394.6,
-          "pv_available": 1394.6,
+          "pv_w": 1389.4,
+          "pv_available": 1389.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T18:00:00+00:00",
-          "pv_w": 772.2,
-          "pv_available": 772.2,
+          "pv_w": 770.3,
+          "pv_available": 770.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T19:00:00+00:00",
-          "pv_w": 359.6,
-          "pv_available": 359.6,
+          "pv_w": 359.4,
+          "pv_available": 359.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T20:00:00+00:00",
-          "pv_w": 143.7,
-          "pv_available": 143.7,
-          "soc_pct": 100.0
+          "pv_w": 144.0,
+          "pv_available": 144.0,
+          "soc_pct": 98.3
         },
         {
           "time": "2026-05-17T21:00:00+00:00",
           "pv_w": 8.1,
           "pv_available": 8.1,
-          "soc_pct": 98.3
+          "soc_pct": 94.7
         },
         {
           "time": "2026-05-17T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 97.1
+          "soc_pct": 93.3
         },
         {
           "time": "2026-05-17T23:00:00+00:00",
@@ -5097,92 +5097,92 @@
         },
         {
           "time": "2026-05-18T05:00:00+00:00",
-          "pv_w": 47.7,
-          "pv_available": 47.7,
+          "pv_w": 48.0,
+          "pv_available": 48.0,
           "soc_pct": 73.7
         },
         {
           "time": "2026-05-18T06:00:00+00:00",
-          "pv_w": 183.4,
-          "pv_available": 183.4,
+          "pv_w": 184.0,
+          "pv_available": 184.0,
           "soc_pct": 75.1
         },
         {
           "time": "2026-05-18T07:00:00+00:00",
-          "pv_w": 535.5,
-          "pv_available": 535.5,
+          "pv_w": 536.3,
+          "pv_available": 536.3,
           "soc_pct": 79.7
         },
         {
           "time": "2026-05-18T08:00:00+00:00",
-          "pv_w": 1077.3,
-          "pv_available": 1077.3,
+          "pv_w": 1077.9,
+          "pv_available": 1077.9,
           "soc_pct": 89.0
         },
         {
           "time": "2026-05-18T09:00:00+00:00",
-          "pv_w": 1659.8,
-          "pv_available": 1659.8,
+          "pv_w": 1659.3,
+          "pv_available": 1659.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T10:00:00+00:00",
-          "pv_w": 1988.9,
-          "pv_available": 1988.9,
+          "pv_w": 1986.1,
+          "pv_available": 1986.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T11:00:00+00:00",
-          "pv_w": 2073.1,
-          "pv_available": 2073.1,
+          "pv_w": 2068.2,
+          "pv_available": 2068.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T12:00:00+00:00",
-          "pv_w": 2204.3,
-          "pv_available": 2204.3,
+          "pv_w": 2197.9,
+          "pv_available": 2197.9,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T13:00:00+00:00",
-          "pv_w": 2592.3,
-          "pv_available": 2592.3,
+          "pv_w": 2583.2,
+          "pv_available": 2583.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T14:00:00+00:00",
-          "pv_w": 3035.9,
-          "pv_available": 3035.9,
+          "pv_w": 3024.2,
+          "pv_available": 3024.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T15:00:00+00:00",
-          "pv_w": 2947.7,
-          "pv_available": 2947.7,
+          "pv_w": 2935.4,
+          "pv_available": 2935.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T16:00:00+00:00",
-          "pv_w": 2307.0,
-          "pv_available": 2307.0,
+          "pv_w": 2297.5,
+          "pv_available": 2297.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T17:00:00+00:00",
-          "pv_w": 1378.6,
-          "pv_available": 1378.6,
+          "pv_w": 1373.4,
+          "pv_available": 1373.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T18:00:00+00:00",
-          "pv_w": 619.0,
-          "pv_available": 619.0,
+          "pv_w": 616.9,
+          "pv_available": 616.9,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T19:00:00+00:00",
-          "pv_w": 266.4,
-          "pv_available": 266.4,
+          "pv_w": 266.0,
+          "pv_available": 266.0,
           "soc_pct": 100.0
         },
         {
@@ -5241,98 +5241,98 @@
         },
         {
           "time": "2026-05-19T05:00:00+00:00",
-          "pv_w": 23.2,
-          "pv_available": 23.2,
+          "pv_w": 23.3,
+          "pv_available": 23.3,
           "soc_pct": 73.5
         },
         {
           "time": "2026-05-19T06:00:00+00:00",
-          "pv_w": 81.2,
-          "pv_available": 81.2,
+          "pv_w": 81.4,
+          "pv_available": 81.4,
           "soc_pct": 74.0
         },
         {
           "time": "2026-05-19T07:00:00+00:00",
-          "pv_w": 139.1,
-          "pv_available": 139.1,
+          "pv_w": 139.4,
+          "pv_available": 139.4,
           "soc_pct": 75.0
         },
         {
           "time": "2026-05-19T08:00:00+00:00",
-          "pv_w": 200.6,
-          "pv_available": 200.6,
+          "pv_w": 201.0,
+          "pv_available": 201.0,
           "soc_pct": 76.6
         },
         {
           "time": "2026-05-19T09:00:00+00:00",
-          "pv_w": 311.7,
-          "pv_available": 311.7,
+          "pv_w": 311.9,
+          "pv_available": 311.9,
           "soc_pct": 79.1
         },
         {
           "time": "2026-05-19T10:00:00+00:00",
-          "pv_w": 578.6,
-          "pv_available": 578.6,
+          "pv_w": 575.8,
+          "pv_available": 575.8,
           "soc_pct": 84.0
         },
         {
           "time": "2026-05-19T11:00:00+00:00",
-          "pv_w": 966.1,
-          "pv_available": 966.1,
-          "soc_pct": 92.4
+          "pv_w": 959.8,
+          "pv_available": 959.8,
+          "soc_pct": 92.3
         },
         {
           "time": "2026-05-19T12:00:00+00:00",
-          "pv_w": 1269.2,
-          "pv_available": 1269.2,
+          "pv_w": 1259.7,
+          "pv_available": 1259.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T13:00:00+00:00",
-          "pv_w": 1349.3,
-          "pv_available": 1349.3,
+          "pv_w": 1339.2,
+          "pv_available": 1339.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T14:00:00+00:00",
-          "pv_w": 1325.8,
-          "pv_available": 1325.8,
+          "pv_w": 1316.3,
+          "pv_available": 1316.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T15:00:00+00:00",
-          "pv_w": 1212.6,
-          "pv_available": 1212.6,
+          "pv_w": 1205.6,
+          "pv_available": 1205.6,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T16:00:00+00:00",
-          "pv_w": 1030.1,
-          "pv_available": 1030.1,
+          "pv_w": 1025.4,
+          "pv_available": 1025.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T17:00:00+00:00",
-          "pv_w": 793.6,
-          "pv_available": 793.6,
+          "pv_w": 790.9,
+          "pv_available": 790.9,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T18:00:00+00:00",
-          "pv_w": 509.0,
-          "pv_available": 509.0,
+          "pv_w": 507.9,
+          "pv_available": 507.9,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T19:00:00+00:00",
-          "pv_w": 271.9,
-          "pv_available": 271.9,
+          "pv_w": 271.5,
+          "pv_available": 271.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T20:00:00+00:00",
-          "pv_w": 117.5,
-          "pv_available": 117.5,
+          "pv_w": 117.4,
+          "pv_available": 117.4,
           "soc_pct": 100.0
         },
         {
@@ -5357,57 +5357,57 @@
       "daily": [
         {
           "date": "2026-05-13",
-          "gen_kwh": 11.58,
-          "full_charge_time": "06:00",
-          "fc_model_time": "08:36",
+          "gen_kwh": 11.011,
+          "full_charge_time": "12:00",
+          "fc_model_time": "10:13",
           "fc_confidence": "high",
           "weather_icon": "cloudy"
         },
         {
           "date": "2026-05-14",
-          "gen_kwh": 16.64,
+          "gen_kwh": 15.244,
           "full_charge_time": "06:00",
-          "fc_model_time": "08:14",
+          "fc_model_time": "08:22",
           "fc_confidence": "high",
-          "weather_icon": "partly_cloudy"
+          "weather_icon": "cloudy"
         },
         {
           "date": "2026-05-15",
-          "gen_kwh": 21.588,
+          "gen_kwh": 16.008,
           "full_charge_time": "06:00",
-          "fc_model_time": "08:03",
+          "fc_model_time": "08:18",
           "fc_confidence": "high",
-          "weather_icon": "partly_cloudy"
+          "weather_icon": "cloudy"
         },
         {
           "date": "2026-05-16",
-          "gen_kwh": 16.734,
-          "full_charge_time": "10:00",
-          "fc_model_time": "09:05",
-          "fc_confidence": "high",
-          "weather_icon": "partly_cloudy"
-        },
-        {
-          "date": "2026-05-17",
-          "gen_kwh": 21.057,
-          "full_charge_time": "10:00",
-          "fc_model_time": "09:08",
-          "fc_confidence": "high",
-          "weather_icon": "partly_cloudy"
-        },
-        {
-          "date": "2026-05-18",
-          "gen_kwh": 23.051,
+          "gen_kwh": 16.742,
           "full_charge_time": "10:00",
           "fc_model_time": "09:04",
           "fc_confidence": "high",
           "weather_icon": "partly_cloudy"
         },
         {
+          "date": "2026-05-17",
+          "gen_kwh": 20.996,
+          "full_charge_time": "10:00",
+          "fc_model_time": "09:07",
+          "fc_confidence": "high",
+          "weather_icon": "partly_cloudy"
+        },
+        {
+          "date": "2026-05-18",
+          "gen_kwh": 22.988,
+          "full_charge_time": "10:00",
+          "fc_model_time": "09:02",
+          "fc_confidence": "high",
+          "weather_icon": "partly_cloudy"
+        },
+        {
           "date": "2026-05-19",
-          "gen_kwh": 10.188,
+          "gen_kwh": 10.135,
           "full_charge_time": "13:00",
-          "fc_model_time": "10:10",
+          "fc_model_time": "10:07",
           "fc_confidence": "high",
           "weather_icon": "cloudy"
         },
@@ -5425,7 +5425,7 @@
       "name": "Clyde CP2",
       "capacity_kwp": 5.4,
       "system_derating": 0.876,
-      "current_soc_pct": 93.3,
+      "current_soc_pct": 62.6,
       "soc_source": "api",
       "weather_mode": "forecast",
       "hourly": [
@@ -5433,67 +5433,67 @@
           "time": "2026-05-13T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 93.3
+          "soc_pct": 62.6
         },
         {
           "time": "2026-05-13T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 92.3
+          "soc_pct": 62.2
         },
         {
           "time": "2026-05-13T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 91.8
+          "soc_pct": 61.8
         },
         {
           "time": "2026-05-13T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 91.5
+          "soc_pct": 61.5
         },
         {
           "time": "2026-05-13T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 90.4
+          "soc_pct": 61.1
         },
         {
           "time": "2026-05-13T05:00:00+00:00",
           "pv_w": 39.3,
           "pv_available": 39.3,
-          "soc_pct": 89.9
+          "soc_pct": 61.1
         },
         {
           "time": "2026-05-13T06:00:00+00:00",
           "pv_w": 195.8,
           "pv_available": 195.8,
-          "soc_pct": 91.3
+          "soc_pct": 62.5
         },
         {
           "time": "2026-05-13T07:00:00+00:00",
           "pv_w": 725.0,
           "pv_available": 725.0,
-          "soc_pct": 95.0
+          "soc_pct": 68.6
         },
         {
           "time": "2026-05-13T08:00:00+00:00",
           "pv_w": 549.7,
           "pv_available": 549.7,
-          "soc_pct": 98.1
+          "soc_pct": 73.1
         },
         {
           "time": "2026-05-13T09:00:00+00:00",
           "pv_w": 1104.0,
           "pv_available": 1104.0,
-          "soc_pct": 99.5
+          "soc_pct": 82.6
         },
         {
           "time": "2026-05-13T10:00:00+00:00",
           "pv_w": 1294.8,
           "pv_available": 1294.8,
-          "soc_pct": 100.0
+          "soc_pct": 93.7
         },
         {
           "time": "2026-05-13T11:00:00+00:00",
@@ -5521,51 +5521,51 @@
         },
         {
           "time": "2026-05-13T15:00:00+00:00",
-          "pv_w": 1099.2,
-          "pv_available": 1099.2,
+          "pv_w": 1199.2,
+          "pv_available": 1199.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-13T16:00:00+00:00",
-          "pv_w": 1400.5,
-          "pv_available": 1400.5,
-          "soc_pct": 100.0
+          "pv_w": 275.1,
+          "pv_available": 275.1,
+          "soc_pct": 99.5
         },
         {
           "time": "2026-05-13T17:00:00+00:00",
-          "pv_w": 1024.1,
-          "pv_available": 1024.1,
+          "pv_w": 947.0,
+          "pv_available": 947.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-13T18:00:00+00:00",
-          "pv_w": 131.8,
-          "pv_available": 131.8,
+          "pv_w": 347.3,
+          "pv_available": 347.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-13T19:00:00+00:00",
-          "pv_w": 70.1,
-          "pv_available": 70.1,
-          "soc_pct": 98.6
+          "pv_w": 330.0,
+          "pv_available": 330.0,
+          "soc_pct": 98.1
         },
         {
           "time": "2026-05-13T20:00:00+00:00",
-          "pv_w": 46.8,
-          "pv_available": 46.8,
-          "soc_pct": 97.6
+          "pv_w": 105.3,
+          "pv_available": 105.3,
+          "soc_pct": 96.9
         },
         {
           "time": "2026-05-13T21:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 95.9
+          "soc_pct": 96.5
         },
         {
           "time": "2026-05-13T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 95.4
+          "soc_pct": 96.1
         },
         {
           "time": "2026-05-13T23:00:00+00:00",
@@ -5577,7 +5577,7 @@
           "time": "2026-05-14T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 94.5
+          "soc_pct": 94.6
         },
         {
           "time": "2026-05-14T01:00:00+00:00",
@@ -5589,271 +5589,271 @@
           "time": "2026-05-14T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 92.8
+          "soc_pct": 93.3
         },
         {
           "time": "2026-05-14T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 92.4
+          "soc_pct": 92.8
         },
         {
           "time": "2026-05-14T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 92.0
+          "soc_pct": 92.3
         },
         {
           "time": "2026-05-14T05:00:00+00:00",
-          "pv_w": 43.2,
-          "pv_available": 43.2,
+          "pv_w": 51.4,
+          "pv_available": 51.4,
           "soc_pct": 92.1
         },
         {
           "time": "2026-05-14T06:00:00+00:00",
-          "pv_w": 174.7,
-          "pv_available": 174.7,
-          "soc_pct": 93.0
+          "pv_w": 219.8,
+          "pv_available": 219.8,
+          "soc_pct": 93.3
         },
         {
           "time": "2026-05-14T07:00:00+00:00",
-          "pv_w": 838.5,
-          "pv_available": 838.5,
+          "pv_w": 796.1,
+          "pv_available": 796.1,
           "soc_pct": 95.7
         },
         {
           "time": "2026-05-14T08:00:00+00:00",
-          "pv_w": 1317.3,
-          "pv_available": 1317.3,
+          "pv_w": 914.2,
+          "pv_available": 914.2,
           "soc_pct": 98.8
         },
         {
           "time": "2026-05-14T09:00:00+00:00",
-          "pv_w": 1638.1,
-          "pv_available": 1638.1,
+          "pv_w": 1063.6,
+          "pv_available": 1063.6,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T10:00:00+00:00",
-          "pv_w": 1494.1,
-          "pv_available": 1494.1,
+          "pv_w": 1244.3,
+          "pv_available": 1244.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T11:00:00+00:00",
-          "pv_w": 609.1,
-          "pv_available": 609.1,
+          "pv_w": 999.1,
+          "pv_available": 999.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T12:00:00+00:00",
-          "pv_w": 1516.4,
-          "pv_available": 1516.4,
+          "pv_w": 2492.4,
+          "pv_available": 2492.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T13:00:00+00:00",
-          "pv_w": 2792.7,
-          "pv_available": 2792.7,
+          "pv_w": 1556.3,
+          "pv_available": 1556.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T14:00:00+00:00",
-          "pv_w": 1550.9,
-          "pv_available": 1550.9,
+          "pv_w": 1897.8,
+          "pv_available": 1897.8,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T15:00:00+00:00",
-          "pv_w": 1847.3,
-          "pv_available": 1847.3,
+          "pv_w": 1705.9,
+          "pv_available": 1705.9,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T16:00:00+00:00",
-          "pv_w": 866.0,
-          "pv_available": 866.0,
+          "pv_w": 769.8,
+          "pv_available": 769.8,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T17:00:00+00:00",
-          "pv_w": 1307.3,
-          "pv_available": 1307.3,
+          "pv_w": 464.5,
+          "pv_available": 464.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T18:00:00+00:00",
-          "pv_w": 426.2,
-          "pv_available": 426.2,
+          "pv_w": 651.4,
+          "pv_available": 651.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T19:00:00+00:00",
-          "pv_w": 104.9,
-          "pv_available": 104.9,
-          "soc_pct": 99.8
+          "pv_w": 305.1,
+          "pv_available": 305.1,
+          "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T20:00:00+00:00",
-          "pv_w": 113.5,
-          "pv_available": 113.5,
-          "soc_pct": 98.3
+          "pv_w": 112.6,
+          "pv_available": 112.6,
+          "soc_pct": 100.0
         },
         {
           "time": "2026-05-14T21:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 96.9
+          "soc_pct": 97.6
         },
         {
           "time": "2026-05-14T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 95.7
+          "soc_pct": 96.9
         },
         {
           "time": "2026-05-14T23:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 94.0
+          "soc_pct": 95.9
         },
         {
           "time": "2026-05-15T00:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 92.6
+          "soc_pct": 93.3
         },
         {
           "time": "2026-05-15T01:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 91.1
+          "soc_pct": 92.1
         },
         {
           "time": "2026-05-15T02:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 90.2
+          "soc_pct": 89.9
         },
         {
           "time": "2026-05-15T03:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 88.7
+          "soc_pct": 89.0
         },
         {
           "time": "2026-05-15T04:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 88.0
+          "soc_pct": 88.5
         },
         {
           "time": "2026-05-15T05:00:00+00:00",
           "pv_w": 44.8,
           "pv_available": 44.8,
-          "soc_pct": 88.1
+          "soc_pct": 88.5
         },
         {
           "time": "2026-05-15T06:00:00+00:00",
           "pv_w": 181.6,
           "pv_available": 181.6,
-          "soc_pct": 89.3
+          "soc_pct": 89.8
         },
         {
           "time": "2026-05-15T07:00:00+00:00",
-          "pv_w": 864.5,
-          "pv_available": 864.5,
+          "pv_w": 839.5,
+          "pv_available": 839.5,
           "soc_pct": 93.5
         },
         {
           "time": "2026-05-15T08:00:00+00:00",
-          "pv_w": 1547.2,
-          "pv_available": 1547.2,
-          "soc_pct": 97.4
+          "pv_w": 1206.4,
+          "pv_available": 1206.4,
+          "soc_pct": 95.9
         },
         {
           "time": "2026-05-15T09:00:00+00:00",
-          "pv_w": 2211.6,
-          "pv_available": 2211.6,
-          "soc_pct": 100.0
+          "pv_w": 1658.2,
+          "pv_available": 1658.2,
+          "soc_pct": 98.6
         },
         {
           "time": "2026-05-15T10:00:00+00:00",
-          "pv_w": 2331.2,
-          "pv_available": 2331.2,
+          "pv_w": 2166.1,
+          "pv_available": 2166.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T11:00:00+00:00",
-          "pv_w": 2283.2,
-          "pv_available": 2283.2,
+          "pv_w": 2476.6,
+          "pv_available": 2476.6,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T12:00:00+00:00",
-          "pv_w": 2327.0,
-          "pv_available": 2327.0,
+          "pv_w": 2202.7,
+          "pv_available": 2202.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T13:00:00+00:00",
-          "pv_w": 2488.1,
-          "pv_available": 2488.1,
+          "pv_w": 1142.9,
+          "pv_available": 1142.9,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T14:00:00+00:00",
-          "pv_w": 2930.4,
-          "pv_available": 2930.4,
+          "pv_w": 937.2,
+          "pv_available": 937.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T15:00:00+00:00",
-          "pv_w": 1688.5,
-          "pv_available": 1688.5,
+          "pv_w": 1084.3,
+          "pv_available": 1084.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T16:00:00+00:00",
-          "pv_w": 927.7,
-          "pv_available": 927.7,
+          "pv_w": 628.0,
+          "pv_available": 628.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T17:00:00+00:00",
-          "pv_w": 865.1,
-          "pv_available": 865.1,
+          "pv_w": 680.5,
+          "pv_available": 680.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T18:00:00+00:00",
-          "pv_w": 535.5,
-          "pv_available": 535.5,
+          "pv_w": 347.1,
+          "pv_available": 347.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T19:00:00+00:00",
-          "pv_w": 254.4,
-          "pv_available": 254.4,
+          "pv_w": 298.4,
+          "pv_available": 298.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-15T20:00:00+00:00",
-          "pv_w": 103.5,
-          "pv_available": 103.5,
-          "soc_pct": 100.0
+          "pv_w": 110.1,
+          "pv_available": 110.1,
+          "soc_pct": 99.5
         },
         {
           "time": "2026-05-15T21:00:00+00:00",
-          "pv_w": 4.0,
-          "pv_available": 4.0,
-          "soc_pct": 97.6
+          "pv_w": 3.2,
+          "pv_available": 3.2,
+          "soc_pct": 96.4
         },
         {
           "time": "2026-05-15T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 94.0
+          "soc_pct": 91.8
         },
         {
           "time": "2026-05-15T23:00:00+00:00",
@@ -5893,20 +5893,20 @@
         },
         {
           "time": "2026-05-16T05:00:00+00:00",
-          "pv_w": 52.4,
-          "pv_available": 52.4,
+          "pv_w": 52.5,
+          "pv_available": 52.5,
           "soc_pct": 72.8
         },
         {
           "time": "2026-05-16T06:00:00+00:00",
-          "pv_w": 194.5,
-          "pv_available": 194.5,
+          "pv_w": 194.7,
+          "pv_available": 194.7,
           "soc_pct": 74.2
         },
         {
           "time": "2026-05-16T07:00:00+00:00",
-          "pv_w": 839.2,
-          "pv_available": 839.2,
+          "pv_w": 839.9,
+          "pv_available": 839.9,
           "soc_pct": 81.3
         },
         {
@@ -5917,87 +5917,87 @@
         },
         {
           "time": "2026-05-16T09:00:00+00:00",
-          "pv_w": 2073.7,
-          "pv_available": 2073.7,
-          "soc_pct": 96.2
+          "pv_w": 2073.1,
+          "pv_available": 2073.1,
+          "soc_pct": 96.4
         },
         {
           "time": "2026-05-16T10:00:00+00:00",
-          "pv_w": 1788.4,
-          "pv_available": 1788.4,
-          "soc_pct": 97.4
+          "pv_w": 1788.9,
+          "pv_available": 1788.9,
+          "soc_pct": 97.1
         },
         {
           "time": "2026-05-16T11:00:00+00:00",
-          "pv_w": 1860.3,
-          "pv_available": 1860.3,
-          "soc_pct": 98.6
+          "pv_w": 1863.0,
+          "pv_available": 1863.0,
+          "soc_pct": 97.4
         },
         {
           "time": "2026-05-16T12:00:00+00:00",
-          "pv_w": 1713.3,
-          "pv_available": 1713.3,
-          "soc_pct": 99.8
+          "pv_w": 1716.8,
+          "pv_available": 1716.8,
+          "soc_pct": 98.1
         },
         {
           "time": "2026-05-16T13:00:00+00:00",
-          "pv_w": 1703.8,
-          "pv_available": 1703.8,
-          "soc_pct": 100.0
+          "pv_w": 1706.7,
+          "pv_available": 1706.7,
+          "soc_pct": 99.3
         },
         {
           "time": "2026-05-16T14:00:00+00:00",
-          "pv_w": 1367.6,
-          "pv_available": 1367.6,
+          "pv_w": 1369.2,
+          "pv_available": 1369.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T15:00:00+00:00",
-          "pv_w": 1197.4,
-          "pv_available": 1197.4,
+          "pv_w": 1197.7,
+          "pv_available": 1197.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T16:00:00+00:00",
-          "pv_w": 1018.1,
-          "pv_available": 1018.1,
+          "pv_w": 1017.5,
+          "pv_available": 1017.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T17:00:00+00:00",
-          "pv_w": 792.9,
-          "pv_available": 792.9,
+          "pv_w": 791.5,
+          "pv_available": 791.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T18:00:00+00:00",
-          "pv_w": 523.8,
-          "pv_available": 523.8,
+          "pv_w": 522.7,
+          "pv_available": 522.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T19:00:00+00:00",
-          "pv_w": 244.0,
-          "pv_available": 244.0,
+          "pv_w": 243.5,
+          "pv_available": 243.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-16T20:00:00+00:00",
-          "pv_w": 70.1,
-          "pv_available": 70.1,
-          "soc_pct": 98.3
+          "pv_w": 70.0,
+          "pv_available": 70.0,
+          "soc_pct": 99.5
         },
         {
           "time": "2026-05-16T21:00:00+00:00",
           "pv_w": 3.9,
           "pv_available": 3.9,
-          "soc_pct": 96.4
+          "soc_pct": 97.1
         },
         {
           "time": "2026-05-16T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 95.7
+          "soc_pct": 95.9
         },
         {
           "time": "2026-05-16T23:00:00+00:00",
@@ -6037,111 +6037,111 @@
         },
         {
           "time": "2026-05-17T05:00:00+00:00",
-          "pv_w": 47.1,
-          "pv_available": 47.1,
+          "pv_w": 47.0,
+          "pv_available": 47.0,
           "soc_pct": 72.8
         },
         {
           "time": "2026-05-17T06:00:00+00:00",
-          "pv_w": 275.3,
-          "pv_available": 275.3,
+          "pv_w": 275.0,
+          "pv_available": 275.0,
           "soc_pct": 74.9
         },
         {
           "time": "2026-05-17T07:00:00+00:00",
-          "pv_w": 578.3,
-          "pv_available": 578.3,
+          "pv_w": 579.1,
+          "pv_available": 579.1,
           "soc_pct": 79.7
         },
         {
           "time": "2026-05-17T08:00:00+00:00",
-          "pv_w": 970.4,
-          "pv_available": 970.4,
-          "soc_pct": 87.9
+          "pv_w": 974.8,
+          "pv_available": 974.8,
+          "soc_pct": 88.0
         },
         {
           "time": "2026-05-17T09:00:00+00:00",
-          "pv_w": 1378.1,
-          "pv_available": 1378.1,
-          "soc_pct": 99.8
+          "pv_w": 1386.0,
+          "pv_available": 1386.0,
+          "soc_pct": 97.1
         },
         {
           "time": "2026-05-17T10:00:00+00:00",
-          "pv_w": 1671.5,
-          "pv_available": 1671.5,
+          "pv_w": 1675.9,
+          "pv_available": 1675.9,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T11:00:00+00:00",
-          "pv_w": 1846.5,
-          "pv_available": 1846.5,
+          "pv_w": 1841.7,
+          "pv_available": 1841.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T12:00:00+00:00",
-          "pv_w": 2036.9,
-          "pv_available": 2036.9,
+          "pv_w": 2024.5,
+          "pv_available": 2024.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T13:00:00+00:00",
-          "pv_w": 2326.3,
-          "pv_available": 2326.3,
+          "pv_w": 2310.0,
+          "pv_available": 2310.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T14:00:00+00:00",
-          "pv_w": 2623.4,
-          "pv_available": 2623.4,
+          "pv_w": 2608.0,
+          "pv_available": 2608.0,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T15:00:00+00:00",
-          "pv_w": 2542.4,
-          "pv_available": 2542.4,
+          "pv_w": 2529.7,
+          "pv_available": 2529.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T16:00:00+00:00",
-          "pv_w": 2082.3,
-          "pv_available": 2082.3,
+          "pv_w": 2073.3,
+          "pv_available": 2073.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T17:00:00+00:00",
-          "pv_w": 1394.6,
-          "pv_available": 1394.6,
+          "pv_w": 1389.4,
+          "pv_available": 1389.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T18:00:00+00:00",
-          "pv_w": 772.2,
-          "pv_available": 772.2,
+          "pv_w": 770.3,
+          "pv_available": 770.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T19:00:00+00:00",
-          "pv_w": 359.6,
-          "pv_available": 359.6,
+          "pv_w": 359.4,
+          "pv_available": 359.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-17T20:00:00+00:00",
-          "pv_w": 143.7,
-          "pv_available": 143.7,
-          "soc_pct": 100.0
+          "pv_w": 144.0,
+          "pv_available": 144.0,
+          "soc_pct": 98.3
         },
         {
           "time": "2026-05-17T21:00:00+00:00",
           "pv_w": 8.1,
           "pv_available": 8.1,
-          "soc_pct": 98.3
+          "soc_pct": 94.7
         },
         {
           "time": "2026-05-17T22:00:00+00:00",
           "pv_w": 0.0,
           "pv_available": 0.0,
-          "soc_pct": 97.1
+          "soc_pct": 93.3
         },
         {
           "time": "2026-05-17T23:00:00+00:00",
@@ -6181,92 +6181,92 @@
         },
         {
           "time": "2026-05-18T05:00:00+00:00",
-          "pv_w": 47.7,
-          "pv_available": 47.7,
+          "pv_w": 48.0,
+          "pv_available": 48.0,
           "soc_pct": 72.8
         },
         {
           "time": "2026-05-18T06:00:00+00:00",
-          "pv_w": 183.4,
-          "pv_available": 183.4,
+          "pv_w": 184.0,
+          "pv_available": 184.0,
           "soc_pct": 74.1
         },
         {
           "time": "2026-05-18T07:00:00+00:00",
-          "pv_w": 535.5,
-          "pv_available": 535.5,
+          "pv_w": 536.3,
+          "pv_available": 536.3,
           "soc_pct": 78.5
         },
         {
           "time": "2026-05-18T08:00:00+00:00",
-          "pv_w": 1077.3,
-          "pv_available": 1077.3,
+          "pv_w": 1077.9,
+          "pv_available": 1077.9,
           "soc_pct": 87.7
         },
         {
           "time": "2026-05-18T09:00:00+00:00",
-          "pv_w": 1659.8,
-          "pv_available": 1659.8,
+          "pv_w": 1659.3,
+          "pv_available": 1659.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T10:00:00+00:00",
-          "pv_w": 1988.9,
-          "pv_available": 1988.9,
+          "pv_w": 1986.1,
+          "pv_available": 1986.1,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T11:00:00+00:00",
-          "pv_w": 2073.1,
-          "pv_available": 2073.1,
+          "pv_w": 2068.2,
+          "pv_available": 2068.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T12:00:00+00:00",
-          "pv_w": 2204.3,
-          "pv_available": 2204.3,
+          "pv_w": 2197.9,
+          "pv_available": 2197.9,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T13:00:00+00:00",
-          "pv_w": 2592.3,
-          "pv_available": 2592.3,
+          "pv_w": 2583.2,
+          "pv_available": 2583.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T14:00:00+00:00",
-          "pv_w": 3035.9,
-          "pv_available": 3035.9,
+          "pv_w": 3024.2,
+          "pv_available": 3024.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T15:00:00+00:00",
-          "pv_w": 2947.7,
-          "pv_available": 2947.7,
+          "pv_w": 2935.4,
+          "pv_available": 2935.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T16:00:00+00:00",
-          "pv_w": 2307.0,
-          "pv_available": 2307.0,
+          "pv_w": 2297.5,
+          "pv_available": 2297.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T17:00:00+00:00",
-          "pv_w": 1378.6,
-          "pv_available": 1378.6,
+          "pv_w": 1373.4,
+          "pv_available": 1373.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T18:00:00+00:00",
-          "pv_w": 619.0,
-          "pv_available": 619.0,
+          "pv_w": 616.9,
+          "pv_available": 616.9,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-18T19:00:00+00:00",
-          "pv_w": 266.4,
-          "pv_available": 266.4,
+          "pv_w": 266.0,
+          "pv_available": 266.0,
           "soc_pct": 100.0
         },
         {
@@ -6325,98 +6325,98 @@
         },
         {
           "time": "2026-05-19T05:00:00+00:00",
-          "pv_w": 23.2,
-          "pv_available": 23.2,
+          "pv_w": 23.3,
+          "pv_available": 23.3,
           "soc_pct": 72.5
         },
         {
           "time": "2026-05-19T06:00:00+00:00",
-          "pv_w": 81.2,
-          "pv_available": 81.2,
+          "pv_w": 81.4,
+          "pv_available": 81.4,
           "soc_pct": 72.9
         },
         {
           "time": "2026-05-19T07:00:00+00:00",
-          "pv_w": 139.1,
-          "pv_available": 139.1,
+          "pv_w": 139.4,
+          "pv_available": 139.4,
           "soc_pct": 73.8
         },
         {
           "time": "2026-05-19T08:00:00+00:00",
-          "pv_w": 200.6,
-          "pv_available": 200.6,
+          "pv_w": 201.0,
+          "pv_available": 201.0,
           "soc_pct": 75.3
         },
         {
           "time": "2026-05-19T09:00:00+00:00",
-          "pv_w": 311.7,
-          "pv_available": 311.7,
+          "pv_w": 311.9,
+          "pv_available": 311.9,
           "soc_pct": 77.7
         },
         {
           "time": "2026-05-19T10:00:00+00:00",
-          "pv_w": 578.6,
-          "pv_available": 578.6,
+          "pv_w": 575.8,
+          "pv_available": 575.8,
           "soc_pct": 82.5
         },
         {
           "time": "2026-05-19T11:00:00+00:00",
-          "pv_w": 966.1,
-          "pv_available": 966.1,
+          "pv_w": 959.8,
+          "pv_available": 959.8,
           "soc_pct": 90.7
         },
         {
           "time": "2026-05-19T12:00:00+00:00",
-          "pv_w": 1269.2,
-          "pv_available": 1269.2,
+          "pv_w": 1259.7,
+          "pv_available": 1259.7,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T13:00:00+00:00",
-          "pv_w": 1349.3,
-          "pv_available": 1349.3,
+          "pv_w": 1339.2,
+          "pv_available": 1339.2,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T14:00:00+00:00",
-          "pv_w": 1325.8,
-          "pv_available": 1325.8,
+          "pv_w": 1316.3,
+          "pv_available": 1316.3,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T15:00:00+00:00",
-          "pv_w": 1212.6,
-          "pv_available": 1212.6,
+          "pv_w": 1205.6,
+          "pv_available": 1205.6,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T16:00:00+00:00",
-          "pv_w": 1030.1,
-          "pv_available": 1030.1,
+          "pv_w": 1025.4,
+          "pv_available": 1025.4,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T17:00:00+00:00",
-          "pv_w": 793.6,
-          "pv_available": 793.6,
+          "pv_w": 790.9,
+          "pv_available": 790.9,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T18:00:00+00:00",
-          "pv_w": 509.0,
-          "pv_available": 509.0,
+          "pv_w": 507.9,
+          "pv_available": 507.9,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T19:00:00+00:00",
-          "pv_w": 271.9,
-          "pv_available": 271.9,
+          "pv_w": 271.5,
+          "pv_available": 271.5,
           "soc_pct": 100.0
         },
         {
           "time": "2026-05-19T20:00:00+00:00",
-          "pv_w": 117.5,
-          "pv_available": 117.5,
+          "pv_w": 117.4,
+          "pv_available": 117.4,
           "soc_pct": 100.0
         },
         {
@@ -6441,31 +6441,31 @@
       "daily": [
         {
           "date": "2026-05-13",
-          "gen_kwh": 11.58,
-          "full_charge_time": "06:00",
-          "fc_model_time": "08:36",
+          "gen_kwh": 11.011,
+          "full_charge_time": "12:00",
+          "fc_model_time": "10:17",
           "fc_confidence": "high",
           "weather_icon": "cloudy"
         },
         {
           "date": "2026-05-14",
-          "gen_kwh": 16.64,
+          "gen_kwh": 15.244,
           "full_charge_time": "06:00",
-          "fc_model_time": "08:14",
+          "fc_model_time": "08:22",
           "fc_confidence": "high",
-          "weather_icon": "partly_cloudy"
+          "weather_icon": "cloudy"
         },
         {
           "date": "2026-05-15",
-          "gen_kwh": 21.588,
+          "gen_kwh": 16.008,
           "full_charge_time": "06:00",
-          "fc_model_time": "08:03",
+          "fc_model_time": "08:18",
           "fc_confidence": "high",
-          "weather_icon": "partly_cloudy"
+          "weather_icon": "cloudy"
         },
         {
           "date": "2026-05-16",
-          "gen_kwh": 16.734,
+          "gen_kwh": 16.742,
           "full_charge_time": "10:00",
           "fc_model_time": "09:09",
           "fc_confidence": "high",
@@ -6473,25 +6473,25 @@
         },
         {
           "date": "2026-05-17",
-          "gen_kwh": 21.057,
+          "gen_kwh": 20.996,
           "full_charge_time": "10:00",
-          "fc_model_time": "09:13",
+          "fc_model_time": "09:11",
           "fc_confidence": "high",
           "weather_icon": "partly_cloudy"
         },
         {
           "date": "2026-05-18",
-          "gen_kwh": 23.051,
+          "gen_kwh": 22.988,
           "full_charge_time": "10:00",
-          "fc_model_time": "09:08",
+          "fc_model_time": "09:07",
           "fc_confidence": "high",
           "weather_icon": "partly_cloudy"
         },
         {
           "date": "2026-05-19",
-          "gen_kwh": 10.188,
+          "gen_kwh": 10.135,
           "full_charge_time": "13:00",
-          "fc_model_time": "10:14",
+          "fc_model_time": "10:12",
           "fc_confidence": "high",
           "weather_icon": "cloudy"
         },
